@@ -1,0 +1,135 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MainLayout from '../../components/Layout.tsx';
+import ServiceHero from '../../components/services/ServiceHero.tsx';
+import ServiceFeatures from '../../components/services/ServiceFeatures.tsx';
+import ServiceBackups from '../../components/services/ServiceBackups.tsx';
+import ServiceBenefits from '../../components/services/ServiceBenefits.tsx';
+import WindowsServerInfo from '../../components/services/WindowsServerInfo.tsx';
+import ServiceCTA from '../../components/services/ServiceCTA.tsx';
+import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
+
+const softlandFaqs = [
+  {
+    question: "¿Es compatible con todas las versiones de Softland ERP?",
+    answer: "Sí, nuestros servidores Windows están optimizados para todas las versiones de Softland ERP. Configuramos el entorno específicamente según tu versión y requerimientos, garantizando compatibilidad total y rendimiento óptimo."
+  },
+  {
+    question: "¿Cómo acceden mis empleados desde diferentes sucursales?",
+    answer: "Configuramos acceso seguro mediante VPN y escritorio remoto desde cualquier ubicación en Chile. Tus empleados pueden trabajar como si estuvieran en la oficina principal, con la misma velocidad y seguridad."
+  },
+  {
+    question: "¿Qué diferencia hay con Softland Cloud?",
+    answer: "A diferencia de Softland Cloud, tienes control total sobre tu servidor, configuraciones personalizadas, y puedes instalar software adicional. Mantienes la seguridad de la nube pero con la flexibilidad de un servidor dedicado."
+  },
+  {
+    question: "¿Incluyen migración desde mi servidor actual?",
+    answer: "Sí, nuestro equipo especializado realiza la migración completa de tu Softland ERP sin interrumpir tus operaciones. Incluye transferencia de datos, configuración y pruebas para garantizar continuidad total del negocio."
+  }
+];
+---
+
+<Layout title="Hosting Softland ERP Chile | Windows Server Dedicado | Hosting Sistemas" description="Hosting especializado para Softland ERP en Chile. Servidores Windows dedicados, acceso nacional y soporte experto. Control total vs Softland Cloud.">
+	<MainLayout client:load>
+		<ServiceHero 
+			client:load 
+			iconName="Database"
+			title="Hosting empresarial especializado para sistemas Softland ERP"
+			subtitle="Servidores Windows dedicados para Softland ERP. Control total, seguridad cloud y soporte experto incluido."
+			ctaText="Solicitar Cotización"
+		/>
+		<ServiceFeatures 
+			client:load
+			title="Hosting Softland ERP: Eficiencia y confiabilidad a tu medida"
+			description="En HostingSistemas.cl, ofrecemos hosting especializado para Softland ERP, asegurando una plataforma robusta y segura. Con infraestructura avanzada y soporte técnico, garantizamos un rendimiento superior y disponibilidad constante, para una operación empresarial eficiente y sin interrupciones."
+			features={[
+				{
+					icon: "MapPin",
+					title: "Acceso fácil desde tus sucursales a nivel nacional",
+					description: "Conecta todas tus sucursales con acceso seguro y rápido desde cualquier ubicación en Chile."
+				},
+				{
+					icon: "Server",
+					title: "Infraestructura avanzada",
+					description: "Servidores Windows dedicados con la última tecnología para garantizar máximo rendimiento."
+				},
+				{
+					icon: "Zap",
+					title: "Optimización específica",
+					description: "Configuración especializada para Softland ERP, optimizando recursos y velocidad de respuesta."
+				},
+				{
+					icon: "Headphones",
+					title: "Soporte técnico especializado",
+					description: "Equipo experto en Softland ERP disponible 24/7 para resolver cualquier consulta técnica."
+				}
+			]}
+			gridCols={2}
+		/>
+		<ServiceBackups 
+			client:load
+			title="Respaldos seguros y confiables para tu ERP"
+			description="Garantiza la continuidad y seguridad de tu negocio en línea con nuestros respaldos automáticos. Diseñados para ofrecer tranquilidad, nuestros sistemas de respaldo aseguran que tu información esté protegida y disponible en todo momento."
+			features={[
+				{
+					icon: "Clock",
+					title: "Respaldos diarios automáticos",
+					description: "Copias de seguridad automáticas de tu ERP cada 24 horas sin interrumpir operaciones."
+				},
+				{
+					icon: "Zap",
+					title: "Recuperación rápida",
+					description: "Restaura tu sistema ERP en minutos con nuestro proceso de recuperación optimizado."
+				},
+				{
+					icon: "Cloud",
+					title: "Almacenamiento seguro en la nube",
+					description: "Tus respaldos se almacenan en múltiples ubicaciones con encriptación de nivel empresarial."
+				},
+				{
+					icon: "Settings",
+					title: "Gestión simplificada",
+					description: "Panel de control especializado para gestionar respaldos de Softland de forma intuitiva."
+				}
+			]}
+		/>
+		<ServiceBenefits 
+			client:load
+			title="Características y beneficios"
+			description="En Hosting Sistemas, ofrecemos soluciones de hosting superiores con tecnología avanzada y un servicio al cliente excepcional. Eleva tu negocio en línea con nuestra innovación y excelencia."
+			benefits={[
+				{
+					icon: "Zap",
+					title: "Alto rendimiento",
+					description: "Garantiza un funcionamiento fluido y rápido de tu ERP Softland, esencial para la productividad empresarial y operaciones eficientes."
+				},
+				{
+					icon: "TrendingUp",
+					title: "Escalabilidad y flexibilidad",
+					description: "Adapta fácilmente tu hosting a medida que crece tu empresa, con capacidad para manejar más usuarios y datos sin comprometer el rendimiento."
+				},
+				{
+					icon: "ShieldCheck",
+					title: "Seguridad especializada",
+					description: "Protege los datos empresariales críticos con seguridad avanzada, incluyendo encriptación SSL y protección contra amenazas específicas de Windows."
+				},
+				{
+					icon: "LifeBuoy",
+					title: "Soporte experto",
+					description: "Accede a nuestro soporte técnico especializado en Softland ERP, ofreciendo asistencia y configuraciones para optimizar tu sistema empresarial."
+				}
+			]}
+			ctaText="Solicitar Hosting Softland ERP"
+		/>
+		<ServiceCTA 
+			client:load 
+			serviceName="Hosting Softland ERP"
+			features={["Windows Server", "SQL Optimizado", "Acceso Nacional", "Migración Incluida"]}
+		/>
+		<ServiceFAQ 
+			client:load 
+			serviceName="Hosting Softland ERP"
+			faqs={softlandFaqs}
+		/>
+	</MainLayout>
+</Layout>

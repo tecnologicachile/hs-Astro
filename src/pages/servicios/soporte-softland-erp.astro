@@ -1,0 +1,170 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MainLayout from '../../components/Layout.tsx';
+import ServiceHero from '../../components/services/ServiceHero.tsx';
+import ServiceFeatures from '../../components/services/ServiceFeatures.tsx';
+import ServiceBackups from '../../components/services/ServiceBackups.tsx';
+import ServiceBenefits from '../../components/services/ServiceBenefits.tsx';
+import ServiceCTA from '../../components/services/ServiceCTA.tsx';
+import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
+
+const soporteFaqs = [
+  {
+    question: "¿Qué versiones de Softland ERP soportan?",
+    answer: "Brindamos soporte a toda la línea ERP y a la línea Pyme de Softland. También ofrecemos asistencia a versiones obsoletas, proporcionando una alternativa confiable a Softland Total y Garantizado."
+  },
+  {
+    question: "¿Cómo puedo acceder al soporte técnico?",
+    answer: "Ofrecemos múltiples canales de soporte: telefónico para consultas inmediatas, soporte vía web para generar requerimientos y descargar actualizaciones, y servicios especializados para trabajos específicos."
+  },
+  {
+    question: "¿Realizan migraciones y actualizaciones de versiones?",
+    answer: "Sí, nuestro equipo especializado realiza migraciones seguras y actualizaciones de versiones, asegurando el cumplimiento legal, nuevas funcionalidades y tecnología avanzada para eficiencia óptima."
+  },
+  {
+    question: "¿Qué incluye el soporte para trabajos especiales?",
+    answer: "Los trabajos especiales incluyen análisis detallados del sistema, migraciones complejas, configuraciones personalizadas y gestión avanzada de datos, todo con la máxima seguridad y eficiencia."
+  }
+];
+---
+
+<Layout title="Soporte Softland ERP Chile | Asistencia Técnica Especializada | Hosting Sistemas" description="Soporte especializado para Softland ERP en Chile. Asistencia técnica personalizada, resolución de desafíos y optimización de sistemas. Alternativa a Softland Total y Garantizado.">
+	<MainLayout client:load>
+		<ServiceHero 
+			client:load 
+			iconName="Headphones"
+			title="Soporte continuo y preventivo para Softland"
+			subtitle="Soporte técnico experto para Softland ERP. Optimizamos tu sistema y garantizamos la continuidad operativa."
+			ctaText="Solicitar Soporte"
+		/>
+		
+		<!-- Main Description -->
+		<div class="bg-white py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-4xl">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-poppins mb-8">
+							Especialización en Softland ERP: Soluciones Confiables y Eficaces
+						</h2>
+						<div class="prose prose-lg prose-gray mx-auto">
+							<p class="text-lg leading-8 text-gray-600 mb-6">
+								Ofrecemos soporte especializado en Softland ERP para optimizar su uso en empresas. Nuestro equipo experto brinda asistencia técnica personalizada, asegurando el máximo rendimiento de Softland ERP. Nos enfocamos en resolver desafíos técnicos, mejorar la eficiencia de procesos y garantizar la seguridad de datos.
+							</p>
+							<p class="text-lg leading-8 text-gray-600 mb-8">
+								Este enfoque mejora la estabilidad y rendimiento de tu sistema ERP, contribuyendo al éxito y crecimiento de tu negocio.
+							</p>
+						</div>
+					</div>
+					
+					<!-- Support Alternative Banner -->
+					<div class="bg-gradient-to-r from-hs-blue to-hs-blue-light rounded-2xl p-8 text-center mb-16">
+						<h3 class="text-2xl font-bold text-white mb-4">
+							Alternativa Confiable a Softland Total y Garantizado
+						</h3>
+						<p class="text-blue-100 text-lg">
+							Brindamos soporte alternativo a Softland Total y Garantizado a toda la línea ERP y a la línea Pyme. También entregamos soporte a versiones obsoletas.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ServiceFeatures 
+			client:load
+			title="Asistencia técnica especializada"
+			description="Destacamos por nuestra capacidad de resolver de manera efectiva y eficiente los desafíos técnicos en Softland ERP, asegurando el máximo rendimiento de tu sistema empresarial."
+			features={[
+				{
+					icon: "Zap",
+					title: "Diagnóstico rápido y preciso",
+					description: "Identificamos problemas técnicos de forma inmediata con herramientas avanzadas de diagnóstico y análisis profundo del sistema."
+				},
+				{
+					icon: "Server",
+					title: "Soluciones personalizadas",
+					description: "Desarrollamos soluciones específicas adaptadas a las necesidades únicas de tu empresa y configuración de Softland ERP."
+				},
+				{
+					icon: "TrendingUp",
+					title: "Mejora continua del sistema",
+					description: "Implementamos mejoras constantes para optimizar el rendimiento y mantener tu sistema ERP actualizado y eficiente."
+				},
+				{
+					icon: "Shield",
+					title: "Experiencia y expertise",
+					description: "Más de 15 años de experiencia especializada en Softland ERP garantizan soluciones profesionales y confiables."
+				}
+			]}
+			gridCols={2}
+			backgroundGradient="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50"
+		/>
+
+		<ServiceBackups 
+			client:load
+			title="Respaldos y seguridad para tu soporte Softland ERP"
+			description="Protege tu sistema ERP y configuraciones con respaldos automáticos especializados. Garantizamos la continuidad de tu soporte técnico con sistemas de seguridad diseñados para entornos empresariales críticos."
+			features={[
+				{
+					icon: "Clock",
+					title: "Respaldos de configuraciones ERP",
+					description: "Copias automáticas de todas las configuraciones y personalizaciones de Softland para restauración inmediata."
+				},
+				{
+					icon: "Zap",
+					title: "Recuperación rápida del sistema",
+					description: "Restauración completa del sistema ERP en minutos con configuraciones y datos empresariales intactos."
+				},
+				{
+					icon: "Cloud",
+					title: "Almacenamiento empresarial seguro",
+					description: "Respaldos encriptados con estándares empresariales almacenados en infraestructura dedicada y segura."
+				},
+				{
+					icon: "Settings",
+					title: "Monitoreo de sistema 24/7",
+					description: "Supervisión continua del estado del sistema ERP para prevenir problemas y garantizar operación óptima."
+				}
+			]}
+		/>
+
+		<ServiceBenefits 
+			client:load
+			title="Características y beneficios"
+			description="En HostingSistemas.cl, nos especializamos en proporcionar soporte de primer nivel para Softland, combinando tecnología avanzada y un servicio al cliente excepcional para garantizar el máximo rendimiento de tus sistemas ERP. Eleva la eficiencia y efectividad de tu negocio en línea con nuestro compromiso de innovación y excelencia."
+			benefits={[
+				{
+					icon: "Zap",
+					title: "Soporte telefónico",
+					description: "Nuestro soporte telefónico avanzado gestiona tus consultas de Softland eficientemente, garantizando soluciones rápidas y precisas para resolver cualquier inconveniente técnico de forma inmediata."
+				},
+				{
+					icon: "TrendingUp",
+					title: "Soporte vía web",
+					description: "Accede a servicios en línea como generación de requerimientos y descarga de actualizaciones, todo para una gestión eficaz y autónoma de tu sistema Softland ERP."
+				},
+				{
+					icon: "ShieldCheck",
+					title: "Trabajos especiales",
+					description: "Nuestro soporte en trabajos especiales proporciona análisis detallados y migraciones seguras, asegurando una gestión de datos eficiente y configuraciones avanzadas."
+				},
+				{
+					icon: "LifeBuoy",
+					title: "Actualización de versiones",
+					description: "Con las últimas versiones de software, aseguras el cumplimiento legal, nuevas funcionalidades y tecnología avanzada para eficiencia óptima de tu ERP."
+				}
+			]}
+			ctaText="Solicitar Soporte Especializado"
+		/>
+
+		<ServiceCTA 
+			client:load 
+			serviceName="Soporte Softland ERP"
+			features={["Soporte Telefónico", "Asistencia Web", "Trabajos Especiales", "Actualizaciones"]}
+		/>
+		<ServiceFAQ 
+			client:load 
+			serviceName="Soporte Softland ERP"
+			faqs={soporteFaqs}
+		/>
+	</MainLayout>
+</Layout>

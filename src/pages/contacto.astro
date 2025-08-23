@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MainLayout from '../components/Layout.tsx';
+import Contact from '../components/Contact.tsx';
+---
+
+<Layout title="Contacto - Hosting Sistemas">
+	<MainLayout client:load>
+		<Contact client:load />
+	</MainLayout>
+</Layout>

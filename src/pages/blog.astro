@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import MainLayout from '../components/Layout.tsx';
+import BlogFilter from '../components/BlogFilter.tsx';
+import { Calendar, Clock, User, ArrowRight, Search, Tag, TrendingUp, BookOpen } from 'lucide-react';
+
+// Get all blog posts
+const posts = await getCollection('blog');
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Get unique categories
+const categories = [...new Set(posts.map(post => post.data.category))];
+---
+
+<Layout title="Blog - Hosting Sistemas | Noticias y Tutoriales">
+	<MainLayout client:load>
+		<!-- Hero Section -->
+		<div class="bg-gradient-to-br from-hs-blue via-hs-blue-light to-blue-400 py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-3xl text-center">
+					<h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl leading-tight font-poppins">
+						Blog y Recursos
+					</h1>
+					<p class="mt-6 text-xl leading-8 text-blue-100 font-poppins">
+						Artículos, tutoriales y noticias sobre hosting, e-commerce y tecnología empresarial
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Blog Posts with Filter -->
+		<BlogFilter 
+			client:load 
+			categories={categories} 
+			posts={posts} 
+		/>
+	</MainLayout>
+</Layout>
+
+<style>
+	.line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>

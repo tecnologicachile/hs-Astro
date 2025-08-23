@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MainLayout from '../components/Layout.tsx';
+import Hero from '../components/Hero.tsx';
+import LogoCarousel from '../components/LogoCarousel.tsx';
+import Services from '../components/Services.tsx';
+import Features from '../components/Features.tsx';
+import CTA from '../components/CTA.tsx';
+---
+
+<Layout title="Hosting Sistemas - Hosting Web Profesional en Chile">
+	<MainLayout client:load>
+		<Hero client:load />
+		<LogoCarousel client:load />
+		<Services client:load />
+		<Features client:load />
+		<CTA client:load />
+	</MainLayout>
+</Layout>
