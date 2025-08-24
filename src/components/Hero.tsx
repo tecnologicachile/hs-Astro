@@ -91,7 +91,7 @@ export default function Hero() {
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-2 gap-4">
                   {/* WooCommerce Card */}
                   <div className="group bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-xl p-4 border border-orange-300/20 hover:border-orange-300/40 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center justify-between mb-3">
@@ -147,21 +147,6 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* Bottom Stats */}
-                <div className="flex justify-between items-center pt-4 border-t border-white/10">
-                  <div className="text-center">
-                    <div className="text-white font-bold text-lg">500+</div>
-                    <div className="text-blue-200 text-xs">Clientes</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-white font-bold text-lg">15+</div>
-                    <div className="text-blue-200 text-xs">Años</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-white font-bold text-lg">24/7</div>
-                    <div className="text-blue-200 text-xs">Soporte</div>
-                  </div>
-                </div>
               </div>
 
               {/* Floating Status Indicators */}
