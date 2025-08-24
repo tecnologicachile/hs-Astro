@@ -8,5 +8,9 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   output: 'static',
   site: 'https://hs-astro.pages.dev',
-  integrations: [react(), tailwind()]
+  base: '/',
+  integrations: [react(), tailwind()],
+  build: {
+    format: 'directory'
+  }
 });
