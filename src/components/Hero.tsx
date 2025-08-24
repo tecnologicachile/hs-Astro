@@ -22,10 +22,10 @@ export default function Hero() {
             
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-5xl mb-6 leading-tight sm:leading-[65px]">
               Hosting Especializado para{' '}
-              <span className="bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
+              <span style={{color: '#FAA916'}}>
                 WooCommerce
               </span>
-              <span className="block bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
+              <span className="block" style={{color: '#FAA916'}}>
                 y Softland ERP
               </span>
             </h1>
