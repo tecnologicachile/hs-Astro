@@ -4,7 +4,11 @@ export async function onRequestPost({ request, env }) {
     const { name, email, phone, company, service, message } = body;
 
     // Usar el token de Resend desde las variables de entorno de Cloudflare
-    const RESEND_API_KEY = env.RESEND_API_KEY || 're_REc9SHrH_HArH88z5FndKFcJPCN2q8Myz';
+    const RESEND_API_KEY = env.RESEND_API_KEY;
+    
+    if (!RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY no está configurado');
+    }
 
     const emailHtml = `
       <h2>Nuevo mensaje de contacto desde Hosting Sistemas</h2>
