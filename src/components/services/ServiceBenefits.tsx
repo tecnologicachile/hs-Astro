@@ -44,21 +44,21 @@ export default function ServiceBenefits({
             {description}
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-5xl sm:mt-20 lg:mt-24">
-          <dl className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mx-auto mt-16 max-w-6xl sm:mt-20 lg:mt-24">
+          <dl className="grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2 lg:gap-x-16">
             {benefits.map((benefit, index) => {
               const IconComponent = iconMap[benefit.icon];
               return (
-                <div key={benefit.title} className="relative pl-20 group">
-                  <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-hs-blue to-hs-blue-light shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <div key={benefit.title} className="relative group">
+                  <dt className="flex items-start gap-x-4">
+                    <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-hs-blue to-hs-blue-light shadow-lg group-hover:shadow-xl transition-all duration-300">
                       <IconComponent className="h-7 w-7 text-white" />
                     </div>
-                  <span className="text-xl">{benefit.title}</span>
-                </dt>
-                <dd className="mt-3 text-base leading-7 text-gray-600">
-                  {benefit.description}
-                </dd>
+                    <span className="text-xl font-semibold leading-7 text-gray-900 mt-2">{benefit.title}</span>
+                  </dt>
+                  <dd className="mt-4 ml-18 text-base leading-7 text-gray-600">
+                    {benefit.description}
+                  </dd>
                 </div>
               );
             })}

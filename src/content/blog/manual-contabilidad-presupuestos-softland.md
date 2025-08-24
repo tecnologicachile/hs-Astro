@@ -94,12 +94,4 @@ En Hosting Sistemas entendemos que la implementación del módulo es solo el com
 
 Las actualizaciones regulares del sistema incorporan no solo cambios normativos, sino también mejoras funcionales basadas en las mejores prácticas de la industria y el feedback de nuestros clientes. Esta evolución continua asegura que tu inversión en Softland ERP mantenga su valor y relevancia a lo largo del tiempo.
 
-## Descarga el manual completo
-
-Accede al manual detallado del módulo de Contabilidad y Presupuestos con ejemplos prácticos, casos de uso y guías paso a paso:
-
-[📥 Descargar Manual de Contabilidad y Presupuestos](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-CW-Tabloid.html)
-
----
-
 ¿Necesitas optimizar tu gestión contable y presupuestaria? Nuestros especialistas en Softland ERP pueden ayudarte a transformar tu área financiera. [Contáctanos](/contacto) para una asesoría personalizada y descubre cómo podemos ayudarte a alcanzar la excelencia en la gestión financiera.

@@ -299,12 +299,4 @@ Gobierno          | Sin límite  | 120 días | Orden de compra
 - Soporte post-implementación
 - Consultoría en best practices
 
-## Descarga el manual completo
-
-Accede al manual detallado con todos los procedimientos y ejemplos:
-
-[📥 Descargar Manual de Clientes y Cobranzas](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-XW-tabloid.html)
-
----
-
 ¿Necesitas optimizar tu gestión de cobranzas y mejorar tu flujo de caja? Nuestros expertos en Softland ERP pueden ayudarte a implementar las mejores prácticas. [Contáctanos](/contacto) para más información.

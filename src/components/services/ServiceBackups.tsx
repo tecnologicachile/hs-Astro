@@ -38,20 +38,22 @@ export default function ServiceBackups({
             {description}
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => {
             const IconComponent = iconMap[feature.icon];
             return (
-              <div key={feature.title} className="relative pl-20 group">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-hs-blue to-hs-blue-light shadow-lg group-hover:shadow-xl transition-all duration-300">
-                    <IconComponent className="h-7 w-7 text-white" />
+              <div key={feature.title} className="relative group">
+                <div className="flex flex-col items-center text-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-hs-blue to-hs-blue-light shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    <IconComponent className="h-8 w-8 text-white" />
                   </div>
-                <span className="text-xl">{feature.title}</span>
-              </dt>
-              <dd className="mt-3 text-base leading-7 text-gray-600">
-                {feature.description}
-              </dd>
+                  <h3 className="mt-6 text-lg font-semibold leading-7 text-gray-900">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-3 text-base leading-7 text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
             );
           })}

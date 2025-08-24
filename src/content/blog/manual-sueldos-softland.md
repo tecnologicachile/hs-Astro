@@ -245,12 +245,4 @@ Sí, genera automáticamente el archivo plano con el formato requerido por Previ
 ### ¿Calcula retroactivos?
 Permite calcular y pagar diferencias retroactivas con los ajustes legales correspondientes.
 
-## Descarga el manual completo
-
-Para información detallada y ejemplos prácticos:
-
-[📥 Descargar Manual de Sueldos](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-EW-Tabloid.html)
-
----
-
 ¿Necesitas optimizar tu proceso de remuneraciones? Nuestros expertos en Softland ERP están listos para ayudarte. [Contáctanos](/contacto) para más información.

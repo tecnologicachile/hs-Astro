@@ -294,12 +294,4 @@ Este módulo va más allá de la simple administración de personal, proporciona
 - Soporte post-implementación
 - Consultoría en RRHH
 
-## Descarga el manual completo
-
-Para acceder al manual detallado con todos los procedimientos:
-
-[📥 Descargar Manual de Recursos Humanos](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-SW-tabloid.html)
-
----
-
 ¿Quieres transformar la gestión de tu capital humano? Nuestros especialistas en Softland ERP pueden ayudarte a implementar las mejores prácticas de RRHH. [Contáctanos](/contacto) hoy.

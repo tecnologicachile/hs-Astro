@@ -13,7 +13,7 @@ export default function SyncTechnology() {
               Automatización y Sincronización en Tiempo Real
             </h2>
             <p className="text-lg leading-8 text-gray-600">
-              Brindamos sincronización avanzada entre WooCommerce y Softland ERP. Alineamos tu tienda online con tu sistema ERP para una gestión de datos precisa. Nuestra tecnología permite la automatización y sincronización instantánea, mejorando la gestión de inventarios y ventas y optimizando la experiencia del cliente. Aumenta la competitividad y eficiencia de tu negocio con nuestro servicio integral.
+              Sincronización avanzada entre WooCommerce y Softland ERP para gestión precisa. Automatización instantánea que mejora inventarios, ventas y experiencia del cliente.
             </p>
           </div>
 

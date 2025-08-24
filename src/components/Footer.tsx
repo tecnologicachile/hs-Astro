@@ -7,12 +7,6 @@ const footerNavigation = {
     { name: 'Sincronización', href: '/servicios/sincronizacion' },
     { name: 'Soporte Softland ERP', href: '/servicios/soporte-softland-erp' },
   ],
-  support: [
-    { name: 'Centro de Ayuda', href: '/soporte' },
-    { name: 'Contacto', href: '/contacto' },
-    { name: 'Estado del Servicio', href: '/estado' },
-    { name: 'Base de Conocimientos', href: '/kb' },
-  ],
   company: [
     { name: 'Quienes Somos', href: '/quienes-somos' },
     { name: 'Casos de Éxito', href: '/casos-de-exito' },
@@ -43,8 +37,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Teléfono',
-    value: '+56 2 2XXX XXXX',
-    href: 'tel:+56222XXXXXX',
+    value: '800 914 659',
+    href: 'tel:800914659',
   },
   {
     icon: Mail,
@@ -66,7 +60,7 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <img 
@@ -87,62 +81,46 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Servicios</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {footerNavigation.services.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Soporte</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {footerNavigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">Servicios</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {footerNavigation.services.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Empresa</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {footerNavigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Contacto</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {contactInfo.map((item) => (
-                    <li key={item.label} className="flex items-center space-x-3">
-                      <item.icon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                      <a
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-300 hover:text-white"
-                      >
-                        {item.value}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">Empresa</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {footerNavigation.company.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">Contacto</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {contactInfo.map((item) => (
+                  <li key={item.label} className="flex items-center space-x-3">
+                    <item.icon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                    <a
+                      href={item.href}
+                      className="text-sm leading-6 text-gray-300 hover:text-white"
+                    >
+                      {item.value}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

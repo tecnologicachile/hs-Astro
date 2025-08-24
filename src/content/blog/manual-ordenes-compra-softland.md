@@ -301,12 +301,4 @@ Monto               | Aprobador
 - Soporte técnico 24/7
 - Consultoría en mejores prácticas
 
-## Descarga el manual completo
-
-Para acceder a la documentación completa con casos y ejemplos:
-
-[📥 Descargar Manual de Órdenes de Compra](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-OW-tabloidpdf.html)
-
----
-
 ¿Quieres optimizar tu proceso de compras con Softland ERP? Nuestros especialistas pueden ayudarte a implementar las mejores prácticas. [Contáctanos](/contacto) ahora.

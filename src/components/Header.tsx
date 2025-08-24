@@ -27,18 +27,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md backdrop-blur-lg bg-white/95">
       {/* Top contact bar - Fixed, only visible on desktop */}
-      <div className="bg-gray-50 border-b border-gray-200 hidden md:block">
+      <div className="bg-black border-b border-gray-800 hidden md:block">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex justify-end items-center py-2 space-x-6">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Mail className="h-4 w-4" />
-              <a href="mailto:contacto@hostingsistemas.cl" className="hover:text-blue-600 transition-colors duration-200">
+              <a href="mailto:contacto@hostingsistemas.cl" className="hover:text-white transition-colors duration-200">
                 contacto@hostingsistemas.cl
               </a>
             </div>
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Phone className="h-4 w-4" />
-              <a href="tel:800914659" className="hover:text-blue-600 transition-colors duration-200">
+              <a href="tel:800914659" className="hover:text-white transition-colors duration-200">
                 800 914 659
               </a>
             </div>

@@ -90,12 +90,4 @@ En Hosting Sistemas ofrecemos un servicio integral que va más allá de la simpl
 
 Las actualizaciones normativas son aplicadas de manera proactiva, asegurando que tu sistema siempre esté al día con los últimos cambios en la legislación tributaria chilena. Además, ofrecemos capacitaciones periódicas para mantener al personal actualizado sobre nuevas funcionalidades y mejores prácticas en la gestión de activos fijos.
 
-## Descarga el manual completo
-
-Para acceder al manual detallado del módulo de Activo Fijo con todos los procedimientos paso a paso, ejemplos prácticos y casos de uso avanzados:
-
-[📥 Descargar Manual de Activo Fijo](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-AW-Tabloid.html)
-
----
-
 ¿Necesitas ayuda con la implementación del módulo de Activo Fijo? Nuestro equipo de expertos en Softland ERP está listo para asesorarte y acompañarte en todo el proceso. [Contáctanos](/contacto) para más información sobre nuestros servicios de consultoría, implementación y soporte especializado.

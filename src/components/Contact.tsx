@@ -30,7 +30,7 @@ export default function Contact() {
       <div className="bg-gradient-to-br from-hs-blue via-hs-blue-light to-blue-400 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl leading-tight">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight">
               Contáctanos
             </h1>
             <p className="mt-6 text-xl leading-8 text-blue-100">
@@ -102,19 +102,19 @@ export default function Contact() {
                 <ul className="space-y-3 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-hs-blue rounded-full"></div>
-                    Más de 500 clientes satisfechos
+                    Especialistas en WooCommerce y Softland ERP
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-hs-blue rounded-full"></div>
-                    Configuración en 24 horas
+                    Infraestructura LiteSpeed de alto rendimiento
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-hs-blue rounded-full"></div>
-                    Soporte técnico especializado
+                    Integración ERPSync para automatización total
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-hs-blue rounded-full"></div>
-                    Garantía de satisfacción
+                    Respaldos automáticos y seguridad empresarial
                   </li>
                 </ul>
               </div>

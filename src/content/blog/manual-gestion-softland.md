@@ -284,12 +284,4 @@ Sí, con frecuencia configurable según necesidad.
 ### ¿Puedo compartir dashboards?
 Sí, con control de acceso y permisos específicos.
 
-## Descarga el manual completo
-
-Accede al manual detallado con ejemplos y casos prácticos:
-
-[📥 Descargar Manual de Gestión](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-WG-tabloid.html)
-
----
-
 ¿Listo para transformar tus datos en decisiones estratégicas? Descubre cómo el módulo de Gestión de Softland ERP puede revolucionar tu empresa. [Solicita una demo](/contacto)

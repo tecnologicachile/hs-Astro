@@ -288,9 +288,6 @@ Este módulo permite gestionar eficientemente el inventario, procesar ventas, em
 
 ## Descarga el manual completo
 
-Accede a la documentación completa con ejemplos y casos prácticos:
-
-[📥 Descargar Manual de Inventario y Facturación](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-IW-tabloid.html)
 
 ---
 

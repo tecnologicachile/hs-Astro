@@ -20,7 +20,7 @@ export default function WooCommerceComparison() {
             Comparativa: LiteSpeed vs. Apache y Nginx
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Presentamos un análisis comparativo entre LiteSpeed y los servidores Apache y Nginx. El gráfico muestra diferencias en rendimiento, seguridad y eficiencia de recursos, destacando por qué LiteSpeed es superior para sitios con alto tráfico y demandas de velocidad.
+            Análisis comparativo entre LiteSpeed, Apache y Nginx mostrando por qué LiteSpeed es superior para alto tráfico.
           </p>
         </div>
 

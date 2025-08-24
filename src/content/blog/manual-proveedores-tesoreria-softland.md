@@ -285,12 +285,4 @@ Pagos estratégicos  | > 500 UF     | Directorio
 - Control de tipo de cambio
 - Optimización de liquidez
 
-## Descarga el manual completo
-
-Accede a la documentación detallada del módulo:
-
-[📥 Descargar Manual de Proveedores y Tesorería](https://hostingsistemas.cl/wp-content/uploads/2023/11/Manual-Pw-Tabloid.html)
-
----
-
 ¿Necesitas mejorar el control de tus pagos y optimizar tu tesorería? Contáctanos para conocer cómo Softland ERP puede transformar tu gestión financiera. [Solicita una demo](/contacto)
