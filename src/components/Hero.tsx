@@ -2,7 +2,7 @@ import { ArrowRight, Phone, Shield, Zap, Users, Headphones } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <div className="relative bg-gradient-to-br from-hs-blue via-hs-blue-light to-blue-400 py-8 sm:py-10 lg:py-12 font-poppins overflow-hidden">
+    <div className="relative bg-[#0049AA] py-8 sm:py-10 lg:py-12 font-poppins overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent"></div>
       <div className="absolute inset-0">
@@ -20,12 +20,12 @@ export default function Hero() {
               Más de 15 años de experiencia especializada
             </div>
             
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-5xl mb-6 leading-snug sm:leading-[65px]">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-5xl mb-6 leading-snug sm:leading-[75px]">
               Hosting Especializado para{' '}
-              <span style={{color: '#FAA916'}}>
+              <span className="bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
                 WooCommerce
               </span>
-              <span className="block" style={{color: '#FAA916'}}>
+              <span className="block bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
                 y Softland ERP
               </span>
             </h1>
