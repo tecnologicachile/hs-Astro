@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,6 +10,10 @@ export default function Contact() {
     service: '',
     message: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -18,10 +22,43 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí se implementaría el envío del formulario
-    console.log('Formulario enviado:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        setStatusMessage('¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        setStatusMessage(result.message || 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setStatusMessage('Error de conexión. Por favor, intenta nuevamente más tarde.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -231,11 +268,39 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-hs-blue px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-hs-blue-light hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  disabled={isSubmitting}
+                  className={`w-full inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-hs-blue hover:bg-hs-blue-light hover:shadow-xl transform hover:scale-105'
+                  }`}
                 >
-                  Enviar mensaje
-                  <Send className="h-5 w-5" />
+                  {isSubmitting ? (
+                    <>
+                      Enviando...
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    </>
+                  ) : (
+                    <>
+                      Enviar mensaje
+                      <Send className="h-5 w-5" />
+                    </>
+                  )}
                 </button>
+
+                {submitStatus === 'success' && (
+                  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-green-800">{statusMessage}</p>
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
+                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-red-800">{statusMessage}</p>
+                  </div>
+                )}
 
                 <p className="text-xs text-gray-500 text-center">
                   Al enviar este formulario, aceptas que procesemos tus datos para contactarte sobre nuestros servicios.

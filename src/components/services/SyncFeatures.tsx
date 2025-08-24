@@ -25,7 +25,7 @@ export default function SyncFeatures() {
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </a>
               </div>
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="hidden md:grid grid-cols-3 gap-4 text-center">
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4">
                   <div className="text-3xl font-bold text-white mb-1">100%</div>
                   <div className="text-xs text-blue-100">Sincronización Automática</div>

@@ -19,103 +19,145 @@ import MainLayout from '../components/Layout.tsx';
 			</div>
 		</div>
 
-		<!-- Company Overview -->
+		<!-- Company Overview con layout asimétrico -->
 		<div class="bg-white py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-4xl">
-					<div class="text-center mb-16">
-						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-poppins">
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<!-- Contenido principal a la izquierda -->
+					<div>
+						<h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-poppins mb-8">
 							Tecnológica Chile SpA
 						</h2>
-						<div class="mt-6 text-lg leading-8 text-gray-600 space-y-6">
-							<p>
+						<div class="space-y-6">
+							<p class="text-lg leading-8 text-gray-600">
 								Con más de una década y media de experiencia en el mundo de la tecnología empresarial, en <strong>Tecnológica Chile SpA</strong> nos enorgullece ser líderes en la prestación de servicios en torno a Softland, así como en el desarrollo de software personalizado, soluciones de reporte e integraciones empresariales.
 							</p>
-							<p>
+							<p class="text-lg leading-8 text-gray-600">
 								Desde nuestros inicios en el año <strong>2005</strong>, hemos estado comprometidos con la excelencia y la innovación en el ámbito de la tecnología empresarial. A lo largo de los años, hemos consolidado nuestro conocimiento y experiencia, convirtiéndonos en un socio confiable para empresas de todos los tamaños y sectores.
 							</p>
 						</div>
 					</div>
+					
+					<!-- Timeline visual a la derecha -->
+					<div class="relative">
+						<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-hs-blue via-hs-blue-light to-blue-400"></div>
+						<div class="space-y-12">
+							<div class="relative flex items-center">
+								<div class="absolute left-8 w-4 h-4 bg-hs-blue rounded-full -translate-x-1/2"></div>
+								<div class="ml-20">
+									<div class="text-sm font-semibold text-hs-blue uppercase tracking-wide">2005</div>
+									<div class="text-gray-600">Fundación de la empresa</div>
+								</div>
+							</div>
+							<div class="relative flex items-center">
+								<div class="absolute left-8 w-4 h-4 bg-hs-blue-light rounded-full -translate-x-1/2"></div>
+								<div class="ml-20">
+									<div class="text-sm font-semibold text-hs-blue uppercase tracking-wide">15+ años</div>
+									<div class="text-gray-600">Experiencia en Softland</div>
+								</div>
+							</div>
+							<div class="relative flex items-center">
+								<div class="absolute left-8 w-4 h-4 bg-blue-400 rounded-full -translate-x-1/2"></div>
+								<div class="ml-20">
+									<div class="text-sm font-semibold text-hs-blue uppercase tracking-wide">Hoy</div>
+									<div class="text-gray-600">Líderes en tecnología empresarial</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- History, Mission, Vision Sections -->
+		<!-- Mission & Vision en formato de tarjetas alternadas -->
 		<div class="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-4xl space-y-16">
-					<!-- Historia -->
-					<div class="bg-white rounded-2xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300">
-						<div class="flex items-center mb-8">
-							<div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-xl mr-6">
-								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-								</svg>
-							</div>
-							<h3 class="text-3xl font-bold text-gray-900 font-poppins">Nuestra Historia</h3>
+				<!-- Historia en layout completo -->
+				<div class="mb-20">
+					<div class="max-w-2xl mx-auto text-center mb-12">
+						<div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl mb-6">
+							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
 						</div>
+						<h3 class="text-3xl font-bold text-gray-900 font-poppins mb-6">Nuestra Historia</h3>
 						<p class="text-lg leading-8 text-gray-600">
 							Desde nuestros inicios en el año 2005, hemos estado comprometidos con la excelencia y la innovación en el ámbito de la tecnología empresarial. A lo largo de los años, hemos consolidado nuestro conocimiento y experiencia, convirtiéndonos en un socio confiable para empresas de todos los tamaños y sectores.
 						</p>
 					</div>
+				</div>
 
+				<!-- Misión y Visión en grid lateral -->
+				<div class="grid lg:grid-cols-2 gap-8">
 					<!-- Misión -->
-					<div class="bg-white rounded-2xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300">
-						<div class="flex items-center mb-8">
-							<div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-xl mr-6">
-								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<div class="group relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+						<div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-gradient-to-br from-hs-blue/10 to-transparent rounded-full blur-2xl"></div>
+						<div class="relative">
+							<div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl mb-6">
+								<svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
 								</svg>
 							</div>
-							<h3 class="text-3xl font-bold text-gray-900 font-poppins">Misión</h3>
+							<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">Misión</h3>
+							<p class="text-gray-600 leading-relaxed">
+								En Tecnológica Chile SpA, nos dedicamos a fomentar el éxito empresarial a través de soluciones tecnológicas innovadoras y personalizadas. Estamos comprometidos con la transformación y el avance de nuestros clientes, brindando asistencia y herramientas que se ajusten específicamente a sus necesidades y objetivos comerciales. Nuestra misión es ser un aliado clave en su camino hacia el éxito, utilizando la tecnología como un puente hacia el logro de sus metas.
+							</p>
 						</div>
-						<p class="text-lg leading-8 text-gray-600">
-							En Tecnológica Chile SpA, nos dedicamos a fomentar el éxito empresarial a través de soluciones tecnológicas innovadoras y personalizadas. Estamos comprometidos con la transformación y el avance de nuestros clientes, brindando asistencia y herramientas que se ajusten específicamente a sus necesidades y objetivos comerciales. Nuestra misión es ser un aliado clave en su camino hacia el éxito, utilizando la tecnología como un puente hacia el logro de sus metas.
-						</p>
 					</div>
 
 					<!-- Visión -->
-					<div class="bg-white rounded-2xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300">
-						<div class="flex items-center mb-8">
-							<div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-xl mr-6">
-								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<div class="group relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+						<div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-2xl"></div>
+						<div class="relative">
+							<div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl mb-6">
+								<svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
 								</svg>
 							</div>
-							<h3 class="text-3xl font-bold text-gray-900 font-poppins">Visión</h3>
+							<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">Visión</h3>
+							<p class="text-gray-600 leading-relaxed">
+								En Tecnológica Chile SpA, nuestra visión es impulsar el éxito empresarial a través de la tecnología. Creemos en la capacidad transformadora de la innovación y estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos comerciales mediante soluciones tecnológicas efectivas y adaptadas a sus necesidades específicas.
+							</p>
 						</div>
-						<p class="text-lg leading-8 text-gray-600">
-							En Tecnológica Chile SpA, nuestra visión es impulsar el éxito empresarial a través de la tecnología. Creemos en la capacidad transformadora de la innovación y estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos comerciales mediante soluciones tecnológicas efectivas y adaptadas a sus necesidades específicas.
-						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Experience Section -->
+		<!-- Experience Section con diseño split -->
 		<div class="bg-white py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-4xl">
-					<div class="text-center mb-12">
-						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-poppins">
+				<div class="grid lg:grid-cols-3 gap-12">
+					<!-- Columna izquierda - Título y stats -->
+					<div class="lg:col-span-1">
+						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-poppins mb-8">
 							Nuestra Experiencia
 						</h2>
+						<div class="bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl p-8 text-white">
+							<div class="text-5xl font-bold mb-2">2005</div>
+							<div class="text-xl font-semibold mb-4">Año de Fundación</div>
+							<div class="h-px bg-white/30 my-4"></div>
+							<div class="text-4xl font-bold mb-2">+15</div>
+							<div class="text-lg">Años de experiencia</div>
+						</div>
 					</div>
-					<div class="prose prose-lg prose-gray mx-auto">
-						<p class="text-lg leading-8 text-gray-600 mb-6">
-							Con más de una década y media de dedicación a <strong>Softland</strong>, hemos perfeccionado nuestras habilidades y conocimientos para brindar soluciones integrales que permiten a nuestros clientes optimizar sus operaciones y maximizar su potencial.
-						</p>
-						<p class="text-lg leading-8 text-gray-600">
-							Ya sea a través de la implementación y personalización de sistemas de gestión ERP, el desarrollo de software a medida o la creación de soluciones de reporte y análisis avanzado, nuestro equipo de expertos está preparado para enfrentar los desafíos tecnológicos más exigentes.
-						</p>
-					</div>
-
-					<!-- Stats -->
-					<div class="mt-16 grid grid-cols-1 md:grid-cols-1 gap-8 text-center">
-						<div class="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-8">
-							<div class="text-4xl font-bold text-hs-blue mb-2">2005</div>
-							<div class="text-gray-600 font-semibold">Año de Fundación</div>
+					
+					<!-- Columna derecha - Contenido -->
+					<div class="lg:col-span-2">
+						<div class="space-y-8">
+							<div class="bg-gray-50 rounded-2xl p-8">
+								<h3 class="text-xl font-bold text-gray-900 mb-4">Expertise en Softland</h3>
+								<p class="text-lg leading-8 text-gray-600">
+									Con más de una década y media de dedicación a <strong>Softland</strong>, hemos perfeccionado nuestras habilidades y conocimientos para brindar soluciones integrales que permiten a nuestros clientes optimizar sus operaciones y maximizar su potencial.
+								</p>
+							</div>
+							<div class="bg-blue-50 rounded-2xl p-8">
+								<h3 class="text-xl font-bold text-gray-900 mb-4">Soluciones Integrales</h3>
+								<p class="text-lg leading-8 text-gray-600">
+									Ya sea a través de la implementación y personalización de sistemas de gestión ERP, el desarrollo de software a medida o la creación de soluciones de reporte y análisis avanzado, nuestro equipo de expertos está preparado para enfrentar los desafíos tecnológicos más exigentes.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

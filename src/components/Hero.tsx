@@ -20,7 +20,7 @@ export default function Hero() {
               Más de 15 años de experiencia especializada
             </div>
             
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-5xl mb-6" style={{lineHeight: '65px'}}>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-5xl mb-6 leading-tight sm:leading-[65px]">
               Hosting Especializado para{' '}
               <span className="bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
                 WooCommerce
