@@ -12,74 +12,84 @@ import SyncTechnology from '../../components/services/SyncTechnology.tsx';
 
 const syncFaqs = [
   {
-    question: "¿Qué es ERPSync y cómo funciona?",
-    answer: "ERPSync es una herramienta de integración que sincroniza automáticamente los datos entre tu tienda online y Softland ERP. Mantiene actualizado el inventario, precios, clientes y pedidos en tiempo real entre ambos sistemas."
+    question: "¿Qué plataformas son compatibles con ERPSync?",
+    answer: "ERPSync es compatible con todas las principales plataformas de eCommerce: WooCommerce, Shopify, PrestaShop, Magento, OpenCart, BigCommerce, Vtex, TiendaNube/Nuvemshop, Jumpseller y muchas más plataformas."
   },
   {
-    question: "¿Cuánto tiempo toma implementar la sincronización?",
-    answer: "La implementación típicamente toma entre 2-5 días laborales, dependiendo de la complejidad de tu configuración. Incluye análisis inicial, configuración personalizada, pruebas y capacitación del equipo."
+    question: "¿Cuánto tiempo toma implementar ERPSync?",
+    answer: "ERPSync cuenta con una implementación ultra-rápida de solo 30-45 minutos desde el inicio hasta estar completamente operativo. Incluye instalación automática, configuración guiada y sincronización inicial."
   },
   {
-    question: "¿La sincronización afecta el rendimiento de mi tienda?",
-    answer: "No, ERPSync está diseñado para funcionar en segundo plano sin afectar el rendimiento de tu tienda. Utiliza tecnología optimizada que procesa los datos de manera eficiente y transparente para tus clientes."
+    question: "¿Cada cuánto tiempo se actualiza la información?",
+    answer: "ERPSync realiza actualizaciones automáticas cada 5 minutos entre Softland y tu plataforma eCommerce, manteniendo inventario, pedidos y clientes actualizados en tiempo real."
   },
   {
-    question: "¿Qué datos se sincronizan entre mi tienda online y Softland?",
-    answer: "Se sincronizan productos, precios, stock, categorías, clientes, pedidos, métodos de pago y toda la información relevante para mantener ambos sistemas actualizados y coherentes."
+    question: "¿Hay límites en el número de productos?",
+    answer: "No hay límites en el número de productos que puedes sincronizar con ERPSync. El sistema está diseñado para manejar catálogos de cualquier tamaño de manera eficiente."
   },
   {
-    question: "¿Ofrecen soporte durante la implementación?",
-    answer: "Sí, proporcionamos soporte completo durante todo el proceso: análisis inicial, configuración, migración de datos, pruebas, capacitación y soporte continuo post-implementación."
+    question: "¿Funciona con versiones personalizadas de Softland?",
+    answer: "Sí, ERPSync se adapta a personalizaciones específicas de Softland previo análisis técnico. También es compatible con diferentes versiones internacionales como Exactus ERP en Costa Rica."
+  },
+  {
+    question: "¿Cuál es el costo de ERPSync y cómo puedo obtener más información?",
+    answer: "ERPSync está disponible desde 0.80 UF/mes con tres opciones: mensual (sin compromiso), semestral (18% descuento) y anual (26% descuento). Incluye prueba gratuita de 14 días y configuración inicial sin costo. Visita erpsync.app para información detallada y demostración."
+  },
+  {
+    question: "¿Qué seguridad ofrece ERPSync?",
+    answer: "ERPSync utiliza encriptación SSL de 256 bits, conexiones cifradas HTTPS exclusivamente, acceso restringido a URLs autorizadas y validación estructurada de todos los datos para máxima seguridad."
   }
 ];
 
 const features = [
-  'Sincronización en tiempo real',
-  'Automatización completa',
-  'Soporte especializado',
-  'Configuración personalizada'
+  'Actualizaciones cada 5 minutos',
+  'Implementación 30-45 minutos',
+  'Compatible con todas las plataformas',
+  'Desde 0.80 UF/mes',
+  'Prueba gratuita 14 días',
+  'Configuración inicial gratuita'
 ];
 ---
 
 <Layout 
-	title="Sincronización E-commerce Softland Chile - WooCommerce, PrestaShop, Magento"
-	description="Sincronización exclusiva entre tu tienda online (WooCommerce, PrestaShop, Magento, Jumpseller, desarrollos personalizados) y Softland ERP con ERPSync automático en tiempo real."
-	keywords="sincronizacion ecommerce softland chile, erpsync chile, integracion prestashop softland, sincronizacion magento erp, integracion jumpseller softland, sincronizacion tienda online erp"
+	title="ERPSync Chile - Sincronización Automática Softland con Todas las Plataformas eCommerce"
+	description="ERPSync sincroniza automáticamente cada 5 minutos tu Softland ERP con WooCommerce, Shopify, PrestaShop, Magento, BigCommerce y más. Desde 0.80 UF/mes, prueba gratis 14 días."
+	keywords="erpsync chile, sincronizacion automatica softland, integracion ecommerce softland chile, shopify softland chile, woocommerce erp sync, prestashop softland integracion, magento softland chile"
 	canonical="/servicios/sincronizacion"
 >
 	<MainLayout client:load>
 		<ServiceHero 
 			client:load
 			iconName="RefreshCw"
-			title="Conecta tu E-commerce con Softland ERP"
-			subtitle="Integración y automatización con ERPSync."
-			ctaText="Solicitar Integración"
+			title="ERPSync - Sincronización Automática Softland y Todas las Plataformas eCommerce"
+			subtitle="Automatiza la sincronización entre tu ERP Softland y múltiples plataformas de eCommerce. Inventario, pedidos y clientes actualizados cada 5 minutos. Visita erpsync.app para más información."
+			ctaText="Probar Gratis 14 días"
 		/>
 		
 		<ServiceFeatures 
 			client:load
-			title="Capacidades de sincronización ERPSync"
-			description="ERPSync integra tu plataforma de e-commerce (WooCommerce, PrestaShop, Magento, Jumpseller, desarrollos personalizados) con Softland ERP, automatizando procesos."
+			title="Compatible con Todas las Plataformas eCommerce"
+			description="ERPSync se integra con todas las principales plataformas: WooCommerce, Shopify, PrestaShop, Magento, BigCommerce, Vtex, TiendaNube, Jumpseller y muchas más."
 			features={[
 				{
 					icon: "RefreshCw",
-					title: "Sincronización en tiempo real",
-					description: "Actualización instantánea de inventarios, precios y pedidos entre tu tienda online y Softland ERP sin intervención manual, garantizando datos precisos."
+					title: "Actualizaciones cada 5 minutos",
+					description: "Sincronización automática entre Softland y tu plataforma eCommerce con conversión automática de pedidos a notas de venta, eliminando errores manuales."
 				},
 				{
-					icon: "Shield",
-					title: "Transferencia segura de datos",
-					description: "Protección completa de la información durante el proceso de sincronización con encriptación y validación de datos para máxima seguridad."
+					icon: "Users",
+					title: "Gestión automática de clientes",
+					description: "Validación automática de clientes en Softland durante la compra, creación automática de nuevos registros y sincronización bidireccional de información."
+				},
+				{
+					icon: "Globe",
+					title: "Compatibilidad internacional",
+					description: "Funciona con Softland ERP en Chile, Exactus ERP en Costa Rica, Softland ERP en Guatemala y Colombia, y otros países bajo consulta."
 				},
 				{
 					icon: "Zap",
-					title: "Automatización completa",
-					description: "Reducción de errores manuales mediante automatización de procesos de inventario, clientes y transacciones del negocio con total eficiencia."
-				},
-				{
-					icon: "Server",
-					title: "Integración bidireccional",
-					description: "Sincronización en ambas direcciones permitiendo gestión desde tu plataforma de e-commerce o Softland según las necesidades operativas de tu empresa."
+					title: "Implementación ultra-rápida",
+					description: "Configuración completa en solo 30-45 minutos: instalación automática, configuración guiada, conexión con Softland y verificación de funcionamiento."
 				}
 			]}
 			gridCols={2}
@@ -88,28 +98,28 @@ const features = [
 		
 		<ServiceBackups 
 			client:load
-			title="Respaldos seguros para tu integración ERPSync"
-			description="Sistemas de respaldo automáticos para integraciones E-commerce-Softland con continuidad operacional garantizada."
+			title="Seguridad y Confiabilidad ERPSync"
+			description="Máxima protección de datos y alta disponibilidad con infraestructura redundante, respaldos automáticos y monitoreo 24/7."
 			features={[
 				{
-					icon: "Clock",
-					title: "Respaldos automáticos",
-					description: "Copias de seguridad de configuraciones ERPSync sin interrumpir operaciones."
+					icon: "Shield",
+					title: "Encriptación SSL 256 bits",
+					description: "Todas las comunicaciones utilizan encriptación SSL de 256 bits con conexiones cifradas HTTPS exclusivamente para máxima seguridad."
 				},
 				{
-					icon: "Zap",
-					title: "Recuperación de datos",
-					description: "Restauración inmediata de sincronización y datos sin pérdida de información crítica."
+					icon: "Lock",
+					title: "Acceso restringido autorizado",
+					description: "Acceso limitado solo a URLs autorizadas con defensa activa contra amenazas externas y validación estructurada de datos."
 				},
 				{
-					icon: "Cloud",
-					title: "Almacenamiento seguro",
-					description: "Respaldos encriptados almacenados en la nube con múltiples ubicaciones seguras."
+					icon: "Server",
+					title: "Infraestructura redundante",
+					description: "Alta disponibilidad con infraestructura redundante, respaldos programados automáticos y supervisión permanente 24/7."
 				},
 				{
-					icon: "Settings",
-					title: "Monitoreo permanente",
-					description: "Verificación continua de consistencia de datos entre tu tienda online y Softland ERP."
+					icon: "Activity",
+					title: "Monitoreo proactivo continuo",
+					description: "Supervisión permanente con monitoreo proactivo de incidencias y tiempo de actividad garantizado para operación continua."
 				}
 			]}
 		/>
@@ -120,42 +130,42 @@ const features = [
 		
 		<ServiceBenefits 
 			client:load
-			title="Características y beneficios de la sincronización E-commerce con Softland"
-			description="Sincronización superior entre tu tienda online y Softland ERP con tecnología avanzada y servicio excepcional para tu negocio."
-			ctaText="Solicitar Cotización"
+			title="Más de 50 Empresas Confían en ERPSync"
+			description="Clientes satisfechos que han optimizado sus operaciones con ERPSync, desde equipos médicos hasta distribuidores industriales."
+			ctaText="Probar Gratis 14 días"
 			benefits={[
 				{
-					title: "Integración en tiempo real",
-					description: "ERPSync mantiene tus datos entre tu tienda online y Softland actualizados en tiempo real, mejorando la toma de decisiones y precisión en operaciones comerciales",
+					title: "Reducción del 90% en gestión manual",
+					description: "OrtoTek Punto Dental: 'Excelente plugin para conectar nuestro sitio WordPress-WooCommerce con Softland. Gran soporte.' - Eliminación completa de errores por transcripción.",
+					icon: "TrendingDown"
+				},
+				{
+					title: "Automatización total del flujo de ventas", 
+					description: "Laboratorios Dermik: 'Gracias a ERP Sync, superamos importantes barreras en nuestro canal de ventas online.' - Optimización de inventarios en tiempo real.",
 					icon: "Zap"
 				},
 				{
-					title: "Mejora en la gestión del inventario", 
-					description: "ERPSync ofrece un control preciso del inventario, asegurando seguimiento exacto y evitando desajustes de stock en múltiples canales de venta simultáneamente.",
-					icon: "TrendingUp"
+					title: "Sincronización perfecta precios y stock",
+					description: "Surdent: 'Buena solución para mantener sincronizados precios y stock en Softland. Muy buena experiencia.' - Control preciso en múltiples canales de venta.",
+					icon: "RefreshCw"
 				},
 				{
-					title: "Automatización de procesos",
-					description: "Optimiza tus operaciones al automatizar tareas estratégicas, reduciendo errores significativos y ahorrando tiempo valioso para enfocarte en el crecimiento del negocio",
-					icon: "ShieldCheck"
-				},
-				{
-					title: "Soporte experto",
-					description: "Accede a nuestro soporte técnico especializado en e-commerce y Softland, brindando asistencia para optimizar tu tienda online y sistema ERP con soluciones innovadoras",
-					icon: "LifeBuoy"
+					title: "Conexiones eficientes y estables",
+					description: "Forsend: 'Nuestra experiencia con ERPSync ha sido excelente. El sistema es eficiente y las conexiones funcionan perfectamente.' - Escalabilidad sin costos adicionales.",
+					icon: "CheckCircle"
 				}
 			]}
 		/>
 		
 		<ServiceCTA 
 			client:load
-			serviceName="Sincronización E-commerce-Softland"
+			serviceName="ERPSync - Sincronización Automática"
 			features={features}
 		/>
 		
 		<ServiceFAQ 
 			client:load
-			serviceName="Sincronización E-commerce-Softland"
+			serviceName="ERPSync - Sincronización Automática"
 			faqs={syncFaqs}
 		/>
 	</MainLayout>

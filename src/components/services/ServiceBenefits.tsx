@@ -1,4 +1,4 @@
-import { Zap, TrendingUp, ShieldCheck, LifeBuoy } from 'lucide-react';
+import { Zap, TrendingUp, ShieldCheck, LifeBuoy, TrendingDown, RefreshCw, CheckCircle } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 const iconMap = {
@@ -6,6 +6,9 @@ const iconMap = {
   TrendingUp,
   ShieldCheck,
   LifeBuoy,
+  TrendingDown,
+  RefreshCw,
+  CheckCircle,
 };
 
 interface Benefit {

@@ -1,4 +1,4 @@
-import { Clock, Zap, Cloud, Settings } from 'lucide-react';
+import { Clock, Zap, Cloud, Settings, Shield, Lock, Server, Activity } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 const iconMap = {
@@ -6,6 +6,10 @@ const iconMap = {
   Zap,
   Cloud,
   Settings,
+  Shield,
+  Lock,
+  Server,
+  Activity,
 };
 
 interface BackupFeature {

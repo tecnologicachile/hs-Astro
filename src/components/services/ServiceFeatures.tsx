@@ -5,7 +5,9 @@ import {
   Headphones, 
   MapPin, 
   Server, 
-  Zap
+  Zap,
+  Users,
+  Globe
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
@@ -17,6 +19,8 @@ const iconMap = {
   MapPin,
   Server,
   Zap,
+  Users,
+  Globe,
 };
 
 interface Feature {

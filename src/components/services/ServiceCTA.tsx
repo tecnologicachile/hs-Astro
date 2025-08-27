@@ -30,13 +30,33 @@ export default function ServiceCTA({ serviceName, features }: ServiceCTAProps) {
           )}
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="/contacto"
-              className="inline-flex items-center rounded-xl bg-white px-8 py-4 text-base font-semibold text-hs-blue shadow-lg hover:bg-gray-50 hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
-              Solicitar Cotización Gratuita
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            {serviceName.includes('ERPSync') ? (
+              <>
+                <a
+                  href="https://erpsync.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-xl bg-white px-8 py-4 text-base font-semibold text-hs-blue shadow-lg hover:bg-gray-50 hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Visitar ERPSync.app
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+                <a
+                  href="/contacto"
+                  className="inline-flex items-center rounded-xl bg-transparent border-2 border-white px-8 py-4 text-base font-semibold text-white hover:bg-white hover:text-hs-blue transition-all duration-300"
+                >
+                  Solicitar Información
+                </a>
+              </>
+            ) : (
+              <a
+                href="/contacto"
+                className="inline-flex items-center rounded-xl bg-white px-8 py-4 text-base font-semibold text-hs-blue shadow-lg hover:bg-gray-50 hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
+                Solicitar Cotización Gratuita
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            )}
             <a
               href="tel:800914659"
               className="inline-flex items-center text-white hover:text-blue-100 transition-colors"
