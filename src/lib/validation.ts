@@ -149,12 +149,14 @@ export function validateContactForm(data: unknown) {
     const result = contactFormSchema.parse(data);
     return { success: true, data: result, errors: null };
   } catch (error) {
-    if (error instanceof z.ZodError) {
+    if (error instanceof z.ZodError && error.errors) {
       const formattedErrors: Record<string, string> = {};
       
       error.errors.forEach((err) => {
-        const field = err.path.join('.');
-        formattedErrors[field] = err.message;
+        if (err.path && err.path.length > 0) {
+          const field = err.path.join('.');
+          formattedErrors[field] = err.message;
+        }
       });
       
       return { success: false, data: null, errors: formattedErrors };
@@ -174,10 +176,10 @@ export function validateEmail(email: string) {
     emailSchema.parse(email);
     return { valid: true, error: null };
   } catch (error) {
-    if (error instanceof z.ZodError) {
+    if (error instanceof z.ZodError && error.errors && error.errors.length > 0) {
       return { valid: false, error: error.errors[0].message };
     }
-    return { valid: false, error: 'Error de validación' };
+    return { valid: false, error: 'Error de validación de email' };
   }
 }
 
@@ -187,9 +189,9 @@ export function validatePhone(phone: string) {
     const result = phoneSchema.parse(phone);
     return { valid: true, error: null, data: result };
   } catch (error) {
-    if (error instanceof z.ZodError) {
+    if (error instanceof z.ZodError && error.errors && error.errors.length > 0) {
       return { valid: false, error: error.errors[0].message, data: null };
     }
-    return { valid: false, error: 'Error de validación', data: null };
+    return { valid: false, error: 'Error de validación de teléfono', data: null };
   }
 }

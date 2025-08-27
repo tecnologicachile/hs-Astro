@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import PageHero from './PageHero';
-import { validateContactForm, type ContactFormData } from '../lib/validation';
+import { validateContactForm, validatePhone, type ContactFormData } from '../lib/validation';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -37,14 +37,17 @@ export default function Contact() {
 
     // Validación en tiempo real para teléfono
     if (name === 'phone' && value) {
-      import('../lib/validation').then(({ validatePhone }) => {
+      try {
         const result = validatePhone(value);
-        if (result.valid && result.data) {
+        if (result && result.valid && result.data) {
           setPhoneInfo(`📍 ${result.data.countryName} - ${result.data.formatted}`);
         } else {
           setPhoneInfo('');
         }
-      });
+      } catch (error) {
+        console.warn('Error validating phone:', error);
+        setPhoneInfo('');
+      }
     } else if (name === 'phone' && !value) {
       setPhoneInfo('');
     }
@@ -57,12 +60,21 @@ export default function Contact() {
     setValidationErrors({});
 
     // Validar formulario con Zod
-    const validationResult = validateContactForm(formData);
-    
-    if (!validationResult.success) {
-      setValidationErrors(validationResult.errors || {});
+    let validationResult;
+    try {
+      validationResult = validateContactForm(formData);
+      
+      if (!validationResult || !validationResult.success) {
+        setValidationErrors(validationResult?.errors || {});
+        setSubmitStatus('error');
+        setStatusMessage('Por favor, corrige los errores en el formulario.');
+        setIsSubmitting(false);
+        return;
+      }
+    } catch (error) {
+      console.error('Error en validación:', error);
       setSubmitStatus('error');
-      setStatusMessage('Por favor, corrige los errores en el formulario.');
+      setStatusMessage('Error de validación. Por favor, intenta nuevamente.');
       setIsSubmitting(false);
       return;
     }
