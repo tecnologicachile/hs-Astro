@@ -25,13 +25,13 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="bg-gray-50 py-24 sm:py-32 font-poppins">
+    <div className="bg-gray-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl">
             Experiencia y Calidad Garantizada
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600 px-4 sm:px-0">
             En HostingSistemas.cl, ofrecemos soluciones de hosting superiores con tecnología avanzada y un servicio al cliente excepcional. Eleva tu negocio en línea con nuestra innovación y excelencia.
           </p>
         </div>
@@ -40,14 +40,14 @@ export default function Features() {
             {features.map((feature) => {
               const IconComponent = feature.icon;
               return (
-                <div key={feature.title} className="relative pl-16">
-                  <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-hs-blue">
-                      <IconComponent className="h-6 w-6 text-white" />
+                <div key={feature.title} className="relative pl-14 sm:pl-16">
+                  <dt className="text-sm sm:text-base font-semibold leading-6 sm:leading-7 text-gray-900">
+                    <div className="absolute left-0 top-0 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-hs-blue">
+                      <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
                     {feature.title}
                   </dt>
-                  <dd className="mt-2 text-base leading-7 text-gray-600">
+                  <dd className="mt-2 text-sm sm:text-base leading-6 sm:leading-7 text-gray-600">
                     {feature.description}
                   </dd>
                 </div>

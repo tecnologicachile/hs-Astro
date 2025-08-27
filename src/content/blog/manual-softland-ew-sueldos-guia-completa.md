@@ -1,0 +1,96 @@
+---
+title: 'Manual Softland EW – Sueldos: Guía Completa para la Gestión de Remuneraciones'
+description: 'Guía completa del módulo Softland EW - Sueldos. Aprende a gestionar remuneraciones, liquidaciones y cumplimiento normativo en Chile.'
+author: 'Equipo Hosting Sistemas'
+pubDate: 2025-08-27
+category: 'Softland ERP'
+tags: ['Softland ERP Chile', 'Sueldos EW', 'Remuneraciones', 'Recursos Humanos', 'Manual Softland']
+featured: true
+---
+
+# Manual Softland EW – Sueldos: Guía Completa para la Gestión de Remuneraciones
+
+La administración de remuneraciones es una de las tareas más críticas dentro de cualquier organización, no solo por el impacto directo en los trabajadores, sino también por las obligaciones legales y tributarias que conlleva. Con el módulo Softland EW – Sueldos, las empresas cuentan con una solución integral para gestionar de manera segura, eficiente y en cumplimiento con la normativa chilena todo lo relacionado con el pago de su personal.
+
+En este artículo encontrarás un resumen de las principales funcionalidades y beneficios del sistema, además de un enlace para acceder al manual oficial Softland EW en PDF.
+
+## ¿Qué es el módulo Softland EW?
+
+El módulo Softland EW (Sueldos) está diseñado para administrar todos los aspectos relacionados con las remuneraciones de los trabajadores: cálculo de haberes y descuentos, generación de liquidaciones, emisión de cheques o pagos electrónicos y reportes obligatorios para instituciones como AFP, ISAPRES y Dirección del Trabajo.
+
+Su objetivo es automatizar procesos, reducir errores y garantizar que los pagos y declaraciones se realicen de manera oportuna.
+
+## Funcionalidades principales del EW
+
+### 1. Administración de empresas
+
+Permite crear, seleccionar y eliminar empresas, además de respaldar y recuperar bases de datos. También incluye funciones de desbloqueo y consulta de la estructura de datos.
+
+### 2. Seguridad y control de accesos
+
+Incorpora permisos por usuario, perfiles y procesos, junto con auditorías de movimientos y control de cambios. De esta manera, se protege la información sensible del personal.
+
+### 3. Gestión de fichas de personal
+
+- **Creación y mantención** de fichas completas de trabajadores
+- **Actualización de datos** como códigos de ficha, vigencia, cargas masivas y notificaciones
+- **Listados paramétricos** para un acceso rápido a la información
+
+### 4. Modelo de cálculo de sueldos
+
+- Definición de constantes y variables mensuales
+- Incorporación de tablas de impuesto único
+- Configuración de variables complementarias para ajustes y beneficios
+
+### 5. Procesamiento de valores del mes
+
+- Preparación del nuevo mes de trabajo
+- Ingreso de valores por ficha, variable o centro de costo
+- Registro de movimientos del personal (ingresos, licencias, vacaciones, etc.)
+
+### 6. Cálculo y pago de remuneraciones
+
+El sistema permite calcular liquidaciones, emitir formularios de pago y definir la forma de pago:
+
+- **Cheques** para personal, AFP e ISAPRES
+- **Pagos electrónicos** integrados con bancos nacionales y cajas de compensación (CCAF)
+- **Transferencias directas**, depósitos y conciliación bancaria
+
+### 7. Informes y obligaciones legales
+
+Incluye reportes completos de remuneraciones, cotizaciones previsionales, impuestos, pagos electrónicos y certificados para trabajadores. Esto asegura el cumplimiento con todas las instituciones reguladoras.
+
+## Beneficios de Softland EW
+
+**Cumplimiento normativo**: asegura que las liquidaciones y pagos cumplan con la legislación laboral y previsional chilena.
+
+**Eficiencia administrativa**: automatiza procesos y minimiza errores en cálculos.
+
+**Integración bancaria**: facilita pagos directos y electrónicos.
+
+**Trazabilidad**: historial detallado de movimientos y reportes siempre disponibles.
+
+## Conclusión
+
+El módulo Softland EW – Sueldos es una herramienta fundamental para empresas que buscan simplificar la gestión de remuneraciones y garantizar pagos oportunos, transparentes y en regla. Al centralizar todos los procesos de sueldos en una sola plataforma, se convierte en un aliado estratégico para el área de Recursos Humanos.
+
+---
+
+## 📥 Descargar Manual Completo
+
+Para acceder a información detallada sobre configuración, procesos paso a paso y casos prácticos, descarga el manual oficial:
+
+<div style="text-align: center; margin: 2rem 0;">
+  <a 
+    href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-EW.pdf" 
+    download="Manual-Softland-EW-Sueldos.pdf"
+    style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0048AB, #0058D6); color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); transition: all 0.3s ease;"
+  >
+    📥 Descargar Manual EW PDF
+    <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+    </svg>
+  </a>
+</div>
+
+*El manual incluye guías paso a paso, capturas de pantalla y ejemplos prácticos para optimizar la gestión de sueldos en tu empresa.*

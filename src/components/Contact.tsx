@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import PageHero from './PageHero';
+import { validateContactForm, type ContactFormData } from '../lib/validation';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,18 +16,56 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState('');
+  const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
+  const [phoneInfo, setPhoneInfo] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+
+    // Limpiar errores de validación cuando el usuario empiece a escribir
+    if (validationErrors[name]) {
+      setValidationErrors({
+        ...validationErrors,
+        [name]: ''
+      });
+    }
+
+    // Validación en tiempo real para teléfono
+    if (name === 'phone' && value) {
+      import('../lib/validation').then(({ validatePhone }) => {
+        const result = validatePhone(value);
+        if (result.valid && result.data) {
+          setPhoneInfo(`📍 ${result.data.countryName} - ${result.data.formatted}`);
+        } else {
+          setPhoneInfo('');
+        }
+      });
+    } else if (name === 'phone' && !value) {
+      setPhoneInfo('');
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setValidationErrors({});
+
+    // Validar formulario con Zod
+    const validationResult = validateContactForm(formData);
+    
+    if (!validationResult.success) {
+      setValidationErrors(validationResult.errors || {});
+      setSubmitStatus('error');
+      setStatusMessage('Por favor, corrige los errores en el formulario.');
+      setIsSubmitting(false);
+      return;
+    }
     
     try {
       const response = await fetch('/api/contact', {
@@ -33,7 +73,7 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(validationResult.data),
       });
       
       const result = await response.json();
@@ -49,6 +89,7 @@ export default function Contact() {
           service: '',
           message: ''
         });
+        setPhoneInfo('');
       } else {
         setSubmitStatus('error');
         setStatusMessage(result.message || 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
@@ -62,29 +103,20 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-white font-poppins">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-hs-blue via-hs-blue-light to-blue-400 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight">
-              Contáctanos
-            </h1>
-            <p className="mt-6 text-xl leading-8 text-blue-100">
-              Estamos aquí para ayudarte. Obtén una cotización personalizada o resuelve tus dudas con nuestro equipo de expertos.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="bg-white">
+      <PageHero 
+        title="Contáctanos" 
+        subtitle="Estamos aquí para ayudarte. Obtén una cotización personalizada o resuelve tus dudas con nuestro equipo de expertos."
+      />
 
       {/* Contact Section */}
       <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl mb-6 sm:mb-8">
                 Información de contacto
               </h2>
               
@@ -134,12 +166,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
+              <div className="mt-8 sm:mt-12 p-4 sm:p-6 bg-gray-50 rounded-2xl">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">¿Por qué elegirnos?</h3>
                 <ul className="space-y-3 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-hs-blue rounded-full"></div>
-                    Especialistas en WooCommerce y Softland ERP
+                    Especialistas en E-commerce y Softland ERP
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-hs-blue rounded-full"></div>
@@ -159,7 +191,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl mb-6 sm:mb-8">
                 Solicita tu cotización
               </h2>
               
@@ -176,9 +208,17 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent ${
+                        validationErrors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                      }`}
                       placeholder="Tu nombre"
                     />
+                    {validationErrors.name && (
+                      <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                        <AlertCircle className="w-4 h-4" />
+                        {validationErrors.name}
+                      </p>
+                    )}
                   </div>
                   
                   <div>
@@ -192,26 +232,49 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent ${
+                        validationErrors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                      }`}
                       placeholder="tu@email.com"
                     />
+                    {validationErrors.email && (
+                      <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                        <AlertCircle className="w-4 h-4" />
+                        {validationErrors.email}
+                      </p>
+                    )}
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Teléfono
+                      Teléfono *
                     </label>
                     <input
                       type="tel"
                       name="phone"
                       id="phone"
+                      required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent ${
+                        validationErrors.phone ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                      }`}
                       placeholder="+56 9 1234 5678"
                     />
+                    {phoneInfo && (
+                      <p className="mt-1 text-sm text-green-600 flex items-center gap-1">
+                        <CheckCircle className="w-4 h-4" />
+                        {phoneInfo}
+                      </p>
+                    )}
+                    {validationErrors.phone && (
+                      <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                        <AlertCircle className="w-4 h-4" />
+                        {validationErrors.phone}
+                      </p>
+                    )}
                   </div>
                   
                   <div>
@@ -224,9 +287,17 @@ export default function Contact() {
                       id="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent ${
+                        validationErrors.company ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                      }`}
                       placeholder="Nombre de tu empresa"
                     />
+                    {validationErrors.company && (
+                      <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                        <AlertCircle className="w-4 h-4" />
+                        {validationErrors.company}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -239,15 +310,23 @@ export default function Contact() {
                     id="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent ${
+                      validationErrors.service ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                    }`}
                   >
                     <option value="">Selecciona un servicio</option>
-                    <option value="hosting-woocommerce">Hosting WooCommerce</option>
+                    <option value="hosting-woocommerce">Hosting E-commerce</option>
                     <option value="hosting-softland">Hosting Softland ERP</option>
                     <option value="sincronizacion">Sincronización</option>
                     <option value="soporte-softland">Soporte Softland ERP</option>
                     <option value="otro">Otro</option>
                   </select>
+                  {validationErrors.service && (
+                    <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                      <AlertCircle className="w-4 h-4" />
+                      {validationErrors.service}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -261,9 +340,17 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent resize-none"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-hs-blue focus:border-transparent resize-none ${
+                      validationErrors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                    }`}
                     placeholder="Cuéntanos sobre tu proyecto y qué necesitas..."
                   />
+                  {validationErrors.message && (
+                    <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                      <AlertCircle className="w-4 h-4" />
+                      {validationErrors.message}
+                    </p>
+                  )}
                 </div>
 
                 <button

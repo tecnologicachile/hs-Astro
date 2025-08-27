@@ -8,7 +8,7 @@ const comparisonData = [
 
 export default function WooCommerceComparison() {
   return (
-    <div className="bg-gradient-to-bl from-white via-slate-50 to-gray-100 py-24 sm:py-32 font-poppins">
+    <div className="bg-gradient-to-bl from-white via-slate-50 to-gray-100 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex justify-center mb-6">
@@ -31,7 +31,7 @@ export default function WooCommerceComparison() {
                 key={server.server}
                 className={`rounded-2xl border p-8 transition-all duration-300 hover:shadow-xl ${
                   server.server === 'LiteSpeed' 
-                    ? 'border-hs-blue bg-gradient-to-br from-white to-blue-50 shadow-lg' 
+                    ? 'border-hs-blue bg-gradient-to-br from-white to-hs-blue/5 shadow-lg' 
                     : 'border-gray-200 bg-white hover:border-gray-300'
                 }`}
               >

@@ -13,7 +13,7 @@ import SyncTechnology from '../../components/services/SyncTechnology.tsx';
 const syncFaqs = [
   {
     question: "¿Qué es ERPSync y cómo funciona?",
-    answer: "ERPSync es una herramienta de integración que sincroniza automáticamente los datos entre tu tienda WooCommerce y Softland ERP. Mantiene actualizado el inventario, precios, clientes y pedidos en tiempo real entre ambos sistemas."
+    answer: "ERPSync es una herramienta de integración que sincroniza automáticamente los datos entre tu tienda online y Softland ERP. Mantiene actualizado el inventario, precios, clientes y pedidos en tiempo real entre ambos sistemas."
   },
   {
     question: "¿Cuánto tiempo toma implementar la sincronización?",
@@ -24,7 +24,7 @@ const syncFaqs = [
     answer: "No, ERPSync está diseñado para funcionar en segundo plano sin afectar el rendimiento de tu tienda. Utiliza tecnología optimizada que procesa los datos de manera eficiente y transparente para tus clientes."
   },
   {
-    question: "¿Qué datos se sincronizan entre WooCommerce y Softland?",
+    question: "¿Qué datos se sincronizan entre mi tienda online y Softland?",
     answer: "Se sincronizan productos, precios, stock, categorías, clientes, pedidos, métodos de pago y toda la información relevante para mantener ambos sistemas actualizados y coherentes."
   },
   {
@@ -41,12 +41,17 @@ const features = [
 ];
 ---
 
-<Layout title="Sincronización WooCommerce-Softland | ERPSync | Hosting Sistemas" description="Integración perfecta entre WooCommerce y Softland ERP con ERPSync. Sincronización en tiempo real, automatización de procesos y gestión unificada de tu negocio.">
+<Layout 
+	title="Sincronización E-commerce Softland Chile - WooCommerce, PrestaShop, Magento"
+	description="Sincronización exclusiva entre tu tienda online (WooCommerce, PrestaShop, Magento, Jumpseller, desarrollos personalizados) y Softland ERP con ERPSync automático en tiempo real."
+	keywords="sincronizacion ecommerce softland chile, erpsync chile, integracion prestashop softland, sincronizacion magento erp, integracion jumpseller softland, sincronizacion tienda online erp"
+	canonical="/servicios/sincronizacion"
+>
 	<MainLayout client:load>
 		<ServiceHero 
 			client:load
 			iconName="RefreshCw"
-			title="Conecta WooCommerce con Softland ERP"
+			title="Conecta tu E-commerce con Softland ERP"
 			subtitle="Integración y automatización con ERPSync."
 			ctaText="Solicitar Integración"
 		/>
@@ -54,12 +59,12 @@ const features = [
 		<ServiceFeatures 
 			client:load
 			title="Capacidades de sincronización ERPSync"
-			description="ERPSync integra WooCommerce con Softland ERP, automatizando procesos y manteniendo datos consistentes."
+			description="ERPSync integra tu plataforma de e-commerce (WooCommerce, PrestaShop, Magento, Jumpseller, desarrollos personalizados) con Softland ERP, automatizando procesos."
 			features={[
 				{
 					icon: "RefreshCw",
 					title: "Sincronización en tiempo real",
-					description: "Actualización instantánea de inventarios, precios y pedidos entre WooCommerce y Softland ERP sin intervención manual, garantizando datos precisos."
+					description: "Actualización instantánea de inventarios, precios y pedidos entre tu tienda online y Softland ERP sin intervención manual, garantizando datos precisos."
 				},
 				{
 					icon: "Shield",
@@ -74,7 +79,7 @@ const features = [
 				{
 					icon: "Server",
 					title: "Integración bidireccional",
-					description: "Sincronización en ambas direcciones permitiendo gestión desde WooCommerce o Softland según las necesidades operativas de tu empresa diariamente."
+					description: "Sincronización en ambas direcciones permitiendo gestión desde tu plataforma de e-commerce o Softland según las necesidades operativas de tu empresa."
 				}
 			]}
 			gridCols={2}
@@ -84,7 +89,7 @@ const features = [
 		<ServiceBackups 
 			client:load
 			title="Respaldos seguros para tu integración ERPSync"
-			description="Sistemas de respaldo automáticos para integraciones WooCommerce-Softland con continuidad operacional."
+			description="Sistemas de respaldo automáticos para integraciones E-commerce-Softland con continuidad operacional garantizada."
 			features={[
 				{
 					icon: "Clock",
@@ -104,7 +109,7 @@ const features = [
 				{
 					icon: "Settings",
 					title: "Monitoreo permanente",
-					description: "Verificación continua de consistencia de datos entre WooCommerce y Softland ERP."
+					description: "Verificación continua de consistencia de datos entre tu tienda online y Softland ERP."
 				}
 			]}
 		/>
@@ -115,13 +120,13 @@ const features = [
 		
 		<ServiceBenefits 
 			client:load
-			title="Características y beneficios de la sincronización WooCommerce con Softland"
-			description="Sincronización superior WooCommerce-Softland con tecnología avanzada y servicio excepcional para tu negocio."
+			title="Características y beneficios de la sincronización E-commerce con Softland"
+			description="Sincronización superior entre tu tienda online y Softland ERP con tecnología avanzada y servicio excepcional para tu negocio."
 			ctaText="Solicitar Cotización"
 			benefits={[
 				{
 					title: "Integración en tiempo real",
-					description: "ERPSync mantiene tus datos entre WooCommerce y Softland actualizados en tiempo real, mejorando la toma de decisiones y precisión en todas las operaciones comerciales diarias",
+					description: "ERPSync mantiene tus datos entre tu tienda online y Softland actualizados en tiempo real, mejorando la toma de decisiones y precisión en operaciones comerciales",
 					icon: "Zap"
 				},
 				{
@@ -136,7 +141,7 @@ const features = [
 				},
 				{
 					title: "Soporte experto",
-					description: "Accede a nuestro soporte técnico especializado en WooCommerce y Softland, brindando asistencia y personalizaciones para optimizar tu tienda y sistema ERP con soluciones innovadoras",
+					description: "Accede a nuestro soporte técnico especializado en e-commerce y Softland, brindando asistencia para optimizar tu tienda online y sistema ERP con soluciones innovadoras",
 					icon: "LifeBuoy"
 				}
 			]}
@@ -144,13 +149,13 @@ const features = [
 		
 		<ServiceCTA 
 			client:load
-			serviceName="Sincronización WooCommerce-Softland"
+			serviceName="Sincronización E-commerce-Softland"
 			features={features}
 		/>
 		
 		<ServiceFAQ 
 			client:load
-			serviceName="Sincronización WooCommerce-Softland"
+			serviceName="Sincronización E-commerce-Softland"
 			faqs={syncFaqs}
 		/>
 	</MainLayout>

@@ -4,23 +4,23 @@ import MainLayout from '../../components/Layout.tsx';
 import ServiceHero from '../../components/services/ServiceHero.tsx';
 import ServiceFeatures from '../../components/services/ServiceFeatures.tsx';
 import ServiceBackups from '../../components/services/ServiceBackups.tsx';
-import WooCommerceComparison from '../../components/services/WooCommerceComparison.tsx';
+import EcommerceComparison from '../../components/services/WooCommerceComparison.tsx';
 import ServiceBenefits from '../../components/services/ServiceBenefits.tsx';
 import ServiceCTA from '../../components/services/ServiceCTA.tsx';
 import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
 
-const woocommerceFaqs = [
+const ecommerceFaqs = [
   {
-    question: "¿Qué incluye el hosting para WooCommerce?",
-    answer: "Nuestro hosting incluye servidores optimizados para WooCommerce, certificado SSL gratuito, CDN, respaldos automáticos diarios, soporte técnico especializado 24/7, y configuración optimizada para máximo rendimiento."
+    question: "¿Qué incluye el hosting para e-commerce?",
+    answer: "Nuestro hosting incluye servidores optimizados para plataformas de e-commerce (WooCommerce, PrestaShop, Magento), certificado SSL gratuito, CDN, respaldos automáticos diarios, soporte técnico especializado 24/7, y configuración optimizada para máximo rendimiento."
   },
   {
     question: "¿Cuánto tiempo toma migrar mi tienda existente?",
     answer: "La migración típicamente toma entre 24-48 horas. Nuestro equipo técnico se encarga de todo el proceso sin interrumpir tu tienda, realizando la migración durante horarios de menor tráfico."
   },
   {
-    question: "¿Ofrecen soporte para problemas específicos de WooCommerce?",
-    answer: "Sí, nuestro equipo está especializado en WooCommerce. Podemos ayudarte con optimización de plugins, configuración de pagos, problemas de rendimiento y cualquier consulta técnica relacionada con tu tienda."
+    question: "¿Ofrecen soporte para problemas específicos de e-commerce?",
+    answer: "Sí, nuestro equipo está especializado en plataformas de e-commerce. Podemos ayudarte con optimización de plugins, configuración de pagos, problemas de rendimiento y cualquier consulta técnica relacionada con tu tienda."
   },
   {
     question: "¿Qué medidas de seguridad incluyen para tiendas online?",
@@ -29,19 +29,80 @@ const woocommerceFaqs = [
 ];
 ---
 
-<Layout title="Hosting WooCommerce Chile | Optimizado para E-commerce | Hosting Sistemas" description="Hosting especializado para WooCommerce en Chile. Servidores optimizados, SSL gratuito, CDN y soporte experto 24/7. ¡Potencia tu tienda online!">
+<Layout 
+	title="Hosting E-commerce Chile - WooCommerce, PrestaShop, Magento + Softland ERP"
+	description="Hosting E-commerce Chile especializado: WooCommerce, PrestaShop, Magento, Jumpseller. Integración Softland ERP, SSL gratuito, CDN y soporte 24/7 para tu tienda online."
+	keywords="hosting ecommerce chile, hosting woocommerce chile, hosting prestashop chile, hosting magento chile, hosting jumpseller chile, hosting tienda online chile, integracion ecommerce erp"
+	canonical="/servicios/hosting-woocommerce"
+>
+	<!-- Service Schema for E-commerce Hosting -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Hosting E-commerce Chile",
+		"description": "Hosting especializado para tiendas online en Chile: WooCommerce, PrestaShop, Magento, Jumpseller con servidores optimizados, SSL gratuito y soporte técnico 24/7",
+		"provider": {
+			"@type": "Organization",
+			"name": "Hosting Sistemas",
+			"url": "https://hostingsistemas.cl"
+		},
+		"serviceType": "Web Hosting",
+		"areaServed": {
+			"@type": "Country",
+			"name": "Chile"
+		},
+		"offers": {
+			"@type": "Offer",
+			"description": "Hosting E-commerce optimizado",
+			"priceCurrency": "CLP",
+			"availableAtOrFrom": {
+				"@type": "Place",
+				"addressCountry": "CL"
+			}
+		},
+		"hasOfferCatalog": {
+			"@type": "OfferCatalog",
+			"name": "Hosting E-commerce",
+			"itemListElement": [
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "SSL Certificado Gratuito"
+					}
+				},
+				{
+					"@type": "Offer", 
+					"itemOffered": {
+						"@type": "Service",
+						"name": "CDN Incluido"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service", 
+						"name": "Soporte 24/7"
+					}
+				}
+			]
+		}
+	}
+	</script>
+
 	<MainLayout client:load>
 		<ServiceHero 
 			client:load 
 			iconName="ShoppingCart"
-			title="Hosting optimizado para WooCommerce"
-			subtitle="Acelera tu tienda WooCommerce con soporte experto."
+			title="Hosting optimizado para E-commerce"
+			subtitle="Acelera tu tienda online con soporte experto especializado."
 			ctaText="Solicitar Cotización"
 		/>
 		<ServiceFeatures 
 			client:load
 			title="Eficiencia y seguridad para el crecimiento de tu tienda online"
-			description="Nuestro Hosting WooCommerce, enfocado en eficiencia y seguridad, está diseñado para maximizar el potencial de tu tienda en línea."
+			description="Nuestro Hosting E-commerce, compatible con WooCommerce, PrestaShop, Magento, Jumpseller y desarrollos personalizados, maximiza el potencial de tu tienda en línea."
 			features={[
 				{
 					icon: "TrendingUp",
@@ -56,12 +117,12 @@ const woocommerceFaqs = [
 				{
 					icon: "RefreshCw",
 					title: "Actualizaciones y mantenimiento automáticos",
-					description: "Mantén tu WooCommerce siempre actualizado sin interrumpir tu negocio, aplicando parches de seguridad y mejoras automáticamente siempre."
+					description: "Mantén tu plataforma de e-commerce (WooCommerce, PrestaShop, Magento) siempre actualizada sin interrumpir tu negocio, con parches de seguridad automáticos."
 				},
 				{
 					icon: "Headphones",
 					title: "Soporte técnico 24/7",
-					description: "Equipo especializado en WooCommerce disponible cuando lo necesites, ofreciendo soluciones rápidas y efectivas para cualquier problema."
+					description: "Equipo especializado en plataformas de e-commerce (WooCommerce, PrestaShop, Magento, Jumpseller) disponible cuando lo necesites, con soluciones expertas."
 				}
 			]}
 			gridCols={2}
@@ -69,7 +130,7 @@ const woocommerceFaqs = [
 		/>
 		<ServiceBackups 
 			client:load
-			title="Respaldos seguros y confiables para tu tienda WooCommerce"
+			title="Respaldos seguros y confiables para tu tienda online"
 			description="Garantiza la continuidad y seguridad de tu negocio en línea con nuestros respaldos automáticos."
 			features={[
 				{
@@ -94,7 +155,7 @@ const woocommerceFaqs = [
 				}
 			]}
 		/>
-		<WooCommerceComparison client:load />
+		<EcommerceComparison client:load />
 		<ServiceBenefits 
 			client:load
 			title="Características y beneficios"
@@ -118,20 +179,20 @@ const woocommerceFaqs = [
 				{
 					icon: "LifeBuoy",
 					title: "Asistencia experta",
-					description: "Ayuda técnica enfocada en WooCommerce con atención individualizada para mejorar y maximizar la eficiencia de tu negocio online."
+					description: "Ayuda técnica especializada en e-commerce (WooCommerce, PrestaShop, Magento, Jumpseller) con atención individualizada para maximizar tu negocio online."
 				}
 			]}
-			ctaText="Solicitar Hosting WooCommerce"
+			ctaText="Solicitar Hosting E-commerce"
 		/>
 		<ServiceCTA 
 			client:load 
-			serviceName="Hosting WooCommerce"
+			serviceName="Hosting E-commerce"
 			features={["SSL Incluido", "CDN Global", "Respaldos Diarios", "Soporte 24/7"]}
 		/>
 		<ServiceFAQ 
 			client:load 
-			serviceName="Hosting WooCommerce"
-			faqs={woocommerceFaqs}
+			serviceName="Hosting E-commerce"
+			faqs={ecommerceFaqs}
 		/>
 	</MainLayout>
 </Layout>

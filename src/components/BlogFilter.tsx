@@ -25,7 +25,7 @@ export default function BlogFilter({ categories, posts }: BlogFilterProps) {
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Tag className="h-6 w-6 text-hs-blue" />
-            <h2 className="text-2xl font-bold text-gray-900 font-poppins">Filtrar por categoría</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Filtrar por categoría</h2>
           </div>
           
           <div className="flex flex-wrap gap-3">
@@ -34,7 +34,7 @@ export default function BlogFilter({ categories, posts }: BlogFilterProps) {
               className={`
                 px-4 py-2 rounded-full font-medium transition-all duration-200
                 ${selectedCategory === 'all' 
-                  ? 'bg-blue-600 text-white shadow-md transform scale-105' 
+                  ? 'bg-hs-blue text-white shadow-md transform scale-105' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-sm'
                 }
               `}
@@ -56,7 +56,7 @@ export default function BlogFilter({ categories, posts }: BlogFilterProps) {
                   className={`
                     px-4 py-2 rounded-full font-medium transition-all duration-200 flex items-center gap-2
                     ${selectedCategory === category 
-                      ? 'bg-blue-600 text-white shadow-md transform scale-105' 
+                      ? 'bg-hs-blue text-white shadow-md transform scale-105' 
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-sm'
                     }
                   `}
@@ -78,11 +78,11 @@ export default function BlogFilter({ categories, posts }: BlogFilterProps) {
               <span className="text-sm text-gray-600">
                 Mostrando {filteredPosts.length} {filteredPosts.length === 1 ? 'artículo' : 'artículos'} en
               </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-hs-blue/10 text-hs-blue text-sm font-medium">
                 {selectedCategory}
                 <button
                   onClick={() => setSelectedCategory('all')}
-                  className="ml-1 hover:bg-blue-200 rounded-full p-0.5 transition-colors"
+                  className="ml-1 hover:bg-hs-blue/20 rounded-full p-0.5 transition-colors"
                 >
                   <X className="h-3 w-3" />
                 </button>
@@ -97,17 +97,37 @@ export default function BlogFilter({ categories, posts }: BlogFilterProps) {
             {filteredPosts.map((post) => (
               <article 
                 key={post.slug} 
-                className="group bg-white rounded-2xl border border-gray-200 hover:border-blue-600 hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
+                className="group bg-white rounded-2xl border border-gray-200 hover:border-hs-blue hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
               >
                 <a href={`/blog/${post.slug}`} className="block">
+                  {/* Image or Placeholder */}
+                  {post.data.image ? (
+                    <div className="aspect-video w-full overflow-hidden">
+                      <img 
+                        src={post.data.image} 
+                        alt={post.data.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-video w-full bg-gradient-to-br from-hs-blue via-hs-blue-light to-blue-400 flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <Tag className="h-8 w-8 mx-auto mb-2 opacity-60" />
+                        <span className="text-sm font-medium px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm border border-white/30">
+                          {post.data.category}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                  
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <Tag className="h-4 w-4 text-blue-600" />
-                      <span className="text-sm font-medium text-blue-600">
+                      <Tag className="h-4 w-4 text-hs-blue" />
+                      <span className="text-sm font-medium text-hs-blue">
                         {post.data.category}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 font-poppins">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-hs-blue transition-colors line-clamp-2">
                       {post.data.title}
                     </h3>
                     <p className="text-gray-600 text-sm mb-4 line-clamp-3">
@@ -125,7 +145,7 @@ export default function BlogFilter({ categories, posts }: BlogFilterProps) {
                         <span>•</span>
                         <span>5 min</span>
                       </div>
-                      <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
+                      <div className="text-hs-blue group-hover:text-hs-blue-light transition-colors">
                         <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
@@ -143,7 +163,7 @@ export default function BlogFilter({ categories, posts }: BlogFilterProps) {
             <p className="text-gray-600 mb-6">Intenta seleccionar otra categoría para ver más contenido</p>
             <button
               onClick={() => setSelectedCategory('all')}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-hs-blue text-white rounded-lg hover:bg-hs-blue-light transition-colors"
             >
               Ver todos los artículos
             </button>

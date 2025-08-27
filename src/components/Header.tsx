@@ -10,7 +10,7 @@ const navigation = [
     name: 'Servicios',
     href: '/servicios',
     submenu: [
-      { name: 'Hosting Woocommerce', href: '/servicios/hosting-woocommerce' },
+      { name: 'Hosting E-commerce', href: '/servicios/hosting-woocommerce' },
       { name: 'Hosting Softland ERP', href: '/servicios/hosting-softland-erp' },
       { name: 'Sincronización', href: '/servicios/sincronizacion' },
       { name: 'Soporte Softland ERP', href: '/servicios/soporte-softland-erp' },
@@ -74,7 +74,7 @@ export default function Header() {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors duration-200">
+                      <Disclosure.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-hs-blue transition-colors duration-200">
                         {item.name}
                         <ChevronDown
                           className={clsx(
@@ -100,7 +100,7 @@ export default function Header() {
                               {item.submenu.map((subItem) => (
                                 <div key={subItem.name} className="group relative flex gap-x-6 rounded-lg p-3 hover:bg-gray-50 transition-colors duration-150">
                                   <div>
-                                    <a href={subItem.href} className="font-medium text-gray-900 hover:text-blue-600 transition-colors duration-200">
+                                    <a href={subItem.href} className="font-medium text-gray-900 hover:text-hs-blue transition-colors duration-200">
                                       {subItem.name}
                                       <span className="absolute inset-0" />
                                     </a>
@@ -115,7 +115,7 @@ export default function Header() {
                   )}
                 </Disclosure>
               ) : (
-                <a href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors duration-200">
+                <a href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-hs-blue transition-colors duration-200">
                   {item.name}
                 </a>
               )}
@@ -194,11 +194,11 @@ export default function Header() {
               {/* Contact info in mobile menu */}
               <div className="py-6">
                 <div className="flex flex-col space-y-4">
-                  <a href="tel:800914659" className="flex items-center space-x-3 text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  <a href="tel:800914659" className="flex items-center space-x-3 text-sm text-gray-600 hover:text-hs-blue transition-colors">
                     <Phone className="h-5 w-5" />
                     <span className="font-medium">800 914 659</span>
                   </a>
-                  <a href="mailto:contacto@hostingsistemas.cl" className="flex items-center space-x-3 text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                  <a href="mailto:contacto@hostingsistemas.cl" className="flex items-center space-x-3 text-sm text-gray-600 hover:text-hs-blue transition-colors">
                     <Mail className="h-5 w-5" />
                     <span className="font-medium">contacto@hostingsistemas.cl</span>
                   </a>

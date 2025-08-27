@@ -1,11 +1,12 @@
 import { useEffect, useRef } from 'react';
 
 const logos = [
-  { id: 1, name: 'Surdent', src: '/logos/LogoSurdent-1.webp' },
-  { id: 2, name: 'RCCE', src: '/logos/RCCE.png' },
-  { id: 3, name: 'Tritec', src: '/logos/TritecCE-1024x936.png.webp' },
-  { id: 4, name: 'Clandent', src: '/logos/clandent-caso-de-exito-1024x936.jpg.webp' },
-  { id: 5, name: 'Punto Exacto', src: '/logos/punto-exacto-casos-de-exito-1024x936.jpg.webp' },
+  { id: 1, name: 'Surdent', src: '/logos/surdent.webp' },
+  { id: 2, name: 'RefriChile', src: '/logos/refrichile.png' },
+  { id: 3, name: 'Tritec', src: '/logos/tritec.webp' },
+  { id: 4, name: 'Clandent', src: '/logos/clandent.webp' },
+  { id: 5, name: 'Punto Exacto', src: '/logos/punto-exacto.webp' },
+  { id: 6, name: 'Sagita', src: '/logos/sagita.png' },
 ];
 
 export default function LogoCarousel() {
@@ -29,7 +30,7 @@ export default function LogoCarousel() {
   }, []);
 
   return (
-    <div className="bg-white py-6 sm:py-8 font-poppins border-t border-gray-100">
+    <div className="bg-white py-6 sm:py-8 border-t border-gray-100">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-8">
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">

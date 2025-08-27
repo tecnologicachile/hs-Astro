@@ -28,7 +28,7 @@ export default function ServiceBackups({
   backgroundGradient = "bg-gradient-to-bl from-gray-50 via-slate-50 to-blue-50"
 }: ServiceBackupsProps) {
   return (
-    <div className={`${backgroundGradient} py-24 sm:py-32 font-poppins`}>
+    <div className={`${backgroundGradient} py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

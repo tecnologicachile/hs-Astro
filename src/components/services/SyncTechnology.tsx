@@ -2,7 +2,7 @@ import { RefreshCw } from 'lucide-react';
 
 export default function SyncTechnology() {
   return (
-    <div className="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 py-24 sm:py-32 font-poppins">
+    <div className="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-16">
@@ -13,7 +13,7 @@ export default function SyncTechnology() {
               Automatización y Sincronización en Tiempo Real
             </h2>
             <p className="text-lg leading-8 text-gray-600">
-              Sincronización avanzada entre WooCommerce y Softland ERP para gestión precisa. Automatización instantánea que mejora inventarios, ventas y experiencia del cliente.
+              Sincronización avanzada entre tu tienda online y Softland ERP para gestión precisa. Automatización instantánea que mejora inventarios, ventas y experiencia del cliente.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export default function SyncTechnology() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mr-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-lg mr-4">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                   </svg>

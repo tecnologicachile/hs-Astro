@@ -1,23 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainLayout from '../components/Layout.tsx';
+import PageHero from '../components/PageHero.tsx';
 ---
 
-<Layout title="Quiénes Somos | Tecnológica Chile SpA | Hosting Sistemas" description="Conoce nuestra historia, misión y compromiso con la excelencia. Más de 15 años de experiencia en tecnología empresarial y servicios especializados en Softland ERP.">
+<Layout 
+	title="Quiénes Somos - Hosting Sistemas Chile | 15+ Años Experiencia"
+	description="Hosting Sistemas Chile: 15+ años especializados en e-commerce y Softland ERP. Tecnológica Chile SpA, empresa líder en hosting profesional. Conoce nuestra historia."
+	keywords="hosting sistemas chile, tecnologica chile spa, empresa hosting chile, quienes somos hosting chile"
+	canonical="/quienes-somos"
+>
 	<MainLayout client:load>
-		<!-- Hero Section -->
-		<div class="bg-gradient-to-br from-hs-blue via-hs-blue-light to-blue-400 py-24 sm:py-32 font-poppins">
-			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-3xl text-center">
-					<h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight">
-						Quiénes Somos
-					</h1>
-					<p class="mt-6 text-xl leading-8 text-blue-100">
-						Conoce Nuestra Historia y Nuestro Compromiso con la Excelencia
-					</p>
-				</div>
-			</div>
-		</div>
+		<PageHero 
+			client:load
+			title="Quiénes Somos" 
+			subtitle="Conoce Nuestra Historia y Nuestro Compromiso con la Excelencia"
+		/>
 
 		<!-- Company Overview con layout asimétrico -->
 		<div class="bg-white py-24 sm:py-32">
@@ -25,9 +23,9 @@ import MainLayout from '../components/Layout.tsx';
 				<div class="grid lg:grid-cols-2 gap-12 items-center">
 					<!-- Contenido principal a la izquierda -->
 					<div>
-						<h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl font-poppins mb-8">
+						<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-8">
 							Tecnológica Chile SpA
-						</h2>
+						</h1>
 						<div class="space-y-6">
 							<p class="text-lg leading-8 text-gray-600">
 								Con más de una década y media de experiencia en el mundo de la tecnología empresarial, en <strong>Tecnológica Chile SpA</strong> nos enorgullece ser líderes en la prestación de servicios en torno a Softland, así como en el desarrollo de software personalizado, soluciones de reporte e integraciones empresariales.
@@ -40,7 +38,7 @@ import MainLayout from '../components/Layout.tsx';
 					
 					<!-- Timeline visual a la derecha -->
 					<div class="relative">
-						<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-hs-blue via-hs-blue-light to-blue-400"></div>
+						<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-hs-blue via-hs-blue-light to-hs-blue-lighter"></div>
 						<div class="space-y-12">
 							<div class="relative flex items-center">
 								<div class="absolute left-8 w-4 h-4 bg-hs-blue rounded-full -translate-x-1/2"></div>
@@ -57,7 +55,7 @@ import MainLayout from '../components/Layout.tsx';
 								</div>
 							</div>
 							<div class="relative flex items-center">
-								<div class="absolute left-8 w-4 h-4 bg-blue-400 rounded-full -translate-x-1/2"></div>
+								<div class="absolute left-8 w-4 h-4 bg-hs-blue-lighter rounded-full -translate-x-1/2"></div>
 								<div class="ml-20">
 									<div class="text-sm font-semibold text-hs-blue uppercase tracking-wide">Hoy</div>
 									<div class="text-gray-600">Líderes en tecnología empresarial</div>
@@ -80,7 +78,7 @@ import MainLayout from '../components/Layout.tsx';
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 							</svg>
 						</div>
-						<h3 class="text-3xl font-bold text-gray-900 font-poppins mb-6">Nuestra Historia</h3>
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Nuestra Historia</h2>
 						<p class="text-lg leading-8 text-gray-600">
 							Desde nuestros inicios en el año 2005, hemos estado comprometidos con la excelencia y la innovación en el ámbito de la tecnología empresarial. A lo largo de los años, hemos consolidado nuestro conocimiento y experiencia, convirtiéndonos en un socio confiable para empresas de todos los tamaños y sectores.
 						</p>
@@ -98,7 +96,7 @@ import MainLayout from '../components/Layout.tsx';
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
 								</svg>
 							</div>
-							<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">Misión</h3>
+							<h3 class="text-2xl font-bold text-gray-900 mb-4">Misión</h3>
 							<p class="text-gray-600 leading-relaxed">
 								En Tecnológica Chile SpA, nos dedicamos a fomentar el éxito empresarial a través de soluciones tecnológicas innovadoras y personalizadas. Estamos comprometidos con la transformación y el avance de nuestros clientes, brindando asistencia y herramientas que se ajusten específicamente a sus necesidades y objetivos comerciales. Nuestra misión es ser un aliado clave en su camino hacia el éxito, utilizando la tecnología como un puente hacia el logro de sus metas.
 							</p>
@@ -107,7 +105,7 @@ import MainLayout from '../components/Layout.tsx';
 
 					<!-- Visión -->
 					<div class="group relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
-						<div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-2xl"></div>
+						<div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-gradient-to-br from-hs-blue-lighter/10 to-transparent rounded-full blur-2xl"></div>
 						<div class="relative">
 							<div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl mb-6">
 								<svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,7 +113,7 @@ import MainLayout from '../components/Layout.tsx';
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
 								</svg>
 							</div>
-							<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">Visión</h3>
+							<h3 class="text-2xl font-bold text-gray-900 mb-4">Visión</h3>
 							<p class="text-gray-600 leading-relaxed">
 								En Tecnológica Chile SpA, nuestra visión es impulsar el éxito empresarial a través de la tecnología. Creemos en la capacidad transformadora de la innovación y estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos comerciales mediante soluciones tecnológicas efectivas y adaptadas a sus necesidades específicas.
 							</p>
@@ -131,7 +129,7 @@ import MainLayout from '../components/Layout.tsx';
 				<div class="grid lg:grid-cols-3 gap-12">
 					<!-- Columna izquierda - Título y stats -->
 					<div class="lg:col-span-1">
-						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-poppins mb-8">
+						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
 							Nuestra Experiencia
 						</h2>
 						<div class="bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl p-8 text-white">
@@ -152,7 +150,7 @@ import MainLayout from '../components/Layout.tsx';
 									Con más de una década y media de dedicación a <strong>Softland</strong>, hemos perfeccionado nuestras habilidades y conocimientos para brindar soluciones integrales que permiten a nuestros clientes optimizar sus operaciones y maximizar su potencial.
 								</p>
 							</div>
-							<div class="bg-blue-50 rounded-2xl p-8">
+							<div class="bg-hs-blue/5 rounded-2xl p-8">
 								<h3 class="text-xl font-bold text-gray-900 mb-4">Soluciones Integrales</h3>
 								<p class="text-lg leading-8 text-gray-600">
 									Ya sea a través de la implementación y personalización de sistemas de gestión ERP, el desarrollo de software a medida o la creación de soluciones de reporte y análisis avanzado, nuestro equipo de expertos está preparado para enfrentar los desafíos tecnológicos más exigentes.
@@ -165,10 +163,10 @@ import MainLayout from '../components/Layout.tsx';
 		</div>
 
 		<!-- Commitment Section -->
-		<div class="bg-gradient-to-br from-hs-blue via-hs-blue-light to-blue-400 py-24 sm:py-32">
+		<div class="bg-gradient-to-br from-hs-blue via-hs-blue-light to-hs-blue-lighter py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="mx-auto max-w-4xl text-center">
-					<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl font-poppins mb-8">
+					<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8">
 						Nuestro Compromiso
 					</h2>
 					<div class="prose prose-lg prose-blue mx-auto">

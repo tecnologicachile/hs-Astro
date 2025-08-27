@@ -1,145 +1,97 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainLayout from '../components/Layout.tsx';
+import PageHero from '../components/PageHero.tsx';
+import CaseStudyCard from '../components/CaseStudyCard.tsx';
+import Button from '../components/Button.tsx';
 import { ExternalLink, Building2, ShoppingCart, Cloud, Server, Calculator } from 'lucide-react';
+
+const caseStudies = [
+	{
+		companyName: "Tritec SpA",
+		description: "TRITEC opera su tienda online en el datacenter de HostingSistemas, aprovechando la tecnología LiteSpeed para una experiencia de usuario superior. Adicionalmente, han implementado la integración de Softland con ERPSync, optimizando su gestión empresarial.",
+		logoSrc: "/logos/tritec.webp",
+		logoAlt: "Tritec SpA Logo",
+		industry: "Tecnología",
+		websiteUrl: "https://tritec.cl"
+	},
+	{
+		companyName: "Surdent",
+		description: "SURDENT ha implementado Softland en la nube, conectando eficientemente sus sucursales a través de ERPSync. Esta integración clave mejora su coordinación y gestión empresarial, logrando una operatividad más centralizada y efectiva a nivel nacional.",
+		logoSrc: "/logos/surdent.webp",
+		logoAlt: "Surdent Logo",
+		industry: "Salud",
+		websiteUrl: "https://surdent.cl"
+	},
+	{
+		companyName: "RefriChile",
+		description: "Refrichile opera Softland en un servidor cloud, con conexión nacional. Sus vendedores en terreno acceden al servidor a través de Terminal Server, facilitando la comunicación y la gestión de datos en tiempo real, mejorando así la eficiencia y coordinación de su equipo de ventas.",
+		logoSrc: "/logos/refrichile.png",
+		logoAlt: "RefriChile Logo",
+		industry: "Industrial",
+		websiteUrl: "https://refrichile.cl"
+	},
+	{
+		companyName: "Punto Exacto",
+		description: "Punto Exacto, empresa de contabilidad, mejoró su eficiencia y seguridad con nuestros servicios de Hosting de Softland. La migración a la nube fue rápida y sin interrupciones, optimizando sus operaciones contables y administrativas para ofrecer un servicio más preciso a sus clientes.",
+		logoSrc: "/logos/punto-exacto.webp",
+		logoAlt: "Punto Exacto Logo",
+		industry: "Contabilidad"
+	},
+	{
+		companyName: "Clandent",
+		description: "Clandent impulsa su e-commerce en HostingSistemas, utilizando tecnología LiteSpeed y Redis para una experiencia rápida y fluida. Han añadido respaldos y seguridad avanzada, junto con la integración de herramientas de gestión, optimizando así sus operaciones empresariales.",
+		logoSrc: "/logos/clandent.webp",
+		logoAlt: "Clandent Logo",
+		industry: "Salud"
+	},
+	{
+		companyName: "Sagita",
+		description: "Sagita opera su tienda online con hosting optimizado en HostingSistemas, aprovechando tecnología LiteSpeed para garantizar velocidad y estabilidad en sus transacciones online. Su plataforma e-commerce ofrece una experiencia de compra fluida y confiable para sus clientes.",
+		logoSrc: "/logos/sagita.png",
+		logoAlt: "Sagita Logo",
+		industry: "E-commerce",
+		websiteUrl: "https://tienda.sagita.cl"
+	}
+];
 ---
 
-<Layout title="Casos de Éxito | Resultados Tangibles | Hosting Sistemas" description="Conoce los casos de éxito de nuestros clientes. Tritec, Surdent, RefriChile, Punto Exacto y Clandent han optimizado sus operaciones con nuestras soluciones.">
+<Layout 
+	title="Casos de Éxito Hosting Chile - Clientes Satisfechos"
+    description="Casos de éxito de hosting en Chile: Tritec, Surdent y RefriChile. Implementaciones optimizadas de e-commerce y Softland ERP."
+	keywords="casos exito hosting chile, testimonios hosting chile, clientes hosting chile, referencias hosting ecommerce"
+	canonical="/casos-de-exito"
+>
 	<MainLayout client:load>
-		<!-- Hero Section -->
-		<div class="bg-gradient-to-br from-hs-blue via-hs-blue-light to-blue-400 py-24 sm:py-32 font-poppins">
-			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-3xl text-center">
-					<h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight">
-						Casos de Éxito
-					</h1>
-					<p class="mt-6 text-xl leading-8 text-blue-100">
-						Resultados Tangibles: Nuestro Impacto en Clientes
-					</p>
-				</div>
-			</div>
-		</div>
+		<PageHero 
+			client:load
+			title="Casos de Éxito" 
+			subtitle="Resultados Tangibles: Nuestro Impacto en Clientes"
+		/>
 
 		<!-- Cases Grid -->
-		<div class="bg-white py-24 sm:py-32">
+		<div class="bg-gray-50/30 py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-6xl">
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						
-						<!-- Tritec SpA -->
-						<div class="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
-							<div class="text-center mb-8">
-								<div class="mx-auto w-32 h-32 mb-6 bg-white rounded-2xl shadow-md p-4 flex items-center justify-center">
-									<img 
-										src="https://hostingsistemas.cl/wp-content/uploads/2023/11/TritecCE-1024x936.png.webp" 
-										alt="Tritec SpA Logo" 
-										class="max-w-full max-h-full object-contain"
-									/>
-								</div>
-								<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">Tritec SpA</h3>
-							</div>
-							<p class="text-gray-600 leading-7 mb-6 text-center flex-grow">
-								TRITEC opera su WooCommerce en el datacenter de HostingSistemas, aprovechando la tecnología LiteSpeed para una experiencia de usuario superior. Adicionalmente, han implementado la integración de Softland con ERPSync, optimizando su gestión empresarial.
-							</p>
-							<div class="text-center mt-auto">
-								<a href="#" class="inline-flex items-center text-hs-blue hover:text-hs-blue-light font-semibold transition-colors group-hover:translate-x-1 transform duration-300">
-									Ir al sitio web
-									<ExternalLink className="ml-2 h-4 w-4" />
-								</a>
-							</div>
-						</div>
-
-						<!-- Surdent -->
-						<div class="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
-							<div class="text-center mb-8">
-								<div class="mx-auto w-32 h-32 mb-6 bg-white rounded-2xl shadow-md p-4 flex items-center justify-center">
-									<img 
-										src="https://hostingsistemas.cl/wp-content/uploads/2023/11/LogoSurdent-1-1024x936.webp" 
-										alt="Surdent Logo" 
-										class="max-w-full max-h-full object-contain"
-									/>
-								</div>
-								<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">Surdent</h3>
-							</div>
-							<p class="text-gray-600 leading-7 mb-6 text-center flex-grow">
-								SURDENT ha implementado Softland en la nube, conectando eficientemente sus sucursales a través de ERPSync. Esta integración clave mejora su coordinación y gestión empresarial, logrando una operatividad más centralizada y efectiva a nivel nacional.
-							</p>
-							<div class="text-center mt-auto">
-								<a href="#" class="inline-flex items-center text-hs-blue hover:text-hs-blue-light font-semibold transition-colors group-hover:translate-x-1 transform duration-300">
-									Ir al sitio web
-									<ExternalLink className="ml-2 h-4 w-4" />
-								</a>
-							</div>
-						</div>
-
-						<!-- RefriChile -->
-						<div class="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
-							<div class="text-center mb-8">
-								<div class="mx-auto w-32 h-32 mb-6 bg-white rounded-2xl shadow-md p-4 flex items-center justify-center">
-									<img 
-										src="https://hostingsistemas.cl/wp-content/uploads/2023/11/RCCE-1024x936.png" 
-										alt="RefriChile Logo" 
-										class="max-w-full max-h-full object-contain"
-									/>
-								</div>
-								<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">RefriChile</h3>
-							</div>
-							<p class="text-gray-600 leading-7 mb-6 text-center flex-grow">
-								Refrichile opera Softland en un servidor cloud, con conexión nacional. Sus vendedores en terreno acceden al servidor a través de Terminal Server, facilitando la comunicación y la gestión de datos en tiempo real, mejorando así la eficiencia y coordinación de su equipo de ventas.
-							</p>
-							<div class="text-center mt-auto">
-								<a href="#" class="inline-flex items-center text-hs-blue hover:text-hs-blue-light font-semibold transition-colors group-hover:translate-x-1 transform duration-300">
-									Ir al sitio web
-									<ExternalLink className="ml-2 h-4 w-4" />
-								</a>
-							</div>
-						</div>
-
-						<!-- Punto Exacto -->
-						<div class="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
-							<div class="text-center mb-8">
-								<div class="mx-auto w-32 h-32 mb-6 bg-white rounded-2xl shadow-md p-4 flex items-center justify-center">
-									<img 
-										src="https://hostingsistemas.cl/wp-content/uploads/2024/07/punto-exacto-casos-de-exito-1024x936.jpg.webp" 
-										alt="Punto Exacto Logo" 
-										class="max-w-full max-h-full object-contain"
-									/>
-								</div>
-								<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">Punto Exacto</h3>
-							</div>
-							<p class="text-gray-600 leading-7 mb-6 text-center flex-grow">
-								Punto Exacto, una empresa de contabilidad, mejoró su eficiencia y seguridad al contratar nuestros servicios de Hosting de Softland. La migración a la nube fue rápida y sin interrupciones, permitiéndoles optimizar sus operaciones contables y administrativas. Como resultado, pudieron enfocarse en ofrecer un servicio más preciso y confiable a sus clientes, destacando nuestro compromiso en potenciar la eficiencia empresarial.
-							</p>
-							<div class="text-center mt-auto">
-								<a href="#" class="inline-flex items-center text-hs-blue hover:text-hs-blue-light font-semibold transition-colors group-hover:translate-x-1 transform duration-300">
-									Ir al sitio web
-									<ExternalLink className="ml-2 h-4 w-4" />
-								</a>
-							</div>
-						</div>
-
-						<!-- Clandent -->
-						<div class="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
-							<div class="text-center mb-8">
-								<div class="mx-auto w-32 h-32 mb-6 bg-white rounded-2xl shadow-md p-4 flex items-center justify-center">
-									<img 
-										src="https://hostingsistemas.cl/wp-content/uploads/2024/07/clandent-caso-de-exito-1024x936.jpg.webp" 
-										alt="Clandent Logo" 
-										class="max-w-full max-h-full object-contain"
-									/>
-								</div>
-								<h3 class="text-2xl font-bold text-gray-900 font-poppins mb-4">Clandent</h3>
-							</div>
-							<p class="text-gray-600 leading-7 mb-6 text-center flex-grow">
-								Clandent impulsa su WooCommerce en HostingSistemas, utilizando tecnología LiteSpeed y Redis para una experiencia rápida y fluida. Han añadido respaldos y seguridad avanzada, junto con la integración de herramientas de gestión, optimizando así sus operaciones empresariales.
-							</p>
-							<div class="text-center mt-auto">
-								<a href="#" class="inline-flex items-center text-hs-blue hover:text-hs-blue-light font-semibold transition-colors group-hover:translate-x-1 transform duration-300">
-									Ir al sitio web
-									<ExternalLink className="ml-2 h-4 w-4" />
-								</a>
-							</div>
-						</div>
+				<!-- Section Header -->
+				<div class="text-center mb-16">
+					<p class="text-hs-blue font-semibold text-sm uppercase tracking-wide mb-4">Nuestros Clientes</p>
+					<h1 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-6">
+						Empresas que Confían en Nosotros
+					</h1>
+					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+						Desde startups hasta empresas consolidadas, ayudamos a organizaciones de todos los sectores a alcanzar sus objetivos digitales.
+					</p>
+				</div>
+				
+				<!-- Grid -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12">
+					{caseStudies.map((caseStudy) => (
+						<CaseStudyCard
+							client:load
+							key={caseStudy.companyName}
+							{...caseStudy}
+						/>
+					))}
 
 					</div>
 				</div>
@@ -150,7 +102,7 @@ import { ExternalLink, Building2, ShoppingCart, Cloud, Server, Calculator } from
 		<div class="bg-white py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="mx-auto max-w-4xl text-center">
-					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-poppins mb-8">
+					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
 						¿Listo para ser nuestro próximo caso de éxito?
 					</h2>
 					<p class="text-xl leading-8 text-gray-600 mb-10">

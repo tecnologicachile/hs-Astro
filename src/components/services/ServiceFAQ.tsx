@@ -16,7 +16,7 @@ export default function ServiceFAQ({ faqs, serviceName }: ServiceFAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="bg-gray-50 py-24 sm:py-32 font-poppins">
+    <div className="bg-gray-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="text-center">

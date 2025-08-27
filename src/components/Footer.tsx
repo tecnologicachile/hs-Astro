@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
 
 const footerNavigation = {
   services: [
-    { name: 'Hosting Woocommerce', href: '/servicios/hosting-woocommerce' },
+    { name: 'Hosting E-commerce', href: '/servicios/hosting-woocommerce' },
     { name: 'Hosting Softland ERP', href: '/servicios/hosting-softland-erp' },
     { name: 'Sincronización', href: '/servicios/sincronizacion' },
     { name: 'Soporte Softland ERP', href: '/servicios/soporte-softland-erp' },

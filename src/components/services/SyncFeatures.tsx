@@ -2,7 +2,7 @@ import { ExternalLink } from 'lucide-react';
 
 export default function SyncFeatures() {
   return (
-    <div className="bg-white py-24 sm:py-32 font-poppins">
+    <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           {/* Hero Section with Stats */}
@@ -13,7 +13,7 @@ export default function SyncFeatures() {
                   Descubre Más Sobre ERPSync
                 </h2>
                 <p className="text-xl text-blue-100 mb-6">
-                  Descubre cómo ERPSync potencia tu integración WooCommerce-Softland con funcionalidades avanzadas para tu negocio.
+                  Descubre cómo ERPSync potencia tu integración e-commerce-Softland con funcionalidades avanzadas para tu negocio.
                 </p>
                 <a 
                   href="https://erpsync.cl" 
@@ -51,8 +51,8 @@ export default function SyncFeatures() {
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mb-4">
+            <div className="bg-gradient-to-br from-hs-blue/5 to-hs-blue/10 rounded-2xl p-6 border border-hs-blue/20 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-xl mb-4">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>

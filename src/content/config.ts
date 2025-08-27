@@ -8,7 +8,7 @@ const blog = defineCollection({
     author: z.string(),
     pubDate: z.date(),
     image: z.string().optional(),
-    category: z.enum(['WooCommerce', 'Softland ERP', 'Seguridad', 'Cloud Computing', 'Tutoriales', 'Tendencias']),
+    category: z.enum(['E-commerce', 'Softland ERP', 'Seguridad', 'Cloud Computing', 'Tutoriales', 'Tendencias']),
     tags: z.array(z.string()),
     featured: z.boolean().default(false),
   }),

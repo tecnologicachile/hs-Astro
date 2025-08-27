@@ -27,7 +27,7 @@ export default function ServiceHero({
   const Icon = iconMap[iconName];
   
   return (
-    <div className="bg-gradient-to-br from-hs-blue via-hs-blue-light to-hs-blue-lighter py-12 sm:py-16 font-poppins">
+    <div className="bg-gradient-to-br from-hs-blue via-hs-blue-light to-hs-blue-lighter py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex justify-center mb-6">
@@ -44,7 +44,7 @@ export default function ServiceHero({
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href={ctaLink}
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-hs-blue shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-xl bg-white px-8 py-4 text-base font-semibold text-hs-blue shadow-lg hover:bg-gray-50 hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               {ctaText}
             </a>

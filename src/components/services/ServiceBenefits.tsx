@@ -34,7 +34,7 @@ export default function ServiceBenefits({
   backgroundGradient = "bg-gradient-to-br from-blue-50 via-white to-slate-50"
 }: ServiceBenefitsProps) {
   return (
-    <div id="caracteristicas" className={`${backgroundGradient} py-24 sm:py-32 font-poppins`}>
+    <div id="caracteristicas" className={`${backgroundGradient} py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

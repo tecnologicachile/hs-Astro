@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hostingsistemas.cl/sitemap-index.xml
+Sitemap: https://hostingsistemas.cl/sitemap-0.xml
+
+# Disallow admin and temporary files
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /_astro/
+Disallow: /functions/
+
+# Allow specific important pages
+Allow: /servicios/
+Allow: /blog/
+Allow: /casos-de-exito
+Allow: /contacto
+Allow: /quienes-somos

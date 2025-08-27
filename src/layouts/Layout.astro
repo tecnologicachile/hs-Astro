@@ -2,9 +2,23 @@
 export interface Props {
 	title?: string;
 	description?: string;
+	keywords?: string;
+	canonical?: string;
+	ogImage?: string;
+	noindex?: boolean;
 }
 
-const { title = "Hosting Sistemas - Hosting Web Profesional en Chile", description = "Servicios de hosting web profesional, dominios y soluciones digitales en Chile. Hosting confiable y soporte técnico especializado." } = Astro.props;
+const { 
+	title = "Hosting Sistemas - Hosting Web Profesional en Chile", 
+	description = "Servicios de hosting web profesional, dominios y soluciones digitales en Chile. Hosting confiable y soporte técnico especializado.",
+	keywords = "hosting chile, hosting web chile, dominios chile, servidor web chile",
+	canonical,
+	ogImage = "/og-image.jpg",
+	noindex = false
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
 ---
 
 <!doctype html>
@@ -12,15 +26,110 @@ const { title = "Hosting Sistemas - Hosting Web Profesional en Chile", descripti
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+		{!noindex && <meta name="robots" content="index, follow, max-image-preview:large" />}
+		<link rel="canonical" href={canonicalURL} />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:locale" content="es_CL" />
+		<meta property="og:site_name" content="Hosting Sistemas" />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageURL} />
+		
+		<!-- Favicons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9S5QXQG5R"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-N9S5QXQG5R');
+		</script>
+
+		<!-- Preconnect for performance -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
-		<title>{title}</title>
+		
+		<!-- Local Business Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"@id": "https://hostingsistemas.cl/#organization",
+			"name": "Hosting Sistemas - Especialistas Softland ERP",
+			"description": "Líderes Chile en hosting Softland ERP con 15+ años experiencia. Únicos con sincronización Softland-E-commerce automática",
+			"url": "https://hostingsistemas.cl",
+			"telephone": "800 914 659",
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "CL",
+				"addressLocality": "Chile"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "-33.4489",
+				"longitude": "-70.6693"
+			},
+			"sameAs": [],
+			"areaServed": {
+				"@type": "Country",
+				"name": "Chile"
+			},
+			"serviceType": ["Softland ERP Hosting", "Soporte Softland ERP", "Sincronización Softland-E-commerce", "ERPSync", "Hosting Windows Softland"],
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Servicios Softland ERP Especializado",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Hosting Softland ERP Chile"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Soporte Softland ERP 24/7"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Sincronización Softland-E-commerce ERPSync"
+						}
+					}
+				]
+			}
+		}
+		</script>
 	</head>
-	<body class="min-h-screen bg-gray-50">
+	<body class="min-h-screen bg-gray-50 font-poppins">
 		<slot />
 	</body>
 </html>

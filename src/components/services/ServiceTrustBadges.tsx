@@ -20,7 +20,7 @@ const badges = [
 
 export default function ServiceTrustBadges() {
   return (
-    <div className="bg-white border-t border-gray-100 py-12 font-poppins">
+    <div className="bg-white border-t border-gray-100 py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-3 gap-8">
           {badges.map((badge, index) => (
