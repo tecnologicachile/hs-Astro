@@ -1,14 +1,7 @@
-import type { APIRoute } from 'astro';
-
-export const POST: APIRoute = async ({ request }) => {
+export async function onRequestPost({ request, env }) {
   try {
     const body = await request.json();
     const { name, email, phone, company, service, message } = body;
-
-    // Si phone es un objeto (datos transformados de Zod), extraer el número formateado
-    const phoneDisplay = typeof phone === 'object' && phone?.formatted 
-      ? phone.formatted 
-      : phone || '';
 
     // Validar campos requeridos
     if (!name || !email || !message) {
@@ -20,16 +13,22 @@ export const POST: APIRoute = async ({ request }) => {
         {
           status: 400,
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
           }
         }
       );
     }
 
-    // Configuración de Resend
-    const RESEND_API_KEY = import.meta.env.RESEND_API_KEY || 're_ChBJYXbK_BBTzMiZgTP9c7NdipT78dDXf';
-    const EMAIL_FROM = import.meta.env.EMAIL_FROM || 'noreply@transactional.erpsync.app';
-    const EMAIL_TO = import.meta.env.EMAIL_TO || 'soporte@tecnologicachile.cl';
+    // Si phone es un objeto (datos transformados de Zod), extraer el número formateado
+    const phoneDisplay = typeof phone === 'object' && phone?.formatted 
+      ? phone.formatted 
+      : phone || '';
+
+    // Configuración de Resend usando variables de entorno de Cloudflare
+    const RESEND_API_KEY = env.RESEND_API_KEY;
+    const EMAIL_FROM = env.EMAIL_FROM || 'noreply@transactional.erpsync.app';
+    const EMAIL_TO = env.EMAIL_TO || 'soporte@tecnologicachile.cl';
 
     if (!RESEND_API_KEY) {
       throw new Error('RESEND_API_KEY no está configurado');
@@ -117,7 +116,8 @@ export const POST: APIRoute = async ({ request }) => {
         {
           status: 200,
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
           }
         }
       );
@@ -132,20 +132,21 @@ export const POST: APIRoute = async ({ request }) => {
       JSON.stringify({
         success: false,
         message: 'Error al enviar el mensaje. Por favor, intenta nuevamente o contacta directamente por teléfono.',
-        error: error instanceof Error ? error.message : 'Error desconocido'
+        error: error.message
       }),
       {
         status: 500,
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
         }
       }
     );
   }
-};
+}
 
 // Manejar preflight requests para CORS
-export const OPTIONS: APIRoute = async () => {
+export async function onRequestOptions() {
   return new Response(null, {
     status: 200,
     headers: {
@@ -154,4 +155,4 @@ export const OPTIONS: APIRoute = async () => {
       'Access-Control-Allow-Headers': 'Content-Type'
     }
   });
-};
+}

@@ -1,0 +1,13 @@
+name = "hs-astro"
+main = "functions/**/*.js"
+compatibility_date = "2023-12-01"
+
+[env.production]
+vars = { }
+
+[env.production.vars]
+EMAIL_FROM = "noreply@transactional.erpsync.app"
+EMAIL_TO = "soporte@tecnologicachile.cl"
+
+# Las variables secretas como RESEND_API_KEY se deben configurar en el dashboard de Cloudflare Pages
+# bajo Settings > Environment Variables
