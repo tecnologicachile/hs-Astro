@@ -30,6 +30,10 @@ export async function onRequestPost({ request, env }) {
     const EMAIL_FROM = env.EMAIL_FROM || 'noreply@transactional.erpsync.app';
     const EMAIL_TO = env.EMAIL_TO || 'soporte@tecnologicachile.cl';
 
+    console.log('RESEND_API_KEY configurado:', !!RESEND_API_KEY);
+    console.log('EMAIL_FROM:', EMAIL_FROM);
+    console.log('EMAIL_TO:', EMAIL_TO);
+
     if (!RESEND_API_KEY) {
       throw new Error('RESEND_API_KEY no está configurado');
     }
@@ -105,13 +109,27 @@ export async function onRequestPost({ request, env }) {
       })
     });
 
-    const data = await response.json();
+    console.log('Resend response status:', response.status);
+    console.log('Resend response ok:', response.ok);
+    
+    let data;
+    try {
+      data = await response.json();
+      console.log('Resend response data:', JSON.stringify(data));
+    } catch (jsonError) {
+      console.error('Error parsing JSON response:', jsonError);
+      const textResponse = await response.text();
+      console.error('Raw response:', textResponse);
+      throw new Error(`Invalid JSON response from Resend API: ${textResponse}`);
+    }
 
-    if (response.ok) {
+    if (response.ok && data && data.id) {
+      console.log('Email enviado exitosamente:', data.id);
       return new Response(
         JSON.stringify({
           success: true,
-          message: 'Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.'
+          message: 'Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.',
+          emailId: data.id
         }),
         {
           status: 200,
@@ -122,8 +140,10 @@ export async function onRequestPost({ request, env }) {
         }
       );
     } else {
-      console.error('Error de Resend:', data);
-      throw new Error(data.message || 'Error al enviar el email');
+      console.error('Error de Resend - Status:', response.status);
+      console.error('Error de Resend - Data:', data);
+      const errorMessage = data?.message || data?.error || `HTTP ${response.status}`;
+      throw new Error(`Error de Resend API: ${errorMessage}`);
     }
 
   } catch (error) {
