@@ -1,4 +1,8 @@
-export async function onRequestPost({ request, env }) {
+import type { APIRoute } from 'astro';
+
+export const prerender = false;
+
+export const POST: APIRoute = async ({ request, locals }) => {
   try {
     const body = await request.json();
     const { name, email, phone, company, service, message } = body;
@@ -25,10 +29,11 @@ export async function onRequestPost({ request, env }) {
       ? phone.formatted 
       : phone || '';
 
-    // Configuración de Resend usando variables de entorno de Cloudflare
-    const RESEND_API_KEY = env.RESEND_API_KEY;
-    const EMAIL_FROM = env.EMAIL_FROM || 'noreply@transactional.erpsync.app';
-    const EMAIL_TO = env.EMAIL_TO || 'soporte@tecnologicachile.cl';
+    // Acceso a variables de entorno de Cloudflare (como en tu proyecto que funciona)
+    const cloudflareEnv = (locals as any)?.runtime?.env;
+    const RESEND_API_KEY = cloudflareEnv?.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
+    const EMAIL_FROM = cloudflareEnv?.SMTP_FROM || import.meta.env.EMAIL_FROM || 'noreply@transactional.erpsync.app';
+    const EMAIL_TO = cloudflareEnv?.NOTIFICATION_EMAIL || import.meta.env.EMAIL_TO || 'soporte@tecnologicachile.cl';
 
     console.log('RESEND_API_KEY configurado:', !!RESEND_API_KEY);
     console.log('EMAIL_FROM:', EMAIL_FROM);
@@ -93,7 +98,7 @@ export async function onRequestPost({ request, env }) {
       </html>
     `;
 
-    // Enviar email usando Resend API
+    // Enviar email usando Resend API (mismo patrón que tu proyecto que funciona)
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -152,7 +157,7 @@ export async function onRequestPost({ request, env }) {
       JSON.stringify({
         success: false,
         message: 'Error al enviar el mensaje. Por favor, intenta nuevamente o contacta directamente por teléfono.',
-        error: error.message
+        error: error instanceof Error ? error.message : 'Error desconocido'
       }),
       {
         status: 500,
@@ -163,10 +168,10 @@ export async function onRequestPost({ request, env }) {
       }
     );
   }
-}
+};
 
 // Manejar preflight requests para CORS
-export async function onRequestOptions() {
+export const OPTIONS: APIRoute = async () => {
   return new Response(null, {
     status: 200,
     headers: {
@@ -175,4 +180,4 @@ export async function onRequestOptions() {
       'Access-Control-Allow-Headers': 'Content-Type'
     }
   });
-}
+};
