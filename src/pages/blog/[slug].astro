@@ -6,6 +6,8 @@ import PageHero from '../../components/PageHero.tsx';
 import SoftlandSupportWidget from '../../components/SoftlandSupportWidget.tsx';
 import { Calendar, Clock, User, ArrowLeft, Tag, Share2, Bookmark, BookOpen } from 'lucide-react';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map((post) => ({
