@@ -64,9 +64,9 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <img 
-              src="https://hostingsistemas.cl/wp-content/uploads/2023/11/Hosting-Sistemas-Vector-File.png" 
+              src="/footer.png" 
               alt="Hosting Sistemas" 
-              className="h-8 w-auto brightness-0 invert"
+              className="h-8 w-auto"
             />
             <p className="text-sm leading-6 text-gray-300">
               Soluciones de hosting web profesional y confiable para tu negocio. 

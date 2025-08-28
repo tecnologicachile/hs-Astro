@@ -51,7 +51,7 @@ export default function Header() {
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Hosting Sistemas</span>
             <img 
-              src="https://hostingsistemas.cl/wp-content/uploads/2023/11/Hosting-Sistemas-Vector-File.png" 
+              src="/logo-header.png" 
               alt="Hosting Sistemas" 
               className="h-8 w-auto"
             />
@@ -132,7 +132,7 @@ export default function Header() {
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Hosting Sistemas</span>
               <img 
-                src="https://hostingsistemas.cl/wp-content/uploads/2023/11/Hosting-Sistemas-Vector-File.png" 
+                src="/logo-header.png" 
                 alt="Hosting Sistemas" 
                 className="h-8 w-auto"
               />
