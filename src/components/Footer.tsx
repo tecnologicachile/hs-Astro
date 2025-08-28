@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const footerNavigation = {
   services: [
@@ -11,24 +11,13 @@ const footerNavigation = {
     { name: 'Quienes Somos', href: '/quienes-somos' },
     { name: 'Casos de Éxito', href: '/casos-de-exito' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Términos de Servicio', href: '/terms' },
-    { name: 'Política de Privacidad', href: '/privacy' },
+    { name: 'Contacto', href: '/contacto' },
   ],
   social: [
     {
-      name: 'Facebook',
-      href: '#',
-      icon: Facebook,
-    },
-    {
-      name: 'Twitter',
-      href: '#',
-      icon: Twitter,
-    },
-    {
-      name: 'LinkedIn',
-      href: '#',
-      icon: Linkedin,
+      name: 'WhatsApp',
+      href: 'https://wa.me/+56800914659?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios',
+      icon: MessageCircle,
     },
   ],
 };
@@ -50,7 +39,7 @@ const contactInfo = [
     icon: MapPin,
     label: 'Dirección',
     value: 'Santiago, Chile',
-    href: '#',
+    href: null,
   },
 ];
 
@@ -112,12 +101,18 @@ export default function Footer() {
                 {contactInfo.map((item) => (
                   <li key={item.label} className="flex items-center space-x-3">
                     <item.icon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                    <a
-                      href={item.href}
-                      className="text-sm leading-6 text-gray-300 hover:text-white"
-                    >
-                      {item.value}
-                    </a>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-sm leading-6 text-gray-300 hover:text-white"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <span className="text-sm leading-6 text-gray-300">
+                        {item.value}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -125,9 +120,22 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-400">
-            &copy; 2024 Hosting Sistemas. Todos los derechos reservados.
-          </p>
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-xs leading-5 text-gray-400">
+              &copy; {new Date().getFullYear()} Hosting Sistemas. Todos los derechos reservados.
+            </p>
+            <p className="text-xs leading-5 text-gray-500 mt-2 sm:mt-0">
+              Sitio desarrollado por{' '}
+              <a 
+                href="https://subdominio.cl" 
+                target="_blank" 
+                rel="noopener"
+                className="hover:text-gray-300 transition-colors"
+              >
+                subdominio.cl
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

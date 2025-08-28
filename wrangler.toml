@@ -2,9 +2,6 @@ name = "hs-astro"
 main = "functions/**/*.js"
 compatibility_date = "2023-12-01"
 
-[env.production]
-vars = { }
-
 [env.production.vars]
 SMTP_FROM = "noreply@transactional.erpsync.app"
 NOTIFICATION_EMAIL = "soporte@tecnologicachile.cl"

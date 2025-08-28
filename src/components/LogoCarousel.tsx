@@ -60,7 +60,7 @@ export default function LogoCarousel() {
                     <img
                       src={logo.src}
                       alt={logo.name}
-                      className={`${logo.name === 'Sagita' ? 'max-h-3' : 'max-h-full'} max-w-full object-contain`}
+                      className={`${logo.name === 'Sagita' ? 'max-h-12' : 'max-h-full'} max-w-full object-contain`}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
