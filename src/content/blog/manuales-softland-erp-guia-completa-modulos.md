@@ -28,7 +28,7 @@ Softland ERP se ha consolidado como la solución de gestión empresarial más co
 
 ### 📊 Gestión Contable y Financiera
 
-#### [Manual Softland CW – Contabilidad y Presupuestos](manual-softland-cw-contabilidad-presupuestos-guia-completa)
+#### [Manual Softland CW – Contabilidad y Presupuestos](/blog/manual-softland-cw-contabilidad-presupuestos-guia-completa)
 El núcleo financiero del sistema que permite llevar la contabilidad completa de tu empresa, gestionar presupuestos y generar reportes financieros para la toma de decisiones estratégicas.
 
 **Funcionalidades principales:**
@@ -38,7 +38,7 @@ El núcleo financiero del sistema que permite llevar la contabilidad completa de
 - Reportes financieros y tributarios
 - Balance clasificado y estado de resultados
 
-#### [Manual Softland PW – Proveedores y Tesorería](manual-softland-pw-proveedores-tesoreria-guia-completa)
+#### [Manual Softland PW – Proveedores y Tesorería](/blog/manual-softland-pw-proveedores-tesoreria-guia-completa)
 Control integral de cuentas por pagar, gestión de proveedores y administración de la tesorería empresarial con funcionalidades avanzadas de pagos electrónicos.
 
 **Funcionalidades principales:**
@@ -50,7 +50,7 @@ Control integral de cuentas por pagar, gestión de proveedores y administración
 
 ### 📦 Gestión Comercial e Inventario
 
-#### [Manual Softland IW – Inventario y Facturación](manual-softland-iw-inventario-facturacion-guia-completa)
+#### [Manual Softland IW – Inventario y Facturación](/blog/manual-softland-iw-inventario-facturacion-guia-completa)
 Administración completa del inventario, control de stock en múltiples bodegas y facturación electrónica integrada con el SII para cumplimiento tributario.
 
 **Funcionalidades principales:**
@@ -60,7 +60,7 @@ Administración completa del inventario, control de stock en múltiples bodegas 
 - Gestión de precios y descuentos
 - Reportes de movimientos e inventario
 
-#### [Manual Softland XW – Clientes y Cobranzas](manual-softland-xw-clientes-cobranzas-guia-completa)
+#### [Manual Softland XW – Clientes y Cobranzas](/blog/manual-softland-xw-clientes-cobranzas-guia-completa)
 Gestión integral de la cartera de clientes, control de límites de crédito, seguimiento de cobranzas y administración de cuentas por cobrar.
 
 **Funcionalidades principales:**
@@ -70,7 +70,7 @@ Gestión integral de la cartera de clientes, control de límites de crédito, se
 - Análisis de comportamiento de pago
 - Reportes de antigüedad de cuentas
 
-#### [Manual Softland OW – Órdenes de Compra](manual-softland-ow-ordenes-compra-guia-completa)
+#### [Manual Softland OW – Órdenes de Compra](/blog/manual-softland-ow-ordenes-compra-guia-completa)
 Optimización del proceso de abastecimiento desde la requisición hasta la recepción, incluyendo cotizaciones, convenios con proveedores y control de compras.
 
 **Funcionalidades principales:**
@@ -82,7 +82,7 @@ Optimización del proceso de abastecimiento desde la requisición hasta la recep
 
 ### 👥 Gestión de Recursos Humanos
 
-#### [Manual Softland SW – Recursos Humanos](manual-softland-sw-recursos-humanos-guia-completa)
+#### [Manual Softland SW – Recursos Humanos](/blog/manual-softland-sw-recursos-humanos-guia-completa)
 Administración integral del personal, desde el ingreso hasta el término de la relación laboral, incluyendo gestión de remuneraciones y cumplimiento normativo.
 
 **Funcionalidades principales:**
@@ -92,7 +92,7 @@ Administración integral del personal, desde el ingreso hasta el término de la 
 - Evaluaciones de desempeño
 - Reportes de dotación
 
-#### [Manual Softland EW – Sueldos](manual-softland-ew-sueldos-guia-completa)
+#### [Manual Softland EW – Sueldos](/blog/manual-softland-ew-sueldos-guia-completa)
 Cálculo automático de remuneraciones, liquidaciones de sueldo, leyes sociales y generación de todos los documentos requeridos por la normativa laboral chilena.
 
 **Funcionalidades principales:**
@@ -104,7 +104,7 @@ Cálculo automático de remuneraciones, liquidaciones de sueldo, leyes sociales 
 
 ### 🏢 Gestión de Activos y Análisis
 
-#### [Manual Softland AW – Activo Fijo](manual-softland-activo-fijo-guia-completa)
+#### [Manual Softland AW – Activo Fijo](/blog/manual-softland-activo-fijo-guia-completa)
 Control completo de los bienes de la empresa, depreciación automática según normativas chilenas e internacionales, y gestión patrimonial integral.
 
 **Funcionalidades principales:**
@@ -114,7 +114,7 @@ Control completo de los bienes de la empresa, depreciación automática según n
 - Control de ubicaciones
 - Reportes patrimoniales
 
-#### [Manual Softland WG – Gestión](manual-softland-wg-gestion-guia-completa)
+#### [Manual Softland WG – Gestión](/blog/manual-softland-wg-gestion-guia-completa)
 Herramientas de Business Intelligence con cubos OLAP, reportes ejecutivos y alarmas de gestión para facilitar la toma de decisiones estratégicas.
 
 **Funcionalidades principales:**
