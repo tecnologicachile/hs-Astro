@@ -1,4 +1,4 @@
-import { Zap, TrendingUp, ShieldCheck, LifeBuoy, TrendingDown, RefreshCw, CheckCircle } from 'lucide-react';
+import { Zap, TrendingUp, ShieldCheck, LifeBuoy, TrendingDown, RefreshCw, CheckCircle, Clock } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 const iconMap = {
@@ -9,6 +9,7 @@ const iconMap = {
   TrendingDown,
   RefreshCw,
   CheckCircle,
+  Clock,
 };
 
 interface Benefit {

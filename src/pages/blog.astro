@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import MainLayout from '../components/Layout.tsx';
 import PageHero from '../components/PageHero.tsx';
 import BlogFilter from '../components/BlogFilter.tsx';
+import Breadcrumb from '../components/Breadcrumb.tsx';
 import { Calendar, Clock, User, ArrowRight, Search, Tag, TrendingUp, BookOpen } from 'lucide-react';
 
 export const prerender = true;
@@ -23,6 +24,18 @@ const categories = [...new Set(posts.map(post => post.data.category))];
 	canonical="/blog"
 >
 	<MainLayout client:load>
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 py-3">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<Breadcrumb 
+					client:load
+					items={[
+						{ name: "Blog" }
+					]}
+				/>
+			</div>
+		</div>
+
 		<PageHero 
 			client:load
 			title="Blog y Recursos" 

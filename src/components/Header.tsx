@@ -52,7 +52,7 @@ export default function Header() {
             <span className="sr-only">Hosting Sistemas</span>
             <img 
               src="/logo-header.png" 
-              alt="Hosting Sistemas" 
+              alt="Hosting Sistemas Chile - Especialistas en Softland ERP y E-commerce" 
               className="h-8 w-auto"
             />
           </a>
@@ -133,7 +133,7 @@ export default function Header() {
               <span className="sr-only">Hosting Sistemas</span>
               <img 
                 src="/logo-header.png" 
-                alt="Hosting Sistemas" 
+                alt="Hosting Sistemas Chile - Especialistas en Softland ERP y E-commerce" 
                 className="h-8 w-auto"
               />
             </a>

@@ -10,6 +10,7 @@ import EcommerceComparison from '../../components/services/WooCommerceComparison
 import ServiceBenefits from '../../components/services/ServiceBenefits.tsx';
 import ServiceCTA from '../../components/services/ServiceCTA.tsx';
 import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
+import Breadcrumb from '../../components/Breadcrumb.tsx';
 
 const ecommerceFaqs = [
   {
@@ -32,7 +33,7 @@ const ecommerceFaqs = [
 ---
 
 <Layout 
-	title="Hosting E-commerce Chile - WooCommerce, PrestaShop, Magento + Softland ERP"
+	title="Hosting E-commerce Chile - WooCommerce & PrestaShop"
 	description="Hosting E-commerce Chile especializado: WooCommerce, PrestaShop, Magento, Jumpseller. Integración Softland ERP, SSL gratuito, CDN y soporte 24/7 para tu tienda online."
 	keywords="hosting ecommerce chile, hosting woocommerce chile, hosting prestashop chile, hosting magento chile, hosting jumpseller chile, hosting tienda online chile, integracion ecommerce erp"
 	canonical="/servicios/hosting-woocommerce"
@@ -94,6 +95,19 @@ const ecommerceFaqs = [
 	</script>
 
 	<MainLayout client:load>
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 py-3">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<Breadcrumb 
+					client:load
+					items={[
+						{ name: "Servicios", href: "/servicios" },
+						{ name: "Hosting E-commerce" }
+					]}
+				/>
+			</div>
+		</div>
+
 		<ServiceHero 
 			client:load 
 			iconName="ShoppingCart"

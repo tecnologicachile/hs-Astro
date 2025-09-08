@@ -1,0 +1,242 @@
+---
+export const prerender = true;
+
+import Layout from '../layouts/Layout.astro';
+import MainLayout from '../components/Layout.tsx';
+import ServiceHero from '../components/services/ServiceHero.tsx';
+import Services from '../components/Services.tsx';
+import ServiceFeatures from '../components/services/ServiceFeatures.tsx';
+import ServiceBenefits from '../components/services/ServiceBenefits.tsx';
+import ServiceCTA from '../components/services/ServiceCTA.tsx';
+import ServiceFAQ from '../components/services/ServiceFAQ.tsx';
+import Breadcrumb from '../components/Breadcrumb.tsx';
+
+const servicesFaqs = [
+  {
+    question: "¿Qué servicios de hosting ofrecen?",
+    answer: "Ofrecemos hosting especializado para e-commerce (WooCommerce, PrestaShop, Magento, Jumpseller), hosting para Softland ERP con servidores Windows dedicados, sincronización entre tiendas online y Softland ERP, y soporte técnico especializado."
+  },
+  {
+    question: "¿Cuál es la diferencia entre sus servicios de hosting?",
+    answer: "Nuestro hosting e-commerce está optimizado para tiendas online con SSL, CDN y soporte 24/7. El hosting Softland incluye servidores Windows dedicados con SQL Server. También ofrecemos integración completa entre ambas plataformas."
+  },
+  {
+    question: "¿Ofrecen migración gratuita?",
+    answer: "Sí, incluimos migración gratuita en todos nuestros servicios. Nuestro equipo técnico se encarga de trasladar tu sitio web o sistema sin interrupciones, garantizando una transición fluida."
+  },
+  {
+    question: "¿Qué tipo de soporte técnico brindan?",
+    answer: "Contamos con soporte técnico especializado disponible 24/7. Nuestro equipo tiene experiencia específica en plataformas de e-commerce y sistemas Softland ERP, ofreciendo asistencia experta para cualquier consulta técnica."
+  }
+];
+---
+
+<Layout 
+	title="Servicios Hosting Chile - E-commerce & Softland ERP"
+	description="Descubre nuestros servicios de hosting especializados: hosting e-commerce, servidores Softland ERP, sincronización de sistemas y soporte técnico experto en Chile."
+	keywords="servicios hosting chile, hosting ecommerce, hosting softland erp, sincronizacion erp ecommerce, soporte tecnico hosting"
+	canonical="/servicios"
+>
+	<!-- Organization Schema for Services -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Hosting Sistemas",
+		"url": "https://hostingsistemas.cl",
+		"description": "Servicios especializados de hosting para e-commerce y Softland ERP en Chile",
+		"areaServed": {
+			"@type": "Country",
+			"name": "Chile"
+		},
+		"hasOfferCatalog": {
+			"@type": "OfferCatalog",
+			"name": "Servicios de Hosting",
+			"itemListElement": [
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Hosting E-commerce",
+						"description": "Hosting especializado para WooCommerce, PrestaShop, Magento y Jumpseller"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Hosting Softland ERP",
+						"description": "Servidores Windows dedicados para Softland ERP con SQL Server"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Sincronización E-commerce con ERP",
+						"description": "Integración entre tiendas online y Softland ERP con ERPSync"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Soporte Técnico Especializado",
+						"description": "Soporte experto para sistemas ERP y e-commerce 24/7"
+					}
+				}
+			]
+		}
+	}
+	</script>
+
+	<!-- FAQ Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{
+				"@type": "Question",
+				"name": "¿Qué servicios de hosting ofrecen?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Ofrecemos hosting especializado para e-commerce (WooCommerce, PrestaShop, Magento, Jumpseller), hosting para Softland ERP con servidores Windows dedicados, sincronización entre tiendas online y Softland ERP, y soporte técnico especializado."
+				}
+			},
+			{
+				"@type": "Question", 
+				"name": "¿Cuál es la diferencia entre sus servicios de hosting?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Nuestro hosting e-commerce está optimizado para tiendas online con SSL, CDN y soporte 24/7. El hosting Softland incluye servidores Windows dedicados con SQL Server. También ofrecemos integración completa entre ambas plataformas."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Ofrecen migración gratuita?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Sí, incluimos migración gratuita en todos nuestros servicios. Nuestro equipo técnico se encarga de trasladar tu sitio web o sistema sin interrupciones, garantizando una transición fluida."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Qué tipo de soporte técnico brindan?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Contamos con soporte técnico especializado disponible 24/7. Nuestro equipo tiene experiencia específica en plataformas de e-commerce y sistemas Softland ERP, ofreciendo asistencia experta para cualquier consulta técnica."
+				}
+			}
+		]
+	}
+	</script>
+
+	<MainLayout client:load>
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 py-3">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<Breadcrumb 
+					client:load
+					items={[
+						{ name: "Servicios" }
+					]}
+				/>
+			</div>
+		</div>
+
+		<ServiceHero 
+			client:load 
+			iconName="Database"
+			title="Servicios de Hosting Especializados"
+			subtitle="Soluciones completas de hosting para e-commerce y sistemas ERP con soporte técnico experto en Chile."
+			ctaText="Consultar Servicios"
+			anchorLink="#servicios-disponibles"
+		/>
+		
+		<section id="servicios-disponibles">
+			<Services client:load />
+		</section>
+		
+		<ServiceFeatures 
+			client:load
+			title="¿Por qué elegir nuestros servicios de hosting?"
+			description="Ofrecemos soluciones especializadas con más de 15 años de experiencia en hosting empresarial y sistemas ERP."
+			features={[
+				{
+					icon: "Server",
+					title: "Experiencia comprobada",
+					description: "Más de 15 años especializados en hosting empresarial, e-commerce y sistemas ERP con cientos de clientes satisfechos en Chile."
+				},
+				{
+					icon: "Users",
+					title: "Equipo especializado",
+					description: "Profesionales certificados en plataformas de e-commerce (WooCommerce, PrestaShop, Magento) y sistemas Softland ERP con soporte 24/7."
+				},
+				{
+					icon: "Zap",
+					title: "Infraestructura avanzada",
+					description: "Servidores de última generación ubicados en Chile con tecnología SSD, CDN global y respaldos automáticos para máxima velocidad."
+				},
+				{
+					icon: "Shield",
+					title: "Seguridad garantizada",
+					description: "Protección integral con certificados SSL, firewalls avanzados, monitoreo 24/7 y medidas de seguridad específicas para e-commerce y ERP."
+				},
+				{
+					icon: "TrendingUp",
+					title: "Escalabilidad total",
+					description: "Crece sin límites con nuestras soluciones escalables que se adaptan al crecimiento de tu negocio online y operaciones empresariales."
+				},
+				{
+					icon: "Headphones",
+					title: "Soporte técnico experto",
+					description: "Atención personalizada por parte de técnicos especializados que conocen a fondo las plataformas de e-commerce y sistemas ERP."
+				}
+			]}
+			gridCols={3}
+			backgroundGradient="bg-gradient-to-br from-gray-50 via-blue-50 to-white"
+		/>
+
+		<ServiceBenefits 
+			client:load
+			title="Beneficios de nuestros servicios"
+			description="Maximiza el potencial de tu negocio con nuestras soluciones integrales de hosting empresarial."
+			benefits={[
+				{
+					icon: "Zap",
+					title: "Migración sin interrupciones",
+					description: "Trasladamos tu sitio web o sistema ERP sin downtime, garantizando continuidad operativa durante todo el proceso de migración."
+				},
+				{
+					icon: "RefreshCw",
+					title: "Integración completa",
+					description: "Conecta tu tienda online con Softland ERP mediante nuestra exclusiva solución ERPSync para sincronización automática de datos."
+				},
+				{
+					icon: "LifeBuoy",
+					title: "Consultoría personalizada",
+					description: "Asesoría técnica especializada para optimizar el rendimiento de tu e-commerce y sistemas ERP según las necesidades de tu empresa."
+				},
+				{
+					icon: "CheckCircle",
+					title: "Garantía de uptime",
+					description: "Aseguramos 99.9% de disponibilidad con monitoreo constante y sistemas de respaldo automáticos para máxima confiabilidad."
+				}
+			]}
+			ctaText="Solicitar Consultoría Gratuita"
+		/>
+
+		<ServiceCTA 
+			client:load 
+			serviceName="Hosting Especializado"
+			features={["Migración Gratuita", "Soporte 24/7", "Consultoría Incluida", "Garantía de Uptime"]}
+		/>
+		
+		<ServiceFAQ 
+			client:load 
+			serviceName="Servicios de Hosting"
+			faqs={servicesFaqs}
+		/>
+	</MainLayout>
+</Layout>

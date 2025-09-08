@@ -3,6 +3,7 @@ export const prerender = true;
 
 import Layout from '../../layouts/Layout.astro';
 import MainLayout from '../../components/Layout.tsx';
+import Breadcrumb from '../../components/Breadcrumb.tsx';
 import ServiceHero from '../../components/services/ServiceHero.tsx';
 import ServiceFeatures from '../../components/services/ServiceFeatures.tsx';
 import ServiceBackups from '../../components/services/ServiceBackups.tsx';
@@ -38,6 +39,19 @@ const softlandFaqs = [
 	canonical="/servicios/hosting-softland-erp"
 >
 	<MainLayout client:load>
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 py-3">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<Breadcrumb 
+					client:load
+					items={[
+						{ name: "Servicios", href: "/servicios" },
+						{ name: "Hosting Softland ERP" }
+					]}
+				/>
+			</div>
+		</div>
+
 		<ServiceHero 
 			client:load 
 			iconName="Database"

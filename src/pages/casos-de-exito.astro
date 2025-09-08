@@ -4,6 +4,7 @@ export const prerender = true;
 import Layout from '../layouts/Layout.astro';
 import MainLayout from '../components/Layout.tsx';
 import PageHero from '../components/PageHero.tsx';
+import Breadcrumb from '../components/Breadcrumb.tsx';
 import CaseStudyCard from '../components/CaseStudyCard.tsx';
 import Button from '../components/Button.tsx';
 import { ExternalLink, Building2, ShoppingCart, Cloud, Server, Calculator } from 'lucide-react';
@@ -65,6 +66,18 @@ const caseStudies = [
 	canonical="/casos-de-exito"
 >
 	<MainLayout client:load>
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 py-3">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<Breadcrumb 
+					client:load
+					items={[
+						{ name: "Casos de Éxito" }
+					]}
+				/>
+			</div>
+		</div>
+
 		<PageHero 
 			client:load
 			title="Casos de Éxito" 

@@ -7,7 +7,12 @@ import {
   Server, 
   Zap,
   Users,
-  Globe
+  Globe,
+  Award,
+  CheckCircle,
+  Clock,
+  LifeBuoy,
+  ShieldCheck
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
@@ -21,6 +26,11 @@ const iconMap = {
   Zap,
   Users,
   Globe,
+  Award,
+  CheckCircle,
+  Clock,
+  LifeBuoy,
+  ShieldCheck,
 };
 
 interface Feature {

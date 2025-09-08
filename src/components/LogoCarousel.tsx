@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
 
 const logos = [
-  { id: 1, name: 'Surdent', src: '/logos/surdent.webp' },
-  { id: 2, name: 'RefriChile', src: '/logos/refrichile.png' },
-  { id: 3, name: 'Tritec', src: '/logos/tritec.webp' },
-  { id: 4, name: 'Clandent', src: '/logos/clandent.webp' },
-  { id: 5, name: 'Punto Exacto', src: '/logos/punto-exacto.webp' },
-  { id: 6, name: 'Sagita', src: '/logos/sagita.png' },
+  { id: 1, name: 'Surdent', src: '/logos/surdent.webp', alt: 'Surdent - Cliente Hosting Sistemas Chile, soluciones dentales' },
+  { id: 2, name: 'RefriChile', src: '/logos/refrichile.png', alt: 'RefriChile - Cliente Hosting Sistemas, empresa chilena de refrigeración' },
+  { id: 3, name: 'Tritec', src: '/logos/tritec.webp', alt: 'Tritec - Cliente Hosting Sistemas Chile, empresa tecnológica' },
+  { id: 4, name: 'Clandent', src: '/logos/clandent.webp', alt: 'Clandent - Cliente Hosting Sistemas, clínica dental en Chile' },
+  { id: 5, name: 'Punto Exacto', src: '/logos/punto-exacto.webp', alt: 'Punto Exacto - Cliente Hosting Sistemas Chile, empresa de servicios' },
+  { id: 6, name: 'Sagita', src: '/logos/sagita.png', alt: 'Sagita - Cliente Hosting Sistemas, empresa chilena de software' },
 ];
 
 export default function LogoCarousel() {
@@ -59,7 +59,7 @@ export default function LogoCarousel() {
                   <div className="h-24 w-40 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
                     <img
                       src={logo.src}
-                      alt={logo.name}
+                      alt={logo.alt}
                       className={`${logo.name === 'Sagita' ? 'max-h-12' : 'max-h-full'} max-w-full object-contain`}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;

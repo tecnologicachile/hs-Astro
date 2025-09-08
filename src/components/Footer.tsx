@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="space-y-8">
             <img 
               src="/footer.png" 
-              alt="Hosting Sistemas" 
+              alt="Hosting Sistemas Chile - Logo footer, especialistas en hosting web" 
               className="h-8 w-auto"
             />
             <p className="text-sm leading-6 text-gray-300">
