@@ -50,7 +50,7 @@ export default function SoftlandSupportWidget() {
       {/* Footer */}
       <div className="mt-2 pt-2 border-t border-white/20">
         <p className="text-xs text-center text-blue-100">
-          15+ años especializados
+          20+ años especializados
         </p>
       </div>
     </div>

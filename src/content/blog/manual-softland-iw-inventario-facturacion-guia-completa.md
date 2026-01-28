@@ -2,13 +2,11 @@
 title: 'Manual Softland IW – Inventario y Facturación: Control Integral de Bodegas y Documentos Tributarios'
 description: 'Guía completa del módulo Softland IW - Inventario y Facturación. Control de stock, facturación electrónica DTE y cumplimiento tributario SII en Chile.'
 author: 'Equipo Hosting Sistemas'
-pubDate: 2025-08-27
+pubDate: 2026-01-05
 category: 'Softland ERP'
 tags: ['Softland ERP Chile', 'Inventario IW', 'Facturación Electrónica', 'Control Stock', 'Manual Softland']
 featured: true
 ---
-
-# Manual Softland IW – Inventario y Facturación: Control Integral de Bodegas y Documentos Tributarios
 
 La correcta gestión de inventario y facturación es clave para mantener la continuidad operativa, la trazabilidad y el cumplimiento tributario en cualquier empresa. Con el módulo Softland IW – Inventario y Facturación, las organizaciones pueden administrar de manera centralizada todo el ciclo de inventario, ventas y documentos electrónicos, asegurando orden, control y cumplimiento con el Servicio de Impuestos Internos (SII).
 

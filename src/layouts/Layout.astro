@@ -57,7 +57,10 @@ const ogImageURL = new URL(ogImage, Astro.site);
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		
+
+		<!-- RSS Feed -->
+		<link rel="alternate" type="application/rss+xml" title="Blog Hosting Sistemas Chile" href="/rss.xml" />
+
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9S5QXQG5R"></script>
 		<script>
@@ -80,7 +83,7 @@ const ogImageURL = new URL(ogImage, Astro.site);
 			"@type": "LocalBusiness",
 			"@id": "https://hostingsistemas.cl/#organization",
 			"name": "Hosting Sistemas - Especialistas Softland ERP",
-			"description": "Líderes Chile en hosting Softland ERP con 15+ años experiencia. Únicos con sincronización Softland-E-commerce automática",
+			"description": "Líderes Chile en hosting Softland ERP con 20+ años experiencia. Únicos con sincronización Softland-E-commerce automática",
 			"url": "https://hostingsistemas.cl",
 			"telephone": "800 914 659",
 			"address": {
@@ -128,6 +131,27 @@ const ogImageURL = new URL(ogImage, Astro.site);
 			}
 		}
 		</script>
+
+		<!-- WebPage Schema -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name": title,
+			"description": description,
+			"url": canonicalURL,
+			"isPartOf": {
+				"@type": "WebSite",
+				"@id": "https://hostingsistemas.cl/#website",
+				"name": "Hosting Sistemas",
+				"url": "https://hostingsistemas.cl"
+			},
+			"inLanguage": "es-CL",
+			"dateModified": new Date().toISOString().split('T')[0],
+			"publisher": {
+				"@type": "Organization",
+				"@id": "https://hostingsistemas.cl/#organization"
+			}
+		})}></script>
 	</head>
 	<body class="min-h-screen bg-gray-50 font-poppins">
 		<slot />

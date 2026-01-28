@@ -2,13 +2,11 @@
 title: 'Manual Softland XW – Clientes y Cobranzas: Gestión Eficiente de Créditos y Pagos'
 description: 'Guía completa del módulo Softland XW - Clientes y Cobranzas. Control integral de cuentas por cobrar, límites de crédito y seguimiento de pagos.'
 author: 'Equipo Hosting Sistemas'
-pubDate: 2025-08-27
+pubDate: 2026-01-09
 category: 'Softland ERP'
 tags: ['Softland ERP Chile', 'Clientes XW', 'Cobranzas', 'Cuentas por Cobrar', 'Manual Softland']
 featured: true
 ---
-
-# Manual Softland XW – Clientes y Cobranzas: Gestión Eficiente de Créditos y Pagos
 
 El control de las cuentas por cobrar es vital para la liquidez y estabilidad de cualquier empresa. El módulo Softland XW – Clientes y Cobranzas entrega las herramientas necesarias para administrar de forma integral la cartera de clientes, controlar créditos, gestionar cobranzas y dar seguimiento a los pagos.
 
@@ -90,4 +88,4 @@ Para acceder a información detallada sobre configuración, procesos paso a paso
 
 *El manual incluye guías paso a paso, capturas de pantalla y ejemplos prácticos para optimizar la gestión de clientes y cobranzas en tu empresa.*
 
-Potencia tu gestión de clientes con nuestro [hosting Softland ERP](/servicios/hosting-softland-erp) con Windows Server y acceso nacional. Si manejas tienda online, descubre nuestra [sincronización e-commerce-Softland](/servicios/sincronizacion) exclusiva para WooCommerce, PrestaShop, Magento. Obtén [soporte especializado](/servicios/soporte-softland-erp) con más de 15 años de experiencia.
+Potencia tu gestión de clientes con nuestro [hosting Softland ERP](/servicios/hosting-softland-erp) con Windows Server y acceso nacional. Si manejas tienda online, descubre nuestra [sincronización e-commerce-Softland](/servicios/sincronizacion) exclusiva para WooCommerce, PrestaShop, Magento. Obtén [soporte especializado](/servicios/soporte-softland-erp) con 20+ años de experiencia.

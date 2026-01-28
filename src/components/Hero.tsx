@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="mb-8 inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm text-blue-100">
           <Shield className="w-4 h-4 mr-2" />
-          15+ años especializados en Softland ERP
+          20+ años especializados en Softland ERP
         </div>
         
         {/* Main Headline */}

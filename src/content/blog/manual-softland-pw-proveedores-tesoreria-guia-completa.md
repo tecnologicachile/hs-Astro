@@ -2,13 +2,11 @@
 title: 'Manual Softland PW – Proveedores y Tesorería: Control Financiero y Gestión de Pagos'
 description: 'Guía completa del módulo Softland PW - Proveedores y Tesorería. Gestión integral de cuentas por pagar, facturación electrónica y pagos bancarios.'
 author: 'Equipo Hosting Sistemas'
-pubDate: 2025-08-27
+pubDate: 2026-01-03
 category: 'Softland ERP'
 tags: ['Softland ERP Chile', 'Proveedores PW', 'Tesorería', 'Pagos Electrónicos', 'Manual Softland']
 featured: true
 ---
-
-# Manual Softland PW – Proveedores y Tesorería: Control Financiero y Gestión de Pagos
 
 El manejo de proveedores y tesorería es fundamental para mantener la estabilidad financiera y la buena relación comercial de cualquier empresa. El módulo Softland PW – Proveedores y Tesorería centraliza el registro de facturas de compra, el control de cuentas por pagar y la administración de pagos, tanto manuales como electrónicos, garantizando seguridad, trazabilidad y cumplimiento normativo.
 
@@ -95,3 +93,5 @@ Para acceder a información detallada sobre configuración, procesos paso a paso
 </div>
 
 *El manual incluye guías paso a paso, capturas de pantalla y ejemplos prácticos para optimizar la gestión de proveedores y tesorería en tu empresa.*
+
+Mejora tu gestión de proveedores con nuestro [hosting Softland ERP](/servicios/hosting-softland-erp) con acceso remoto seguro desde cualquier ubicación. Para empresas con e-commerce, ofrecemos [sincronización automática con tu tienda online](/servicios/sincronizacion). Obtén [soporte técnico especializado](/servicios/soporte-softland-erp) con 20+ años de experiencia en Softland.

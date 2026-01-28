@@ -10,6 +10,9 @@ import ServiceBackups from '../../components/services/ServiceBackups.tsx';
 import ServiceBenefits from '../../components/services/ServiceBenefits.tsx';
 import ServiceCTA from '../../components/services/ServiceCTA.tsx';
 import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
+import RelatedServices from '../../components/services/RelatedServices.tsx';
+import RelatedBlogPosts from '../../components/services/RelatedBlogPosts.tsx';
+import HowItWorks from '../../components/services/HowItWorks.tsx';
 
 const soporteFaqs = [
   {
@@ -31,17 +34,141 @@ const soporteFaqs = [
 ];
 ---
 
-<Layout 
-	title="Soporte Softland ERP Chile Especializado - Expertos 15+ Años"
-	description="Soporte Softland ERP Chile especializado con 15+ años de experiencia. Asistencia telefónica y web, trabajos especiales, migraciones y actualizaciones. Alternativa confiable a Softland Total."
-	keywords="soporte softland erp chile, expertos softland erp, consultor softland certificado, asistencia softland erp, soporte erp chile, softland total alternativa"
+<Layout
+	title="Soporte Softland ERP Chile Especializado - Expertos 20+ Años"
+	description="Soporte Softland ERP Chile especializado con 20+ años de experiencia. Asistencia telefónica y web, trabajos especiales, migraciones y actualizaciones. Alternativa confiable a Softland Total."
+	keywords="soporte softland erp chile, expertos softland erp, consultor softland certificado, asistencia softland erp, soporte erp chile, softland total alternativa, precio soporte softland, cotizacion soporte erp, soporte 24/7 softland"
 	canonical="/servicios/soporte-softland-erp"
 >
+	<!-- BreadcrumbList Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Inicio",
+				"item": "https://hostingsistemas.cl"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Servicios",
+				"item": "https://hostingsistemas.cl/servicios"
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"name": "Soporte Softland ERP",
+				"item": "https://hostingsistemas.cl/servicios/soporte-softland-erp"
+			}
+		]
+	}
+	</script>
+
+	<!-- Service Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Soporte Técnico Softland ERP Chile",
+		"description": "Soporte técnico especializado para Softland ERP con 20+ años de experiencia. Asistencia telefónica, web, migraciones y trabajos especiales",
+		"provider": {
+			"@type": "Organization",
+			"name": "Hosting Sistemas",
+			"url": "https://hostingsistemas.cl"
+		},
+		"serviceType": "Soporte Técnico ERP",
+		"areaServed": {
+			"@type": "Country",
+			"name": "Chile"
+		},
+		"hasOfferCatalog": {
+			"@type": "OfferCatalog",
+			"name": "Servicios de Soporte Softland",
+			"itemListElement": [
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Soporte Telefónico Especializado"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Soporte Web y Tickets"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Migraciones y Actualizaciones"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Trabajos Especiales y Consultoría"
+					}
+				}
+			]
+		}
+	}
+	</script>
+
+	<!-- FAQPage Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{
+				"@type": "Question",
+				"name": "¿Qué versiones de Softland ERP soportan?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Brindamos soporte a toda la línea ERP y a la línea Pyme de Softland. También ofrecemos asistencia a versiones obsoletas, proporcionando una alternativa confiable a Softland Total y Garantizado."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Cómo puedo acceder al soporte técnico?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Ofrecemos múltiples canales de soporte: telefónico para consultas inmediatas, soporte vía web para generar requerimientos y descargar actualizaciones, y servicios especializados para trabajos específicos."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Realizan migraciones y actualizaciones de versiones?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Sí, nuestro equipo especializado realiza migraciones seguras y actualizaciones de versiones, asegurando el cumplimiento legal, nuevas funcionalidades y tecnología avanzada para eficiencia óptima."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Qué incluye el soporte para trabajos especiales?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Los trabajos especiales incluyen análisis detallados del sistema, migraciones complejas, configuraciones personalizadas y gestión avanzada de datos, todo con la máxima seguridad y eficiencia."
+				}
+			}
+		]
+	}
+	</script>
+
 	<MainLayout client:load>
 		<!-- Breadcrumbs -->
 		<div class="bg-gray-50 py-3">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<Breadcrumb 
+				<Breadcrumb
 					client:load
 					items={[
 						{ name: "Servicios", href: "/servicios" },
@@ -146,15 +273,50 @@ const soporteFaqs = [
 			ctaText="Solicitar Soporte Especializado"
 		/>
 
-		<ServiceCTA 
-			client:load 
+		<HowItWorks
+			client:load
+			serviceName="Soporte Softland ERP"
+			title="¿Cómo Funciona el Soporte?"
+			subtitle="Accede a soporte técnico especializado de forma simple"
+			steps={[
+				{
+					title: "Contacto Inicial",
+					description: "Comunícate por teléfono, web o email describiendo tu consulta o problema con Softland ERP."
+				},
+				{
+					title: "Diagnóstico Experto",
+					description: "Nuestros especialistas con 20+ años de experiencia analizan tu situación y proponen soluciones."
+				},
+				{
+					title: "Resolución Rápida",
+					description: "Implementamos la solución de forma remota o presencial, según la complejidad del caso."
+				},
+				{
+					title: "Seguimiento",
+					description: "Verificamos que todo funcione correctamente y documentamos la solución para futura referencia."
+				}
+			]}
+		/>
+
+		<ServiceCTA
+			client:load
 			serviceName="Soporte Softland ERP"
 			features={["Soporte Telefónico", "Asistencia Web", "Trabajos Especiales", "Actualizaciones"]}
 		/>
-		<ServiceFAQ 
-			client:load 
+		<ServiceFAQ
+			client:load
 			serviceName="Soporte Softland ERP"
 			faqs={soporteFaqs}
+		/>
+		<RelatedBlogPosts
+			client:load
+			serviceId="soporte-softland-erp"
+			title="Manuales y Guías de Soporte"
+			description="Documentación oficial y guías para resolver consultas frecuentes"
+		/>
+		<RelatedServices
+			client:load
+			currentService="/servicios/soporte-softland-erp"
 		/>
 	</MainLayout>
 </Layout>

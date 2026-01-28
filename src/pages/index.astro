@@ -3,21 +3,21 @@ export const prerender = true;
 
 import Layout from '../layouts/Layout.astro';
 import MainLayout from '../components/Layout.tsx';
-import Hero from '../components/Hero.tsx';
+import Hero from '../components/Hero.astro';
 import LogoCarousel from '../components/LogoCarousel.tsx';
 import Services from '../components/Services.tsx';
 import Features from '../components/Features.tsx';
 import CTA from '../components/CTA.tsx';
 ---
 
-<Layout 
+<Layout
 	title="Hosting Softland ERP Chile - Especialistas #1"
-	description="Hosting Softland ERP especializado en Chile con 15+ años de experiencia. Servidores optimizados, soporte técnico experto y sincronización e-commerce. Consulta gratuita disponible."
-	keywords="hosting softland chile, hosting softland erp chile, servidor softland chile, soporte softland erp, sincronizacion softland ecommerce"
+	description="Hosting Softland ERP especializado en Chile con 20+ años de experiencia. Servidores optimizados, soporte técnico experto y sincronización e-commerce. Consulta gratuita disponible."
+	keywords="hosting softland chile, hosting softland erp chile, servidor softland chile, soporte softland erp, sincronizacion softland ecommerce, precio hosting softland, cotizacion hosting erp, migracion softland nube, consulta gratis hosting"
 	canonical="/"
 >
 	<MainLayout client:load>
-		<Hero client:load />
+		<Hero />
 		<LogoCarousel client:load />
 		<Services client:load />
 		<Features client:load />

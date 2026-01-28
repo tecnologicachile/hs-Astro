@@ -37,23 +37,37 @@ const relatedPosts = allPosts
 	{
 		"@context": "https://schema.org",
 		"@type": "BlogPosting",
+		"@id": ${JSON.stringify(`https://hostingsistemas.cl/blog/${post.slug}#article`)},
 		"headline": ${JSON.stringify(post.data.title)},
 		"description": ${JSON.stringify(post.data.description)},
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://hostingsistemas.cl/og-image.jpg",
+			"width": 1200,
+			"height": 630
+		},
 		"author": {
 			"@type": "Organization",
 			"name": ${JSON.stringify(post.data.author)},
-			"url": "https://hostingsistemas.cl"
-		},
-		"publisher": {
-			"@type": "Organization",
-			"name": "Hosting Sistemas",
+			"url": "https://hostingsistemas.cl",
 			"logo": {
 				"@type": "ImageObject",
 				"url": "https://hostingsistemas.cl/logo.png"
 			}
 		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Hosting Sistemas",
+			"url": "https://hostingsistemas.cl",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://hostingsistemas.cl/logo.png",
+				"width": 200,
+				"height": 60
+			}
+		},
 		"datePublished": ${JSON.stringify(post.data.pubDate.toISOString())},
-		"dateModified": ${JSON.stringify(post.data.pubDate.toISOString())},
+		"dateModified": ${JSON.stringify(new Date().toISOString())},
 		"mainEntityOfPage": {
 			"@type": "WebPage",
 			"@id": ${JSON.stringify(`https://hostingsistemas.cl/blog/${post.slug}`)}
@@ -61,10 +75,17 @@ const relatedPosts = allPosts
 		"articleSection": ${JSON.stringify(post.data.category)},
 		"keywords": ${JSON.stringify(post.data.tags.join(', '))},
 		"inLanguage": "es-CL",
+		"wordCount": 2500,
+		"timeRequired": "PT10M",
 		"isPartOf": {
 			"@type": "Blog",
+			"@id": "https://hostingsistemas.cl/blog#blog",
 			"name": "Blog Hosting Sistemas",
 			"url": "https://hostingsistemas.cl/blog"
+		},
+		"potentialAction": {
+			"@type": "ReadAction",
+			"target": ${JSON.stringify(`https://hostingsistemas.cl/blog/${post.slug}`)}
 		}
 	}
 	</script>
@@ -347,7 +368,7 @@ const relatedPosts = allPosts
 												¿Necesitas Ayuda con Softland?
 											</h3>
 											<p class="text-blue-100 text-sm leading-relaxed">
-												<span class="font-semibold text-white">15+ años</span> de experiencia te respaldan
+												<span class="font-semibold text-white">20+ años</span> de experiencia te respaldan
 											</p>
 										</div>
 
@@ -446,7 +467,7 @@ const relatedPosts = allPosts
 								Soporte Especializado
 							</div>
 							<h3 class="text-lg font-bold mb-2">¿Necesitas Ayuda con Softland?</h3>
-							<p class="text-blue-100 text-sm mb-4"><span class="font-semibold text-white">15+ años</span> de experiencia te respaldan</p>
+							<p class="text-blue-100 text-sm mb-4"><span class="font-semibold text-white">20+ años</span> de experiencia te respaldan</p>
 							
 							<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
 								<a 
@@ -569,7 +590,7 @@ const relatedPosts = allPosts
 								</h3>
 							</div>
 							<p class="text-sm text-gray-600 leading-relaxed mb-4 flex-1">
-								Asistencia técnica especializada en Softland ERP con 15+ años de experiencia en Chile.
+								Asistencia técnica especializada en Softland ERP con 20+ años de experiencia en Chile.
 							</p>
 							<div class="flex items-center text-green-600 group-hover:text-green-700 transition-colors mt-auto">
 								<span class="text-sm font-medium">Solicitar soporte</span>

@@ -2,13 +2,11 @@
 title: 'Manual Softland AW – Activo Fijo: Guía Completa para la Gestión de Bienes Empresariales'
 description: 'Guía completa del módulo Softland AW - Activo Fijo. Aprende a gestionar, depreciar y controlar los bienes de tu empresa con funcionalidades IFRS.'
 author: 'Equipo Hosting Sistemas'
-pubDate: 2025-08-27
+pubDate: 2026-01-10
 category: 'Softland ERP'
 tags: ['Softland ERP Chile', 'Activo Fijo AW', 'Gestión de Activos', 'IFRS', 'Manual Softland']
 featured: true
 ---
-
-# Manual Softland AW – Activo Fijo: Guía Completa para la Gestión de Bienes Empresariales
 
 La administración de activos fijos es un aspecto fundamental en cualquier empresa, ya que permite llevar un control ordenado y transparente del patrimonio. Con el módulo Softland AW – Activo Fijo, las organizaciones cuentan con una solución integral para registrar, gestionar y depreciar sus bienes de manera eficiente y en cumplimiento con normativas locales e internacionales.
 
@@ -89,4 +87,4 @@ Para acceder a información detallada sobre configuración, procesos paso a paso
 
 *El manual incluye ejemplos prácticos, capturas de pantalla y procedimientos detallados para optimizar el uso del módulo en tu empresa.*
 
-¿Necesitas [hosting especializado para Softland ERP](/servicios/hosting-softland-erp) con Windows Server optimizado? También ofrecemos [hosting e-commerce](/servicios/hosting-woocommerce) para WooCommerce, PrestaShop, Magento con integración ERP. Para soporte técnico especializado, conoce nuestros [servicios de soporte Softland](/servicios/soporte-softland-erp) con 15+ años de experiencia.
+¿Necesitas [hosting especializado para Softland ERP](/servicios/hosting-softland-erp) con Windows Server optimizado? También ofrecemos [hosting e-commerce](/servicios/hosting-woocommerce) para WooCommerce, PrestaShop, Magento con integración ERP. Para soporte técnico especializado, conoce nuestros [servicios de soporte Softland](/servicios/soporte-softland-erp) con 20+ años de experiencia.

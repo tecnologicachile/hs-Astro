@@ -2,13 +2,11 @@
 title: 'Manual Softland WG – Gestión: Información Estratégica para la Toma de Decisiones'
 description: 'Guía completa del módulo Softland WG - Gestión. Análisis avanzado con cubos OLAP, reportes ejecutivos y alarmas de gestión para la toma de decisiones.'
 author: 'Equipo Hosting Sistemas'
-pubDate: 2025-08-27
+pubDate: 2026-01-07
 category: 'Softland ERP'
 tags: ['Softland ERP Chile', 'Gestión WG', 'Business Intelligence', 'Cubos OLAP', 'Manual Softland']
 featured: true
 ---
-
-# Manual Softland WG – Gestión: Información Estratégica para la Toma de Decisiones
 
 La información consolidada y el análisis en tiempo real son esenciales para la toma de decisiones estratégicas en una empresa. El módulo Softland WG – Gestión está diseñado para entregar visibilidad sobre ventas, finanzas, stock y clientes, integrando consultas, reportes y herramientas de análisis avanzado que permiten a la gerencia evaluar el negocio desde una perspectiva global.
 
@@ -105,3 +103,5 @@ Para acceder a información detallada sobre configuración, procesos paso a paso
 </div>
 
 *El manual incluye guías paso a paso, capturas de pantalla y ejemplos prácticos para maximizar el uso de herramientas de gestión y análisis en tu empresa.*
+
+Potencia tu análisis de gestión con nuestro [hosting Softland ERP](/servicios/hosting-softland-erp) con infraestructura optimizada para reportes y cubos OLAP. Si operas con e-commerce, integra tus ventas online con [sincronización automática](/servicios/sincronizacion). Obtén [soporte técnico especializado](/servicios/soporte-softland-erp) con 20+ años de experiencia.

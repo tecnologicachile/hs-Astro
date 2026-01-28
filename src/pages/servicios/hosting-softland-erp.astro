@@ -11,6 +11,9 @@ import ServiceBenefits from '../../components/services/ServiceBenefits.tsx';
 import WindowsServerInfo from '../../components/services/WindowsServerInfo.tsx';
 import ServiceCTA from '../../components/services/ServiceCTA.tsx';
 import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
+import RelatedServices from '../../components/services/RelatedServices.tsx';
+import RelatedBlogPosts from '../../components/services/RelatedBlogPosts.tsx';
+import HowItWorks from '../../components/services/HowItWorks.tsx';
 
 const softlandFaqs = [
   {
@@ -32,17 +35,148 @@ const softlandFaqs = [
 ];
 ---
 
-<Layout 
-	title="Hosting Softland ERP Chile #1 - 15+ Años Experiencia Especializada"
-	description="Hosting Softland ERP profesional en Chile con servidores Windows optimizados y SQL Server configurado. 15+ años de experiencia, migración incluida y soporte técnico experto."
-	keywords="hosting softland erp chile, servidor softland erp, hosting softland chile, softland erp especializado, servidor windows softland, hosting erp chile"
+<Layout
+	title="Hosting Softland ERP Chile #1 - 20+ Años Experiencia Especializada"
+	description="Hosting Softland ERP profesional en Chile con servidores Windows optimizados y SQL Server configurado. 20+ años de experiencia, migración incluida y soporte técnico experto."
+	keywords="hosting softland erp chile, servidor softland erp, hosting softland chile, softland erp especializado, servidor windows softland, hosting erp chile, precio hosting softland, cotizacion servidor erp, migracion softland nube gratis"
 	canonical="/servicios/hosting-softland-erp"
 >
+	<!-- BreadcrumbList Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Inicio",
+				"item": "https://hostingsistemas.cl"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Servicios",
+				"item": "https://hostingsistemas.cl/servicios"
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"name": "Hosting Softland ERP",
+				"item": "https://hostingsistemas.cl/servicios/hosting-softland-erp"
+			}
+		]
+	}
+	</script>
+
+	<!-- Service Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Hosting Softland ERP Chile",
+		"description": "Hosting profesional para Softland ERP con servidores Windows dedicados, SQL Server optimizado y soporte técnico especializado 24/7",
+		"provider": {
+			"@type": "Organization",
+			"name": "Hosting Sistemas",
+			"url": "https://hostingsistemas.cl"
+		},
+		"serviceType": "Hosting ERP",
+		"areaServed": {
+			"@type": "Country",
+			"name": "Chile"
+		},
+		"hasOfferCatalog": {
+			"@type": "OfferCatalog",
+			"name": "Planes Hosting Softland ERP",
+			"itemListElement": [
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Servidor Windows Dedicado"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "SQL Server Optimizado"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Respaldos Automáticos Diarios"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Soporte Técnico 24/7"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Migración Gratuita Incluida"
+					}
+				}
+			]
+		}
+	}
+	</script>
+
+	<!-- FAQPage Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{
+				"@type": "Question",
+				"name": "¿Es compatible con todas las versiones de Softland ERP?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Sí, nuestros servidores Windows están optimizados para todas las versiones de Softland ERP. Configuramos el entorno específicamente según tu versión y requerimientos, garantizando compatibilidad total y rendimiento óptimo."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Cómo acceden mis empleados desde diferentes sucursales?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Configuramos acceso seguro mediante VPN y escritorio remoto desde cualquier ubicación en Chile. Tus empleados pueden trabajar como si estuvieran en la oficina principal, con la misma velocidad y seguridad."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Qué diferencia hay con Softland Cloud?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "A diferencia de Softland Cloud, tienes control total sobre tu servidor, configuraciones personalizadas, y puedes instalar software adicional. Mantienes la seguridad de la nube pero con la flexibilidad de un servidor dedicado."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Incluyen migración desde mi servidor actual?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Sí, nuestro equipo especializado realiza la migración completa de tu Softland ERP sin interrumpir tus operaciones. Incluye transferencia de datos, configuración y pruebas para garantizar continuidad total del negocio."
+				}
+			}
+		]
+	}
+	</script>
+
 	<MainLayout client:load>
 		<!-- Breadcrumbs -->
 		<div class="bg-gray-50 py-3">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<Breadcrumb 
+				<Breadcrumb
 					client:load
 					items={[
 						{ name: "Servicios", href: "/servicios" },
@@ -142,15 +276,49 @@ const softlandFaqs = [
 			]}
 			ctaText="Solicitar Hosting Softland ERP"
 		/>
-		<ServiceCTA 
-			client:load 
+		<HowItWorks
+			client:load
+			serviceName="Hosting Softland ERP"
+			title="¿Cómo Contratar Hosting Softland ERP?"
+			subtitle="Proceso simple en 4 pasos para migrar tu ERP a la nube"
+			steps={[
+				{
+					title: "Diagnóstico Inicial",
+					description: "Evaluamos tu versión de Softland ERP, cantidad de usuarios y requerimientos específicos para configurar el servidor ideal."
+				},
+				{
+					title: "Planificación",
+					description: "Definimos fechas de migración, configuramos el servidor Windows con SQL Server y preparamos el entorno de pruebas."
+				},
+				{
+					title: "Migración Segura",
+					description: "Transferimos tu base de datos y configuraciones sin interrumpir tus operaciones, con respaldo completo."
+				},
+				{
+					title: "Puesta en Marcha",
+					description: "Validamos el funcionamiento, configuramos accesos remotos y capacitamos a tu equipo en el nuevo entorno."
+				}
+			]}
+		/>
+		<ServiceCTA
+			client:load
 			serviceName="Hosting Softland ERP"
 			features={["Windows Server", "SQL Optimizado", "Acceso Nacional", "Migración Incluida"]}
 		/>
-		<ServiceFAQ 
-			client:load 
+		<ServiceFAQ
+			client:load
 			serviceName="Hosting Softland ERP"
 			faqs={softlandFaqs}
+		/>
+		<RelatedBlogPosts
+			client:load
+			serviceId="hosting-softland-erp"
+			title="Guías y Manuales Softland ERP"
+			description="Aprende a sacar el máximo provecho de tu sistema ERP con nuestras guías especializadas"
+		/>
+		<RelatedServices
+			client:load
+			currentService="/servicios/hosting-softland-erp"
 		/>
 	</MainLayout>
 </Layout>

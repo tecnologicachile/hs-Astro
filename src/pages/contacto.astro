@@ -4,15 +4,78 @@ export const prerender = true;
 import Layout from '../layouts/Layout.astro';
 import MainLayout from '../components/Layout.tsx';
 import Contact from '../components/Contact.tsx';
+import Breadcrumb from '../components/Breadcrumb.tsx';
 ---
 
-<Layout 
+<Layout
 	title="Contacto Hosting Chile - Consulta GRATIS | Hosting Sistemas"
 	description="Contacta Hosting Sistemas Chile: consulta gratuita hosting e-commerce, Softland ERP, migración web. Respuesta en 24h. Hablemos de tu proyecto."
-	keywords="contacto hosting chile, consulta hosting chile, cotizacion hosting chile, soporte hosting chile"
+	keywords="contacto hosting chile, consulta hosting chile, cotizacion hosting chile, soporte hosting chile, presupuesto hosting, consulta gratis hosting, solicitar demo hosting"
 	canonical="/contacto"
 >
+	<!-- ContactPage Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ContactPage",
+		"name": "Contacto - Hosting Sistemas Chile",
+		"description": "Página de contacto de Hosting Sistemas Chile. Consulta gratuita para hosting e-commerce y Softland ERP.",
+		"url": "https://hostingsistemas.cl/contacto",
+		"mainEntity": {
+			"@type": "Organization",
+			"name": "Hosting Sistemas",
+			"telephone": "800 914 659",
+			"email": "contacto@hostingsistemas.cl",
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "CL",
+				"addressLocality": "Chile"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "800 914 659",
+				"contactType": "customer service",
+				"availableLanguage": "Spanish",
+				"areaServed": "CL"
+			}
+		}
+	}
+	</script>
+
+	<!-- BreadcrumbList Schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Inicio",
+				"item": "https://hostingsistemas.cl"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Contacto",
+				"item": "https://hostingsistemas.cl/contacto"
+			}
+		]
+	}
+	</script>
+
 	<MainLayout client:load>
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 py-3">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<Breadcrumb
+					client:load
+					items={[
+						{ name: "Contacto" }
+					]}
+				/>
+			</div>
+		</div>
 		<Contact client:load />
 	</MainLayout>
 </Layout>

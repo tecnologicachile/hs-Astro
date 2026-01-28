@@ -2,13 +2,11 @@
 title: 'Manual Softland SW – Recursos Humanos: Administración Integral del Personal'
 description: 'Guía completa del módulo Softland SW - Recursos Humanos. Gestión integral de personal, remuneraciones, certificados de renta y cumplimiento laboral.'
 author: 'Equipo Hosting Sistemas'
-pubDate: 2025-08-27
+pubDate: 2026-01-02
 category: 'Softland ERP'
 tags: ['Softland ERP Chile', 'Recursos Humanos SW', 'Gestión Personal', 'Boletas Honorarios', 'Manual Softland']
 featured: true
 ---
-
-# Manual Softland SW – Recursos Humanos: Administración Integral del Personal
 
 La gestión de recursos humanos va mucho más allá de las remuneraciones: incluye el control de fichas de personal, movimientos laborales, certificaciones y obligaciones legales. Con el módulo Softland SW – Recursos Humanos, las empresas pueden administrar de manera integral la información de sus colaboradores, optimizar procesos de pago y asegurar el cumplimiento normativo.
 
@@ -101,3 +99,5 @@ Para acceder a información detallada sobre configuración, procesos paso a paso
 </div>
 
 *El manual incluye guías paso a paso, capturas de pantalla y ejemplos prácticos para optimizar la gestión de recursos humanos en tu empresa.*
+
+Centraliza tu gestión de RRHH con nuestro [hosting Softland ERP](/servicios/hosting-softland-erp) con acceso remoto seguro para todas tus sucursales. Si tu empresa tiene tienda online, conoce nuestra [sincronización e-commerce con Softland](/servicios/sincronizacion). Obtén [soporte técnico especializado](/servicios/soporte-softland-erp) con 20+ años de experiencia.
