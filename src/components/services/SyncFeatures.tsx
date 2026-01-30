@@ -31,8 +31,8 @@ export default function SyncFeatures() {
                   <div className="text-xs text-blue-100">Sincronización Automática</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4">
-                  <div className="text-3xl font-bold text-white mb-1">24/7</div>
-                  <div className="text-xs text-blue-100">Monitoreo Continuo</div>
+                  <div className="text-3xl font-bold text-white mb-1">99.9%</div>
+                  <div className="text-xs text-blue-100">Uptime Garantizado</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl p-4">
                   <div className="text-3xl font-bold text-white mb-1">0</div>

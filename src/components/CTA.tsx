@@ -9,7 +9,7 @@ export default function CTA() {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
             Conversemos sobre la mejor solución para tu negocio
           </h2>
-          <p className="text-lg text-blue-100 mb-10">
+          <p className="text-lg text-white/90 mb-10">
             Nuestro equipo de expertos está listo para ayudarte a optimizar tu infraestructura digital 
             y potenciar el crecimiento de tu empresa con soluciones personalizadas.
           </p>

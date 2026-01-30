@@ -183,6 +183,6 @@ Cada manual incluye explicaciones detalladas, casos prácticos y acceso a la doc
 - **[Soporte Técnico Especializado](/servicios/soporte-softland-erp)** - 20+ años de experiencia en Softland ERP, asistencia telefónica y web, migraciones y actualizaciones.
 - **[Sincronización con E-commerce](/servicios/sincronizacion)** - Integra tu Softland con WooCommerce, Shopify, PrestaShop y más con ERPSync.
 
-[Solicitar consulta gratuita →](/contacto)
+[Solicitar información →](/contacto)
 
 *Nuestro equipo de especialistas certificados puede ayudarte con implementación, migración a la nube, capacitación y soporte técnico continuo.*

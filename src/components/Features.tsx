@@ -17,8 +17,8 @@ const features = [
     icon: Puzzle,
   },
   {
-    title: 'Soporte Técnico 24/7',
-    description: 'Accede a soporte técnico experto en cualquier momento, con asistencia disponible las 24 horas del día, los 7 días de la semana',
+    title: 'Soporte Técnico Especializado',
+    description: 'Accede a soporte técnico experto con más de 20 años de experiencia en Softland ERP y plataformas e-commerce',
     icon: LifeBuoy,
   },
 ];

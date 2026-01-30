@@ -26,7 +26,7 @@ export default function PageHero({
         <div className="mx-auto max-w-4xl">
           {/* Breadcrumb */}
           {showBreadcrumb && breadcrumbItems.length > 0 && (
-            <nav className="flex items-center gap-2 text-sm text-blue-100 mb-8">
+            <nav className="flex items-center gap-2 text-sm text-white/90 mb-8">
               {breadcrumbItems.map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
                   {item.href ? (
@@ -47,7 +47,7 @@ export default function PageHero({
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight mb-6">
               {title}
             </h1>
-            <p className="text-xl leading-8 text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl leading-8 text-white/90 max-w-3xl mx-auto">
               {subtitle}
             </p>
           </div>

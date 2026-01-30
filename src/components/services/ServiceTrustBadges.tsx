@@ -8,7 +8,7 @@ const badges = [
   },
   {
     icon: Clock,
-    text: 'Soporte 24/7',
+    text: 'Soporte Experto',
     subtext: 'Especializado',
   },
   {

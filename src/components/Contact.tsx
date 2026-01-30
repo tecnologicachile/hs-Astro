@@ -140,7 +140,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Teléfono</h3>
                     <p className="text-gray-600">800 914 659</p>
-                    <p className="text-sm text-gray-500">Llamada gratuita desde todo Chile</p>
+                    <p className="text-sm text-gray-500">Línea directa Chile</p>
                   </div>
                 </div>
 
@@ -173,7 +173,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Horarios</h3>
                     <p className="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
-                    <p className="text-sm text-gray-500">Soporte técnico 24/7</p>
+                    <p className="text-sm text-gray-500">Lun - Vie: 9:00 - 19:00</p>
                   </div>
                 </div>
               </div>

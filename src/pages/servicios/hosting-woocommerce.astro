@@ -10,15 +10,18 @@ import EcommerceComparison from '../../components/services/WooCommerceComparison
 import ServiceBenefits from '../../components/services/ServiceBenefits.tsx';
 import ServiceCTA from '../../components/services/ServiceCTA.tsx';
 import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
+import PeopleAlsoAsk from '../../components/services/PeopleAlsoAsk.tsx';
+import PlatformComparison from '../../components/services/PlatformComparison.tsx';
 import RelatedServices from '../../components/services/RelatedServices.tsx';
 import RelatedBlogPosts from '../../components/services/RelatedBlogPosts.tsx';
 import HowItWorks from '../../components/services/HowItWorks.tsx';
 import Breadcrumb from '../../components/Breadcrumb.tsx';
+import LastUpdated from '../../components/LastUpdated.tsx';
 
 const ecommerceFaqs = [
   {
     question: "¿Qué incluye el hosting para e-commerce?",
-    answer: "Nuestro hosting incluye servidores optimizados para plataformas de e-commerce (WooCommerce, PrestaShop, Magento), certificado SSL gratuito, CDN, respaldos automáticos diarios, soporte técnico especializado 24/7, y configuración optimizada para máximo rendimiento."
+    answer: "Nuestro hosting incluye servidores optimizados para plataformas de e-commerce (WooCommerce, PrestaShop, Magento), certificado SSL incluido, CDN, respaldos automáticos diarios, soporte técnico especializado, y configuración optimizada para máximo rendimiento."
   },
   {
     question: "¿Cuánto tiempo toma migrar mi tienda existente?",
@@ -30,15 +33,14 @@ const ecommerceFaqs = [
   },
   {
     question: "¿Qué medidas de seguridad incluyen para tiendas online?",
-    answer: "Implementamos firewall avanzado, monitoreo de malware 24/7, certificados SSL, respaldos automáticos, actualizaciones de seguridad, y protección DDoS para garantizar la máxima seguridad de tu tienda."
+    answer: "Implementamos firewall avanzado, monitoreo de malware constante, certificados SSL, respaldos automáticos, actualizaciones de seguridad, y protección DDoS para garantizar la máxima seguridad de tu tienda."
   }
 ];
 ---
 
-<Layout 
+<Layout
 	title="Hosting E-commerce Chile - WooCommerce & PrestaShop"
-	description="Hosting E-commerce Chile especializado: WooCommerce, PrestaShop, Magento, Jumpseller. Integración Softland ERP, SSL gratuito, CDN y soporte 24/7 para tu tienda online."
-	keywords="hosting ecommerce chile, hosting woocommerce chile, hosting prestashop chile, hosting magento chile, hosting jumpseller chile, hosting tienda online chile, integracion ecommerce erp, precio hosting tienda online, migracion woocommerce gratis, ssl gratis ecommerce"
+	description="Hosting e-commerce especializado para WooCommerce, PrestaShop y Magento en Chile. SSL incluido, CDN, respaldos automáticos y soporte técnico especializado."
 	canonical="/servicios/hosting-woocommerce"
 >
 	<!-- Service Schema for E-commerce Hosting -->
@@ -47,7 +49,7 @@ const ecommerceFaqs = [
 		"@context": "https://schema.org",
 		"@type": "Service",
 		"name": "Hosting E-commerce Chile",
-		"description": "Hosting especializado para tiendas online en Chile: WooCommerce, PrestaShop, Magento, Jumpseller con servidores optimizados, SSL gratuito y soporte técnico 24/7",
+		"description": "Hosting especializado para tiendas online en Chile: WooCommerce, PrestaShop, Magento, Jumpseller con servidores optimizados, SSL incluido y soporte técnico especializado",
 		"provider": {
 			"@type": "Organization",
 			"name": "Hosting Sistemas",
@@ -89,7 +91,7 @@ const ecommerceFaqs = [
 					"@type": "Offer",
 					"itemOffered": {
 						"@type": "Service", 
-						"name": "Soporte 24/7"
+						"name": "Soporte Especializado"
 					}
 				}
 			]
@@ -136,7 +138,7 @@ const ecommerceFaqs = [
 				"name": "¿Qué incluye el hosting para e-commerce?",
 				"acceptedAnswer": {
 					"@type": "Answer",
-					"text": "Nuestro hosting incluye servidores optimizados para plataformas de e-commerce (WooCommerce, PrestaShop, Magento), certificado SSL gratuito, CDN, respaldos automáticos diarios, soporte técnico especializado 24/7, y configuración optimizada para máximo rendimiento."
+					"text": "Nuestro hosting incluye servidores optimizados para plataformas de e-commerce (WooCommerce, PrestaShop, Magento), certificado SSL incluido, CDN, respaldos automáticos diarios, soporte técnico especializado, y configuración optimizada para máximo rendimiento."
 				}
 			},
 			{
@@ -160,7 +162,7 @@ const ecommerceFaqs = [
 				"name": "¿Qué medidas de seguridad incluyen para tiendas online?",
 				"acceptedAnswer": {
 					"@type": "Answer",
-					"text": "Implementamos firewall avanzado, monitoreo de malware 24/7, certificados SSL, respaldos automáticos, actualizaciones de seguridad, y protección DDoS para garantizar la máxima seguridad de tu tienda."
+					"text": "Implementamos firewall avanzado, monitoreo de malware constante, certificados SSL, respaldos automáticos, actualizaciones de seguridad, y protección DDoS para garantizar la máxima seguridad de tu tienda."
 				}
 			}
 		]
@@ -201,7 +203,7 @@ const ecommerceFaqs = [
 				{
 					icon: "Shield",
 					title: "Protección integral de datos",
-					description: "Seguridad avanzada con certificados SSL, firewalls y monitoreo constante 24/7, protegiendo tu tienda contra amenazas y ataques maliciosos."
+					description: "Seguridad avanzada con certificados SSL, firewalls y monitoreo constante, protegiendo tu tienda contra amenazas y ataques maliciosos."
 				},
 				{
 					icon: "RefreshCw",
@@ -210,13 +212,17 @@ const ecommerceFaqs = [
 				},
 				{
 					icon: "Headphones",
-					title: "Soporte técnico 24/7",
+					title: "Soporte técnico experto",
 					description: "Equipo especializado en plataformas de e-commerce (WooCommerce, PrestaShop, Magento, Jumpseller) disponible cuando lo necesites, con soluciones expertas."
 				}
 			]}
 			gridCols={2}
 			backgroundGradient="bg-gradient-to-br from-white via-blue-50 to-gray-50"
 		/>
+
+		<!-- Platform Comparison Table -->
+		<PlatformComparison client:load />
+
 		<ServiceBackups 
 			client:load
 			title="Respaldos seguros y confiables para tu tienda online"
@@ -300,8 +306,37 @@ const ecommerceFaqs = [
 		<ServiceCTA
 			client:load
 			serviceName="Hosting E-commerce"
-			features={["SSL Incluido", "CDN Global", "Respaldos Diarios", "Soporte 24/7"]}
+			features={["SSL Incluido", "CDN Global", "Respaldos Diarios", "Soporte Experto"]}
 		/>
+
+		<!-- People Also Ask Section -->
+		<PeopleAlsoAsk
+			client:load
+			title="Preguntas Frecuentes sobre Hosting E-commerce"
+			questions={[
+				{
+					question: "¿Qué velocidad debería tener mi tienda online?",
+					answer: "Google recomienda que las páginas carguen en menos de 3 segundos. Para e-commerce, menos de 2 segundos es ideal. Nuestro hosting optimizado logra tiempos de carga promedio de 1.2 segundos con CDN incluido."
+				},
+				{
+					question: "¿Cuál es la diferencia entre WooCommerce, PrestaShop y Magento?",
+					answer: "WooCommerce: Plugin WordPress, flexible, ideal para tiendas medianas. PrestaShop: Plataforma independiente, excelente UX. Magento: Para grandes operaciones, muy potente pero requiere más recursos."
+				},
+				{
+					question: "¿Es seguro procesar pagos en línea con tu hosting?",
+					answer: "Sí. Cumplimos con PCI DSS, incluimos certificados SSL gratuitos, firewall WAF y protección DDoS. Todos los datos de pago se procesan a través de pasarelas seguras certificadas."
+				},
+				{
+					question: "¿Qué pasa si tengo un pico de tráfico?",
+					answer: "Nuestro hosting es escalable automáticamente. Si tienes promociones o picos de ventas, los recursos se expanden sin necesidad de intervención manual, garantizando que tu tienda siga funcionando normalmente."
+				},
+				{
+					question: "¿Puedo migrar desde otro hosting sin perder datos?",
+					answer: "Sí, incluimos asistencia de migración. Nuestro equipo se encarga de todo el proceso sin downtime. Realizamos migraciones típicamente en 24-48 horas, dependiendo del tamaño de tu tienda."
+				}
+			]}
+		/>
+
 		<ServiceFAQ
 			client:load
 			serviceName="Hosting E-commerce"
@@ -317,5 +352,12 @@ const ecommerceFaqs = [
 			client:load
 			currentService="/servicios/hosting-woocommerce"
 		/>
+
+		<!-- Last Updated -->
+		<div class="bg-white py-8">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<LastUpdated client:load />
+			</div>
+		</div>
 	</MainLayout>
 </Layout>

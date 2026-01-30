@@ -14,6 +14,7 @@ import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
 import RelatedServices from '../../components/services/RelatedServices.tsx';
 import RelatedBlogPosts from '../../components/services/RelatedBlogPosts.tsx';
 import HowItWorks from '../../components/services/HowItWorks.tsx';
+import LastUpdated from '../../components/LastUpdated.tsx';
 
 const softlandFaqs = [
   {
@@ -37,8 +38,7 @@ const softlandFaqs = [
 
 <Layout
 	title="Hosting Softland ERP Chile #1 - 20+ Años Experiencia Especializada"
-	description="Hosting Softland ERP profesional en Chile con servidores Windows optimizados y SQL Server configurado. 20+ años de experiencia, migración incluida y soporte técnico experto."
-	keywords="hosting softland erp chile, servidor softland erp, hosting softland chile, softland erp especializado, servidor windows softland, hosting erp chile, precio hosting softland, cotizacion servidor erp, migracion softland nube gratis"
+	description="Hosting profesional para Softland ERP en Chile con servidores Windows dedicados y SQL Server optimizado. 20+ años de experiencia y migración incluida."
 	canonical="/servicios/hosting-softland-erp"
 >
 	<!-- BreadcrumbList Schema -->
@@ -75,7 +75,7 @@ const softlandFaqs = [
 		"@context": "https://schema.org",
 		"@type": "Service",
 		"name": "Hosting Softland ERP Chile",
-		"description": "Hosting profesional para Softland ERP con servidores Windows dedicados, SQL Server optimizado y soporte técnico especializado 24/7",
+		"description": "Hosting profesional para Softland ERP con servidores Windows dedicados, SQL Server optimizado y soporte técnico especializado",
 		"provider": {
 			"@type": "Organization",
 			"name": "Hosting Sistemas",
@@ -115,14 +115,14 @@ const softlandFaqs = [
 					"@type": "Offer",
 					"itemOffered": {
 						"@type": "Service",
-						"name": "Soporte Técnico 24/7"
+						"name": "Soporte Técnico Especializado"
 					}
 				},
 				{
 					"@type": "Offer",
 					"itemOffered": {
 						"@type": "Service",
-						"name": "Migración Gratuita Incluida"
+						"name": "Migración Incluida"
 					}
 				}
 			]
@@ -216,7 +216,7 @@ const softlandFaqs = [
 				{
 					icon: "Headphones",
 					title: "Soporte técnico especializado",
-					description: "Equipo experto en Softland ERP disponible 24/7 para resolver cualquier consulta técnica, garantizando continuidad operativa y asistencia profesional inmediata siempre."
+					description: "Equipo experto en Softland ERP con 20+ años de experiencia para resolver cualquier consulta técnica, garantizando continuidad operativa y asistencia profesional."
 				}
 			]}
 			gridCols={2}
@@ -320,5 +320,12 @@ const softlandFaqs = [
 			client:load
 			currentService="/servicios/hosting-softland-erp"
 		/>
+
+		<!-- Last Updated -->
+		<div class="bg-white py-8">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<LastUpdated client:load />
+			</div>
+		</div>
 	</MainLayout>
 </Layout>

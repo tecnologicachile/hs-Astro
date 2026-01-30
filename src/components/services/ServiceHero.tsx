@@ -38,7 +38,7 @@ export default function ServiceHero({
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight sm:leading-tight">
             {title}
           </h1>
-          <p className="mt-6 text-lg leading-8 text-blue-100">
+          <p className="mt-6 text-lg leading-8 text-white/90">
             {subtitle}
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -48,7 +48,7 @@ export default function ServiceHero({
             >
               {ctaText}
             </a>
-            <a href={anchorLink} className="text-sm font-semibold leading-6 text-white hover:text-blue-100 inline-flex items-center gap-2">
+            <a href={anchorLink} className="text-sm font-semibold leading-6 text-white hover:text-white/90 inline-flex items-center gap-2">
               Ver Características <ArrowRight className="h-4 w-4" />
             </a>
           </div>

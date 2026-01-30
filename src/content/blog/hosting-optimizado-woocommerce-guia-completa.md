@@ -26,8 +26,8 @@ A diferencia de un sitio web informativo, una tienda online debe manejar picos d
 - Almacenamiento SSD NVMe: Imprescindible para tiempos de respuesta rápidos
 
 **Tecnologías de aceleración:**
-- PHP 8.0 o superior con OPcache habilitado
-- MariaDB o MySQL optimizado para consultas complejas
+- PHP 8.2 o superior con OPcache habilitado (PHP 8.3 recomendado para 2026)
+- MySQL 8.0+ o MariaDB 10.6+ optimizado para consultas complejas
 - Redis o Memcached para caché de objetos
 - HTTP/2 o HTTP/3 para transferencias más eficientes
 
@@ -148,8 +148,8 @@ WooCommerce es intensivo en base de datos. Necesitas:
 ### Paso 2: Analiza las especificaciones técnicas
 
 **Checklist esencial:**
-- [ ] PHP 8.0+ con módulos necesarios
-- [ ] MySQL 5.7+ o MariaDB 10.3+
+- [ ] PHP 8.2+ con módulos necesarios (8.3 recomendado)
+- [ ] MySQL 8.0+ o MariaDB 10.6+
 - [ ] Mínimo 4GB RAM
 - [ ] Almacenamiento SSD
 - [ ] Ancho de banda ilimitado o generoso
@@ -158,7 +158,7 @@ WooCommerce es intensivo en base de datos. Necesitas:
 ### Paso 3: Verifica el soporte técnico
 
 **Aspectos críticos:**
-- Disponibilidad 24/7/365
+- Alta disponibilidad
 - Tiempo de respuesta garantizado
 - Expertise en WooCommerce y WordPress
 - Canales múltiples (chat, teléfono, tickets)
@@ -178,7 +178,7 @@ La proximidad del servidor a tus clientes afecta la velocidad:
 - Uptime 99.9% garantizado
 - Compensación por tiempo de inactividad
 - Política de reembolso (mínimo 30 días)
-- Migración gratuita desde otro hosting
+- Asistencia de migración desde otro hosting
 
 ## Optimizaciones adicionales post-instalación
 
@@ -316,6 +316,6 @@ La inversión en un hosting de calidad siempre se reflejará en mejores ventas, 
 - **[Sincronización con Softland ERP](/servicios/sincronizacion)** - Integra tu WooCommerce con Softland ERP usando ERPSync para sincronizar inventario, precios y pedidos automáticamente.
 - **[Soporte Técnico Especializado](/servicios/soporte-softland-erp)** - 20+ años de experiencia en e-commerce y sistemas empresariales.
 
-[Solicitar consulta gratuita →](/contacto)
+[Solicitar información →](/contacto)
 
 *Nuestro equipo de especialistas puede ayudarte a elegir el hosting ideal para tu tienda y optimizar su rendimiento.*

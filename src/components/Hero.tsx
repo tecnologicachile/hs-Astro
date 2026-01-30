@@ -6,7 +6,7 @@ export default function Hero() {
     <div className="relative bg-hs-blue py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
         {/* Badge */}
-        <div className="mb-8 inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm text-blue-100">
+        <div className="mb-8 inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm text-white/90">
           <Shield className="w-4 h-4 mr-2" />
           20+ años especializados en Softland ERP
         </div>
@@ -20,7 +20,7 @@ export default function Hero() {
         </h1>
         
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+        <p className="text-lg sm:text-xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
           Servidores Windows optimizados, hosting empresarial y sincronización e-commerce exclusiva (WooCommerce, PrestaShop, Magento). Más de 15 años ayudando a empresas chilenas con tecnología confiable.
         </p>
 
@@ -39,7 +39,7 @@ export default function Hero() {
             variant="secondary"
             size="lg"
           >
-            Consulta Gratuita
+            Contáctanos
           </Button>
         </div>
       </div>

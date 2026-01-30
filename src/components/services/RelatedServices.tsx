@@ -11,7 +11,7 @@ interface Service {
 const allServices: Service[] = [
   {
     title: 'Hosting Softland ERP',
-    description: 'Servidores Windows dedicados con SQL Server optimizado y soporte especializado 24/7.',
+    description: 'Servidores Windows dedicados con SQL Server optimizado y soporte técnico especializado.',
     href: '/servicios/hosting-softland-erp',
     icon: 'Database',
     color: 'blue'

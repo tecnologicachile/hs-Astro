@@ -11,6 +11,13 @@ export default {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
       },
+      spacing: {
+        'section-sm': '3rem',      // 48px - py-12
+        'section-md': '4rem',      // 64px - py-16
+        'section-lg': '5rem',      // 80px - py-20
+        'section-xl': '6rem',      // 96px - py-24
+        'section-2xl': '8rem',     // 128px - py-32
+      },
       typography: {
         DEFAULT: {
           css: {

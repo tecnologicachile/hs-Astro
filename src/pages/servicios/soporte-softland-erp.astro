@@ -13,6 +13,7 @@ import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
 import RelatedServices from '../../components/services/RelatedServices.tsx';
 import RelatedBlogPosts from '../../components/services/RelatedBlogPosts.tsx';
 import HowItWorks from '../../components/services/HowItWorks.tsx';
+import LastUpdated from '../../components/LastUpdated.tsx';
 
 const soporteFaqs = [
   {
@@ -37,7 +38,6 @@ const soporteFaqs = [
 <Layout
 	title="Soporte Softland ERP Chile Especializado - Expertos 20+ Años"
 	description="Soporte Softland ERP Chile especializado con 20+ años de experiencia. Asistencia telefónica y web, trabajos especiales, migraciones y actualizaciones. Alternativa confiable a Softland Total."
-	keywords="soporte softland erp chile, expertos softland erp, consultor softland certificado, asistencia softland erp, soporte erp chile, softland total alternativa, precio soporte softland, cotizacion soporte erp, soporte 24/7 softland"
 	canonical="/servicios/soporte-softland-erp"
 >
 	<!-- BreadcrumbList Schema -->
@@ -238,7 +238,7 @@ const soporteFaqs = [
 				},
 				{
 					icon: "Settings",
-					title: "Monitoreo 24/7",
+					title: "Monitoreo Continuo",
 					description: "Supervisión continua del estado del sistema para prevenir problemas operativos."
 				}
 			]}
@@ -318,5 +318,12 @@ const soporteFaqs = [
 			client:load
 			currentService="/servicios/soporte-softland-erp"
 		/>
+
+		<!-- Last Updated -->
+		<div class="bg-white py-8">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<LastUpdated client:load />
+			</div>
+		</div>
 	</MainLayout>
 </Layout>
