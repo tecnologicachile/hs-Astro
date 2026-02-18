@@ -62,10 +62,28 @@ export default function Contact() {
       validationResult = validateContactForm(formData);
 
       if (!validationResult || !validationResult.success) {
-        setValidationErrors(validationResult?.errors || {});
+        const errors = validationResult?.errors || {};
+        setValidationErrors(errors);
         setSubmitStatus('error');
-        setStatusMessage('Por favor, corrige los errores en el formulario.');
+
+        const fieldNames: Record<string, string> = {
+          name: 'Nombre',
+          email: 'Email',
+          phone: 'Teléfono',
+          company: 'Empresa',
+          service: 'Servicio',
+          message: 'Mensaje'
+        };
+        const errorList = Object.entries(errors)
+          .map(([field, msg]) => `${fieldNames[field] || field}: ${msg}`)
+          .join('\n');
+        setStatusMessage(errorList || 'Por favor, revisa los campos del formulario.');
         setIsSubmitting(false);
+
+        const firstErrorField = Object.keys(errors)[0];
+        if (firstErrorField) {
+          document.getElementById(firstErrorField)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
         return;
       }
     } catch (error) {
@@ -381,7 +399,17 @@ export default function Contact() {
                 {submitStatus === 'error' && (
                   <div className="p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
                     <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-red-800">{statusMessage}</p>
+                    <div className="text-sm text-red-800">
+                      {statusMessage.includes('\n') ? (
+                        <ul className="space-y-1">
+                          {statusMessage.split('\n').map((line, i) => (
+                            <li key={i}>{line}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{statusMessage}</p>
+                      )}
+                    </div>
                   </div>
                 )}
 
