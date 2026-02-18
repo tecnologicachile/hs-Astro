@@ -18,57 +18,49 @@ export default function CaseStudyCard({
   industry
 }: CaseStudyCardProps) {
   return (
-    <div className="group relative">
-      {/* Card */}
-      <div className="bg-white border border-gray-100 rounded-3xl p-8 hover:border-hs-blue/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 h-full flex flex-col">
-        
-        {/* Logo */}
-        <div className="mb-8">
-          <div className="w-24 h-24 bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex items-center justify-center group-hover:border-hs-blue/20 transition-colors duration-300">
-            <img 
-              src={logoSrc}
-              alt={logoAlt}
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
-
-        {/* Company Info */}
-        <div className="mb-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-hs-blue transition-colors duration-300">
-            {companyName}
-          </h3>
-          {industry && (
-            <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">
-              {industry}
-            </p>
-          )}
-        </div>
-        
-        {/* Description */}
-        <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
-          {description}
-        </p>
-        
-        {/* Action */}
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-400">Cliente</span>
-          {websiteUrl !== "#" && (
-            <a 
-              href={websiteUrl}
-              className="inline-flex items-center gap-2 text-hs-blue hover:text-hs-blue-light font-medium transition-all duration-300 group-hover:translate-x-1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver sitio
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          )}
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:border-hs-blue/30 hover:shadow-sm transition-all duration-200 h-full flex flex-col">
+      {/* Logo */}
+      <div className="mb-5">
+        <div className="w-16 h-16 bg-gray-50 rounded-lg border border-gray-100 p-3 flex items-center justify-center">
+          <img
+            src={logoSrc}
+            alt={logoAlt}
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
-      
-      {/* Subtle accent */}
-      <div className="absolute inset-0 bg-gradient-to-r from-hs-blue/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+      {/* Company Info */}
+      <div className="mb-4">
+        <h3 className="text-base font-semibold text-gray-900 mb-1">
+          {companyName}
+        </h3>
+        {industry && (
+          <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">
+            {industry}
+          </p>
+        )}
+      </div>
+
+      {/* Description */}
+      <p className="text-sm text-gray-500 leading-6 mb-6 flex-grow">
+        {description}
+      </p>
+
+      {/* Action */}
+      {websiteUrl !== "#" && (
+        <div className="pt-4 border-t border-gray-100">
+          <a
+            href={websiteUrl}
+            className="inline-flex items-center gap-1.5 text-sm text-hs-blue font-medium hover:text-hs-blue-light transition-colors duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver sitio
+            <ArrowRight className="w-3.5 h-3.5" />
+          </a>
+        </div>
+      )}
     </div>
   );
 }

@@ -8,9 +8,11 @@ tags: ['Softland ERP Chile', 'Recursos Humanos SW', 'Gestión Personal', 'Boleta
 featured: true
 ---
 
-La gestión de recursos humanos va mucho más allá de las remuneraciones: incluye el control de fichas de personal, movimientos laborales, certificaciones y obligaciones legales. Con el módulo Softland SW – Recursos Humanos, las empresas pueden administrar de manera integral la información de sus colaboradores, optimizar procesos de pago y asegurar el cumplimiento normativo.
+¿Tienes toda la documentación laboral de tus trabajadores organizada y accesible? ¿Cuánto tiempo dedica tu equipo de RRHH a generar certificados, declaraciones juradas y reportes para fiscalizaciones?
 
-En este artículo encontrarás un resumen de las principales funcionalidades del sistema y el enlace al manual oficial Softland SW en PDF para consulta detallada.
+Las observaciones de la Dirección del Trabajo por documentación incompleta o incorrecta son más comunes de lo que parece. Sin un sistema centralizado, encontrar un contrato antiguo o generar un certificado de renta se convierte en una búsqueda de horas.
+
+En esta guía conocerás cómo el **módulo Softland SW** centraliza toda la información de tu personal, automatiza certificados y declaraciones, y te mantiene en cumplimiento con la normativa laboral. Al final podrás descargar el manual oficial en PDF.
 
 ## ¿Qué es el módulo Softland SW?
 
@@ -67,13 +69,30 @@ Permite definir, emitir, anular y registrar boletas de honorarios, además de ge
 
 ## Beneficios de Softland SW
 
-**Gestión integral**: centraliza toda la información laboral de los colaboradores.
+**Información laboral centralizada**
+Fichas de personal completas con contratos, movimientos, licencias y vacaciones. Todo accesible cuando lo necesites, sin buscar en carpetas físicas.
 
-**Cumplimiento legal**: asegura la correcta emisión de boletas, certificados y declaraciones.
+**Cumplimiento legal garantizado**
+Certificados de renta, declaraciones juradas y boletas de honorarios generados automáticamente. Cumple con la Dirección del Trabajo sin estrés.
 
-**Automatización**: procesos de remuneraciones y pagos electrónicos en un solo sistema.
+**Integración con Previred**
+Conexión directa para envío de cotizaciones previsionales. Elimina la digitación manual y reduce errores en el proceso de pago.
 
-**Trazabilidad**: auditoría y control de cada movimiento realizado.
+**Trazabilidad completa**
+Auditoría de cada movimiento: quién modificó qué y cuándo. Información confiable para fiscalizaciones y auditorías internas.
+
+> **¿Tu equipo de RRHH trabaja en varias sucursales?** Con nuestro [hosting Softland ERP](/servicios/hosting-softland-erp), todos acceden a la misma información actualizada desde cualquier ubicación.
+
+## Preguntas Frecuentes
+
+**¿El módulo SW se conecta con Previred?**
+Sí, tiene integración directa con Previred para el envío de cotizaciones previsionales, evitando digitación manual y reduciendo errores.
+
+**¿Puedo emitir certificados de renta automáticamente?**
+Sí, el módulo genera certificados de renta y declaraciones juradas de forma automática basándose en la información de remuneraciones procesada.
+
+**¿Cómo se relaciona con el módulo de Sueldos (EW)?**
+SW amplía las capacidades de EW, agregando gestión de personal, boletas de honorarios, rentas accesorias y certificaciones. Trabajan de forma integrada.
 
 ## Conclusión
 
@@ -81,20 +100,13 @@ El módulo Softland SW – Recursos Humanos es una solución robusta que abarca 
 
 ---
 
-## 📥 Descargar Manual Completo
+## Descargar Manual Completo
 
 Para acceder a información detallada sobre configuración, procesos paso a paso y casos prácticos, descarga el manual oficial:
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a 
-    href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-SW.pdf" 
-    download="Manual-Softland-SW-Recursos-Humanos.pdf"
-    style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0048AB, #0058D6); color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); transition: all 0.3s ease;"
-  >
-    📥 Descargar Manual SW PDF
-    <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-    </svg>
+  <a href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-SW.pdf" download="Manual-Softland-SW-Recursos-Humanos.pdf" class="download-btn">
+    Descargar Manual SW PDF
   </a>
 </div>
 

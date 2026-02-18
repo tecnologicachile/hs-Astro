@@ -16,39 +16,39 @@ interface ServiceHeroProps {
   anchorLink?: string;
 }
 
-export default function ServiceHero({ 
-  iconName, 
-  title, 
-  subtitle, 
+export default function ServiceHero({
+  iconName,
+  title,
+  subtitle,
   ctaText = "Solicitar Cotización",
   ctaLink = "/contacto",
   anchorLink = "#caracteristicas"
 }: ServiceHeroProps) {
   const Icon = iconMap[iconName];
-  
+
   return (
-    <div className="bg-gradient-to-br from-hs-blue via-hs-blue-light to-hs-blue-lighter py-12 sm:py-16">
+    <div className="bg-hs-blue py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex justify-center mb-6">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white bg-opacity-20 backdrop-blur-sm">
-              <Icon className="h-8 w-8 text-white" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-white/20 bg-white/10">
+              <Icon className="h-6 w-6 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl leading-tight sm:leading-tight">
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl leading-tight">
             {title}
           </h1>
-          <p className="mt-6 text-lg leading-8 text-white/90">
+          <p className="mt-5 text-base leading-7 text-blue-100/60 max-w-2xl mx-auto">
             {subtitle}
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-8 flex items-center justify-center gap-x-6">
             <a
               href={ctaLink}
-              className="rounded-xl bg-white px-8 py-4 text-base font-semibold text-hs-blue shadow-lg hover:bg-gray-50 hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-hs-blue shadow-sm hover:bg-gray-50 hover:shadow-md transition-all duration-200"
             >
               {ctaText}
             </a>
-            <a href={anchorLink} className="text-sm font-semibold leading-6 text-white hover:text-white/90 inline-flex items-center gap-2">
+            <a href={anchorLink} className="text-sm font-medium text-white/70 hover:text-white inline-flex items-center gap-1.5 transition-colors duration-200">
               Ver Características <ArrowRight className="h-4 w-4" />
             </a>
           </div>

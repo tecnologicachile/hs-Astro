@@ -8,9 +8,11 @@ tags: ['Softland ERP Chile', 'Proveedores PW', 'Tesorería', 'Pagos Electrónico
 featured: true
 ---
 
-El manejo de proveedores y tesorería es fundamental para mantener la estabilidad financiera y la buena relación comercial de cualquier empresa. El módulo Softland PW – Proveedores y Tesorería centraliza el registro de facturas de compra, el control de cuentas por pagar y la administración de pagos, tanto manuales como electrónicos, garantizando seguridad, trazabilidad y cumplimiento normativo.
+¿Cuántos descuentos por pronto pago dejó pasar tu empresa el año pasado? ¿Has pagado alguna vez la misma factura dos veces por falta de control?
 
-En este artículo te mostramos las principales funcionalidades del sistema y te dejamos el manual oficial Softland PW en PDF para consulta detallada.
+Los errores en pagos a proveedores —facturas duplicadas, vencimientos no aprovechados, información dispersa— generan pérdidas silenciosas pero significativas. Sin un sistema centralizado, cada pago requiere verificación manual y el riesgo de error aumenta.
+
+En esta guía descubrirás cómo el **módulo Softland PW** centraliza tu tesorería, automatiza pagos electrónicos y te permite aprovechar cada descuento por pronto pago. Al final podrás descargar el manual oficial en PDF.
 
 ## ¿Qué es el módulo Softland PW?
 
@@ -61,13 +63,30 @@ Integración con bancos nacionales como Banco de Chile, BCI, Santander, Itaú, C
 
 ## Beneficios de Softland PW
 
-**Centralización**: concentra la gestión de proveedores y tesorería en un solo sistema.
+**Tesorería centralizada**
+Toda la información de proveedores, facturas y pagos en un solo lugar. Elimina hojas de cálculo paralelas y reduce errores de duplicación.
 
-**Cumplimiento tributario**: soporta facturación electrónica y reportes exigidos por el SII.
+**Pagos electrónicos integrados**
+Conexión directa con los principales bancos chilenos (Banco de Chile, BCI, Santander, Itaú). Procesa transferencias masivas sin salir del sistema.
 
-**Eficiencia operativa**: automatiza pagos manuales y electrónicos.
+**Cumplimiento tributario automático**
+Soporte completo para facturación electrónica de compra y reportes exigidos por el SII. Certificación y envío de sets de prueba integrados.
 
-**Seguridad financiera**: control de permisos, auditoría y restricciones por áreas.
+**Control y auditoría**
+Permisos granulares, flujos de aprobación y trazabilidad completa de cada transacción. Sabe quién autorizó qué y cuándo.
+
+> **¿Necesitas acceso remoto a tu tesorería?** Con nuestro [hosting Softland ERP](/servicios/hosting-softland-erp), tu equipo financiero puede aprobar pagos desde cualquier ubicación de forma segura.
+
+## Preguntas Frecuentes
+
+**¿Con qué bancos se integra para pagos electrónicos?**
+PW se integra con Banco de Chile, BCI, Santander, Itaú, CitiBank y otros bancos nacionales para transferencias electrónicas seguras.
+
+**¿Puedo configurar flujos de aprobación de pagos?**
+Sí, el módulo permite definir niveles de aprobación según montos y responsables, asegurando control sobre los egresos de la empresa.
+
+**¿Se integra con facturación electrónica del SII?**
+Sí, soporta recepción de facturas de compra electrónicas y notas de crédito/débito, incluyendo envío de sets de certificación al SII.
 
 ## Conclusión
 
@@ -75,20 +94,13 @@ El módulo Softland PW – Proveedores y Tesorería es una herramienta indispens
 
 ---
 
-## 📥 Descargar Manual Completo
+## Descargar Manual Completo
 
 Para acceder a información detallada sobre configuración, procesos paso a paso y casos prácticos, descarga el manual oficial:
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a 
-    href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-Pw.pdf" 
-    download="Manual-Softland-PW-Proveedores-Tesoreria.pdf"
-    style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0048AB, #0058D6); color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); transition: all 0.3s ease;"
-  >
-    📥 Descargar Manual PW PDF
-    <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-    </svg>
+  <a href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-Pw.pdf" download="Manual-Softland-PW-Proveedores-Tesoreria.pdf" class="download-btn">
+    Descargar Manual PW PDF
   </a>
 </div>
 

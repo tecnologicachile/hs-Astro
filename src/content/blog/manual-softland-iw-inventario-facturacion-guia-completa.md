@@ -8,9 +8,11 @@ tags: ['Softland ERP Chile', 'Inventario IW', 'Facturación Electrónica', 'Cont
 featured: true
 ---
 
-La correcta gestión de inventario y facturación es clave para mantener la continuidad operativa, la trazabilidad y el cumplimiento tributario en cualquier empresa. Con el módulo Softland IW – Inventario y Facturación, las organizaciones pueden administrar de manera centralizada todo el ciclo de inventario, ventas y documentos electrónicos, asegurando orden, control y cumplimiento con el Servicio de Impuestos Internos (SII).
+¿Tu inventario en el sistema coincide con lo que realmente hay en bodega? ¿Alguna vez has tenido facturas rechazadas por el SII o errores en documentos tributarios electrónicos?
 
-En este artículo encontrarás un resumen de sus funcionalidades principales y, al final, podrás acceder al manual oficial Softland IW en PDF.
+La gestión manual de stock y facturación genera quiebres de inventario, ventas perdidas por falta de productos y dolores de cabeza con el cumplimiento tributario. Cada error en un DTE significa tiempo perdido en correcciones y posibles multas.
+
+En esta guía conocerás cómo el **módulo Softland IW** centraliza el control de inventario y facturación electrónica, asegurando stock actualizado en tiempo real y cumplimiento total con el SII. Al final podrás descargar el manual oficial en PDF.
 
 ## ¿Qué es el módulo Softland IW?
 
@@ -65,13 +67,30 @@ Incluye tablas auxiliares para bodegas, centros de costo, listas de precios, pro
 
 ## Beneficios de Softland IW
 
-**Cumplimiento tributario**: integrado con facturación electrónica exigida por el SII.
+**Cumplimiento tributario garantizado**
+Integración nativa con facturación electrónica del SII. Emite facturas, boletas, notas de crédito y débito con validación automática, reduciendo rechazos a prácticamente cero.
 
-**Control de stock**: visibilidad en tiempo real de existencias y movimientos.
+**Control de stock en tiempo real**
+Visibilidad instantánea de existencias en todas tus bodegas. Evita quiebres de stock y sobrestock con alertas automáticas de niveles mínimos y máximos.
 
-**Automatización**: procesos de ventas, facturación y consolidación multiempresa.
+**Automatización de procesos**
+Desde la facturación por lotes hasta la consolidación multiempresa, automatiza tareas repetitivas que antes consumían horas de trabajo manual.
 
-**Flexibilidad**: soporta múltiples bodegas, listas de precios y tipos de documentos.
+**Flexibilidad operativa**
+Soporta múltiples bodegas, listas de precios diferenciadas, promociones y diversos tipos de documentos. Adapta el sistema a tu forma de trabajar.
+
+> **¿Vendes también por e-commerce?** Conoce nuestra [sincronización con tiendas online](/servicios/sincronizacion) para mantener tu stock de Softland actualizado con WooCommerce, PrestaShop o Magento.
+
+## Preguntas Frecuentes
+
+**¿El módulo IW está certificado para facturación electrónica SII?**
+Sí, Softland IW está completamente certificado por el SII para emisión de DTE (Documentos Tributarios Electrónicos) incluyendo facturas, boletas, notas de crédito y débito.
+
+**¿Puedo manejar múltiples bodegas?**
+Sí, el módulo soporta gestión de múltiples bodegas con control de stock independiente, transferencias entre bodegas y reportes consolidados o por ubicación.
+
+**¿Se integra con otros módulos de Softland?**
+Sí, IW se integra nativamente con Contabilidad (CW), Clientes y Cobranzas (XW), y Órdenes de Compra (OW) para un flujo de información completo.
 
 ## Conclusión
 
@@ -79,20 +98,13 @@ El módulo Softland IW – Inventario y Facturación es una solución esencial p
 
 ---
 
-## 📥 Descargar Manual Completo
+## Descargar Manual Completo
 
 Para acceder a información detallada sobre configuración, procesos paso a paso y casos prácticos, descarga el manual oficial:
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a 
-    href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-IW.pdf" 
-    download="Manual-Softland-IW-Inventario-Facturacion.pdf"
-    style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0048AB, #0058D6); color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); transition: all 0.3s ease;"
-  >
-    📥 Descargar Manual IW PDF
-    <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-    </svg>
+  <a href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-IW.pdf" download="Manual-Softland-IW-Inventario-Facturacion.pdf" class="download-btn">
+    Descargar Manual IW PDF
   </a>
 </div>
 

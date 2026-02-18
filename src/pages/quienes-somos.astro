@@ -9,15 +9,15 @@ import LastUpdated from '../components/LastUpdated.tsx';
 ---
 
 <Layout
-	title="Quiénes Somos - Hosting Sistemas Chile"
-	description="Hosting Sistemas Chile: 20+ años especializados en e-commerce y Softland ERP. Tecnológica Chile SpA, empresa líder en hosting profesional. Conoce nuestra historia."
+	title="Hosting Sistemas Chile - 20+ Años Experiencia"
+	description="Hosting Sistemas: 20+ años en e-commerce y Softland ERP. Empresa líder chilena en hosting profesional. Conoce nuestra experiencia."
 	canonical="/quienes-somos"
 >
 	<MainLayout client:load>
 		<!-- Breadcrumbs -->
 		<div class="bg-gray-50 py-3">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<Breadcrumb 
+				<Breadcrumb
 					client:load
 					items={[
 						{ name: "Quiénes Somos" }
@@ -26,54 +26,53 @@ import LastUpdated from '../components/LastUpdated.tsx';
 			</div>
 		</div>
 
-		<PageHero 
+		<PageHero
 			client:load
-			title="Quiénes Somos" 
-			subtitle="Conoce Nuestra Historia y Nuestro Compromiso con la Excelencia"
+			title="Quiénes Somos"
+			subtitle="Conoce nuestra historia y nuestro compromiso con la excelencia"
 		/>
 
-		<!-- Company Overview con layout asimétrico -->
-		<div class="bg-white py-24 sm:py-32">
+		<!-- Company Overview -->
+		<div class="bg-white py-16 sm:py-20">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="grid lg:grid-cols-2 gap-12 items-center">
-					<!-- Contenido principal a la izquierda -->
+				<div class="grid lg:grid-cols-2 gap-12 items-start">
 					<div>
-						<h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-8">
+						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
 							Tecnológica Chile SpA
 						</h2>
-						<div class="space-y-6">
-							<p class="text-lg leading-8 text-gray-600">
-								Con más de una década y media de experiencia en el mundo de la tecnología empresarial, en <strong>Tecnológica Chile SpA</strong> nos enorgullece ser líderes en la prestación de servicios en torno a Softland, así como en el desarrollo de software personalizado, soluciones de reporte e integraciones empresariales.
+						<div class="space-y-5">
+							<p class="text-base leading-7 text-gray-500">
+								Con más de una década y media de experiencia en el mundo de la tecnología empresarial, en <strong class="text-gray-700">Tecnológica Chile SpA</strong> nos enorgullece ser líderes en la prestación de servicios en torno a Softland, así como en el desarrollo de software personalizado, soluciones de reporte e integraciones empresariales.
 							</p>
-							<p class="text-lg leading-8 text-gray-600">
-								Desde nuestros inicios en el año <strong>2005</strong>, hemos estado comprometidos con la excelencia y la innovación en el ámbito de la tecnología empresarial. A lo largo de los años, hemos consolidado nuestro conocimiento y experiencia, convirtiéndonos en un socio confiable para empresas de todos los tamaños y sectores.
+							<p class="text-base leading-7 text-gray-500">
+								Desde nuestros inicios en el año <strong class="text-gray-700">2005</strong>, hemos estado comprometidos con la excelencia y la innovación en el ámbito de la tecnología empresarial. A lo largo de los años, hemos consolidado nuestro conocimiento y experiencia, convirtiéndonos en un socio confiable para empresas de todos los tamaños y sectores.
 							</p>
 						</div>
 					</div>
-					
-					<!-- Timeline visual a la derecha -->
-					<div class="relative">
-						<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-hs-blue via-hs-blue-light to-hs-blue-lighter"></div>
-						<div class="space-y-12">
-							<div class="relative flex items-center">
-								<div class="absolute left-8 w-4 h-4 bg-hs-blue rounded-full -translate-x-1/2"></div>
-								<div class="ml-20">
-									<div class="text-sm font-semibold text-hs-blue uppercase tracking-wide">2005</div>
-									<div class="text-gray-600">Fundación de la empresa</div>
+
+					<!-- Timeline -->
+					<div class="relative pl-8">
+						<div class="absolute left-8 top-0 bottom-0 w-px bg-gray-200"></div>
+						<div class="space-y-10">
+							<div class="relative flex items-start">
+								<div class="absolute left-0 w-2.5 h-2.5 bg-hs-blue rounded-full -translate-x-1/2 mt-1.5"></div>
+								<div class="ml-8">
+									<div class="text-sm font-semibold text-hs-blue">2005</div>
+									<div class="text-sm text-gray-500">Fundación de la empresa</div>
 								</div>
 							</div>
-							<div class="relative flex items-center">
-								<div class="absolute left-8 w-4 h-4 bg-hs-blue-light rounded-full -translate-x-1/2"></div>
-								<div class="ml-20">
-									<div class="text-sm font-semibold text-hs-blue uppercase tracking-wide">20+ años</div>
-									<div class="text-gray-600">Experiencia en Softland</div>
+							<div class="relative flex items-start">
+								<div class="absolute left-0 w-2.5 h-2.5 bg-hs-blue rounded-full -translate-x-1/2 mt-1.5"></div>
+								<div class="ml-8">
+									<div class="text-sm font-semibold text-hs-blue">20+ años</div>
+									<div class="text-sm text-gray-500">Experiencia en Softland</div>
 								</div>
 							</div>
-							<div class="relative flex items-center">
-								<div class="absolute left-8 w-4 h-4 bg-hs-blue-lighter rounded-full -translate-x-1/2"></div>
-								<div class="ml-20">
-									<div class="text-sm font-semibold text-hs-blue uppercase tracking-wide">Hoy</div>
-									<div class="text-gray-600">Líderes en tecnología empresarial</div>
+							<div class="relative flex items-start">
+								<div class="absolute left-0 w-2.5 h-2.5 bg-hs-blue rounded-full -translate-x-1/2 mt-1.5"></div>
+								<div class="ml-8">
+									<div class="text-sm font-semibold text-hs-blue">Hoy</div>
+									<div class="text-sm text-gray-500">Líderes en tecnología empresarial</div>
 								</div>
 							</div>
 						</div>
@@ -82,95 +81,85 @@ import LastUpdated from '../components/LastUpdated.tsx';
 			</div>
 		</div>
 
-		<!-- Mission & Vision en formato de tarjetas alternadas -->
-		<div class="bg-gradient-to-br from-gray-50 via-slate-50 to-blue-50 py-24 sm:py-32">
+		<!-- Historia, Misión & Visión -->
+		<div class="bg-gray-50 py-16 sm:py-20">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<!-- Historia en layout completo -->
-				<div class="mb-20">
+				<!-- Historia -->
+				<div class="mb-16">
 					<div class="max-w-2xl mx-auto text-center mb-12">
-						<div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl mb-6">
-							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<div class="inline-flex items-center justify-center w-12 h-12 bg-hs-blue rounded-lg mb-5">
+							<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 							</svg>
 						</div>
-						<h2 class="text-3xl font-bold text-gray-900 mb-6">Nuestra Historia</h2>
-						<p class="text-lg leading-8 text-gray-600">
+						<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">Nuestra Historia</h2>
+						<p class="text-base leading-7 text-gray-500">
 							Desde nuestros inicios en el año 2005, hemos estado comprometidos con la excelencia y la innovación en el ámbito de la tecnología empresarial. A lo largo de los años, hemos consolidado nuestro conocimiento y experiencia, convirtiéndonos en un socio confiable para empresas de todos los tamaños y sectores.
 						</p>
 					</div>
 				</div>
 
-				<!-- Misión y Visión en grid lateral -->
-				<div class="grid lg:grid-cols-2 gap-8">
-					<!-- Misión -->
-					<div class="group relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
-						<div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-gradient-to-br from-hs-blue/10 to-transparent rounded-full blur-2xl"></div>
-						<div class="relative">
-							<div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl mb-6">
-								<svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-								</svg>
-							</div>
-							<h3 class="text-2xl font-bold text-gray-900 mb-4">Misión</h3>
-							<p class="text-gray-600 leading-relaxed">
-								En Tecnológica Chile SpA, nos dedicamos a fomentar el éxito empresarial a través de soluciones tecnológicas innovadoras y personalizadas. Estamos comprometidos con la transformación y el avance de nuestros clientes, brindando asistencia y herramientas que se ajusten específicamente a sus necesidades y objetivos comerciales. Nuestra misión es ser un aliado clave en su camino hacia el éxito, utilizando la tecnología como un puente hacia el logro de sus metas.
-							</p>
+				<!-- Misión y Visión -->
+				<div class="grid lg:grid-cols-2 gap-6">
+					<div class="bg-white rounded-xl border border-gray-200 p-8">
+						<div class="flex items-center justify-center w-10 h-10 bg-hs-blue/8 text-hs-blue rounded-lg mb-5">
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
 						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Misión</h3>
+						<p class="text-sm text-gray-500 leading-6">
+							En Tecnológica Chile SpA, nos dedicamos a fomentar el éxito empresarial a través de soluciones tecnológicas innovadoras y personalizadas. Estamos comprometidos con la transformación y el avance de nuestros clientes, brindando asistencia y herramientas que se ajusten específicamente a sus necesidades y objetivos comerciales.
+						</p>
 					</div>
 
-					<!-- Visión -->
-					<div class="group relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
-						<div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-gradient-to-br from-hs-blue-lighter/10 to-transparent rounded-full blur-2xl"></div>
-						<div class="relative">
-							<div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl mb-6">
-								<svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-								</svg>
-							</div>
-							<h3 class="text-2xl font-bold text-gray-900 mb-4">Visión</h3>
-							<p class="text-gray-600 leading-relaxed">
-								En Tecnológica Chile SpA, nuestra visión es impulsar el éxito empresarial a través de la tecnología. Creemos en la capacidad transformadora de la innovación y estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos comerciales mediante soluciones tecnológicas efectivas y adaptadas a sus necesidades específicas.
-							</p>
+					<div class="bg-white rounded-xl border border-gray-200 p-8">
+						<div class="flex items-center justify-center w-10 h-10 bg-hs-blue/8 text-hs-blue rounded-lg mb-5">
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+							</svg>
 						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Visión</h3>
+						<p class="text-sm text-gray-500 leading-6">
+							Nuestra visión es impulsar el éxito empresarial a través de la tecnología. Creemos en la capacidad transformadora de la innovación y estamos comprometidos a ayudar a nuestros clientes a alcanzar sus objetivos comerciales mediante soluciones tecnológicas efectivas y adaptadas a sus necesidades específicas.
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Experience Section con diseño split -->
-		<div class="bg-white py-24 sm:py-32">
+		<!-- Experience Section -->
+		<div class="bg-white py-16 sm:py-20">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="grid lg:grid-cols-3 gap-12">
-					<!-- Columna izquierda - Título y stats -->
+				<div class="grid lg:grid-cols-3 gap-10">
+					<!-- Stats -->
 					<div class="lg:col-span-1">
-						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
+						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
 							Nuestra Experiencia
 						</h2>
-						<div class="bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-2xl p-8 text-white">
-							<div class="text-5xl font-bold mb-2">2005</div>
-							<div class="text-xl font-semibold mb-4">Año de Fundación</div>
-							<div class="h-px bg-white/30 my-4"></div>
-							<div class="text-4xl font-bold mb-2">+20</div>
-							<div class="text-lg">Años de experiencia</div>
+						<div class="bg-hs-blue rounded-xl p-8 text-white">
+							<div class="text-4xl font-bold mb-1">2005</div>
+							<div class="text-base font-medium text-blue-100/60 mb-5">Año de Fundación</div>
+							<div class="h-px bg-white/20 my-5"></div>
+							<div class="text-4xl font-bold mb-1">+20</div>
+							<div class="text-base text-blue-100/60">Años de experiencia</div>
 						</div>
 					</div>
-					
-					<!-- Columna derecha - Contenido -->
-					<div class="lg:col-span-2">
-						<div class="space-y-8">
-							<div class="bg-gray-50 rounded-2xl p-8">
-								<h3 class="text-xl font-bold text-gray-900 mb-4">Expertise en Softland</h3>
-								<p class="text-lg leading-8 text-gray-600">
-									Con más de una década y media de dedicación a <strong>Softland</strong>, hemos perfeccionado nuestras habilidades y conocimientos para brindar soluciones integrales que permiten a nuestros clientes optimizar sus operaciones y maximizar su potencial.
-								</p>
-							</div>
-							<div class="bg-hs-blue/5 rounded-2xl p-8">
-								<h3 class="text-xl font-bold text-gray-900 mb-4">Soluciones Integrales</h3>
-								<p class="text-lg leading-8 text-gray-600">
-									Ya sea a través de la implementación y personalización de sistemas de gestión ERP, el desarrollo de software a medida o la creación de soluciones de reporte y análisis avanzado, nuestro equipo de expertos está preparado para enfrentar los desafíos tecnológicos más exigentes.
-								</p>
-							</div>
+
+					<!-- Content -->
+					<div class="lg:col-span-2 space-y-6">
+						<div class="border border-gray-200 rounded-xl p-6">
+							<h3 class="text-base font-semibold text-gray-900 mb-3">Expertise en Softland</h3>
+							<p class="text-sm leading-6 text-gray-500">
+								Con más de una década y media de dedicación a <strong class="text-gray-700">Softland</strong>, hemos perfeccionado nuestras habilidades y conocimientos para brindar soluciones integrales que permiten a nuestros clientes optimizar sus operaciones y maximizar su potencial.
+							</p>
+						</div>
+						<div class="border border-gray-200 rounded-xl p-6">
+							<h3 class="text-base font-semibold text-gray-900 mb-3">Soluciones Integrales</h3>
+							<p class="text-sm leading-6 text-gray-500">
+								Ya sea a través de la implementación y personalización de sistemas de gestión ERP, el desarrollo de software a medida o la creación de soluciones de reporte y análisis avanzado, nuestro equipo de expertos está preparado para enfrentar los desafíos tecnológicos más exigentes.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -178,26 +167,23 @@ import LastUpdated from '../components/LastUpdated.tsx';
 		</div>
 
 		<!-- Commitment Section -->
-		<div class="bg-gradient-to-br from-hs-blue via-hs-blue-light to-hs-blue-lighter py-24 sm:py-32">
+		<div class="bg-hs-blue py-16 sm:py-20">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-4xl text-center">
-					<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8">
+				<div class="mx-auto max-w-3xl text-center">
+					<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
 						Nuestro Compromiso
 					</h2>
-					<div class="prose prose-lg prose-blue mx-auto">
-						<p class="text-xl leading-8 text-blue-100 mb-6">
-							La satisfacción del cliente es el corazón de todo lo que hacemos. Trabajamos estrechamente con cada uno de nuestros clientes para comprender sus metas y desafíos únicos, y luego diseñamos y entregamos soluciones que superen sus expectativas.
-						</p>
-						<p class="text-xl leading-8 text-blue-100">
-							Nuestro compromiso con la calidad y la excelencia es evidente en cada proyecto que emprendemos.
-						</p>
-					</div>
+					<p class="text-base leading-7 text-blue-100/60 mb-4">
+						La satisfacción del cliente es el corazón de todo lo que hacemos. Trabajamos estrechamente con cada uno de nuestros clientes para comprender sus metas y desafíos únicos, y luego diseñamos y entregamos soluciones que superen sus expectativas.
+					</p>
+					<p class="text-base leading-7 text-blue-100/60">
+						Nuestro compromiso con la calidad y la excelencia es evidente en cada proyecto que emprendemos.
+					</p>
 
-					<!-- CTA -->
-					<div class="mt-12">
-						<a href="/contacto" class="inline-flex items-center rounded-xl bg-white px-8 py-4 text-base font-semibold text-hs-blue shadow-lg hover:bg-gray-50 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+					<div class="mt-10">
+						<a href="/contacto" class="inline-flex items-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-hs-blue shadow-sm hover:bg-gray-50 hover:shadow-md transition-all duration-200">
 							Conoce Nuestros Servicios
-							<svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 							</svg>
 						</a>

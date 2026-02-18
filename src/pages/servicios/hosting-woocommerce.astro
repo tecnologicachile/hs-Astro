@@ -10,7 +10,6 @@ import EcommerceComparison from '../../components/services/WooCommerceComparison
 import ServiceBenefits from '../../components/services/ServiceBenefits.tsx';
 import ServiceCTA from '../../components/services/ServiceCTA.tsx';
 import ServiceFAQ from '../../components/services/ServiceFAQ.tsx';
-import PeopleAlsoAsk from '../../components/services/PeopleAlsoAsk.tsx';
 import PlatformComparison from '../../components/services/PlatformComparison.tsx';
 import RelatedServices from '../../components/services/RelatedServices.tsx';
 import RelatedBlogPosts from '../../components/services/RelatedBlogPosts.tsx';
@@ -24,12 +23,32 @@ const ecommerceFaqs = [
     answer: "Nuestro hosting incluye servidores optimizados para plataformas de e-commerce (WooCommerce, PrestaShop, Magento), certificado SSL incluido, CDN, respaldos automáticos diarios, soporte técnico especializado, y configuración optimizada para máximo rendimiento."
   },
   {
+    question: "¿Qué velocidad debería tener mi tienda online?",
+    answer: "Google recomienda que las páginas carguen en menos de 3 segundos. Para e-commerce, menos de 2 segundos es ideal. Nuestro hosting optimizado logra tiempos de carga promedio de 1.2 segundos con CDN incluido."
+  },
+  {
+    question: "¿Cuál es la diferencia entre WooCommerce, PrestaShop y Magento?",
+    answer: "WooCommerce: Plugin WordPress, flexible, ideal para tiendas medianas. PrestaShop: Plataforma independiente, excelente UX. Magento: Para grandes operaciones, muy potente pero requiere más recursos."
+  },
+  {
     question: "¿Cuánto tiempo toma migrar mi tienda existente?",
     answer: "La migración típicamente toma entre 24-48 horas. Nuestro equipo técnico se encarga de todo el proceso sin interrumpir tu tienda, realizando la migración durante horarios de menor tráfico."
   },
   {
+    question: "¿Es seguro procesar pagos en línea con tu hosting?",
+    answer: "Sí. Cumplimos con PCI DSS, incluimos certificados SSL gratuitos, firewall WAF y protección DDoS. Todos los datos de pago se procesan a través de pasarelas seguras certificadas."
+  },
+  {
     question: "¿Ofrecen soporte para problemas específicos de e-commerce?",
     answer: "Sí, nuestro equipo está especializado en plataformas de e-commerce. Podemos ayudarte con optimización de plugins, configuración de pagos, problemas de rendimiento y cualquier consulta técnica relacionada con tu tienda."
+  },
+  {
+    question: "¿Qué pasa si tengo un pico de tráfico?",
+    answer: "Nuestro hosting es escalable automáticamente. Si tienes promociones o picos de ventas, los recursos se expanden sin necesidad de intervención manual, garantizando que tu tienda siga funcionando normalmente."
+  },
+  {
+    question: "¿Puedo migrar desde otro hosting sin perder datos?",
+    answer: "Sí, incluimos asistencia de migración. Nuestro equipo se encarga de todo el proceso sin downtime. Realizamos migraciones típicamente en 24-48 horas, dependiendo del tamaño de tu tienda."
   },
   {
     question: "¿Qué medidas de seguridad incluyen para tiendas online?",
@@ -143,6 +162,22 @@ const ecommerceFaqs = [
 			},
 			{
 				"@type": "Question",
+				"name": "¿Qué velocidad debería tener mi tienda online?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Google recomienda que las páginas carguen en menos de 3 segundos. Para e-commerce, menos de 2 segundos es ideal. Nuestro hosting optimizado logra tiempos de carga promedio de 1.2 segundos con CDN incluido."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Cuál es la diferencia entre WooCommerce, PrestaShop y Magento?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "WooCommerce: Plugin WordPress, flexible, ideal para tiendas medianas. PrestaShop: Plataforma independiente, excelente UX. Magento: Para grandes operaciones, muy potente pero requiere más recursos."
+				}
+			},
+			{
+				"@type": "Question",
 				"name": "¿Cuánto tiempo toma migrar mi tienda existente?",
 				"acceptedAnswer": {
 					"@type": "Answer",
@@ -151,10 +186,34 @@ const ecommerceFaqs = [
 			},
 			{
 				"@type": "Question",
+				"name": "¿Es seguro procesar pagos en línea con tu hosting?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Sí. Cumplimos con PCI DSS, incluimos certificados SSL gratuitos, firewall WAF y protección DDoS. Todos los datos de pago se procesan a través de pasarelas seguras certificadas."
+				}
+			},
+			{
+				"@type": "Question",
 				"name": "¿Ofrecen soporte para problemas específicos de e-commerce?",
 				"acceptedAnswer": {
 					"@type": "Answer",
 					"text": "Sí, nuestro equipo está especializado en plataformas de e-commerce. Podemos ayudarte con optimización de plugins, configuración de pagos, problemas de rendimiento y cualquier consulta técnica relacionada con tu tienda."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Qué pasa si tengo un pico de tráfico?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Nuestro hosting es escalable automáticamente. Si tienes promociones o picos de ventas, los recursos se expanden sin necesidad de intervención manual, garantizando que tu tienda siga funcionando normalmente."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "¿Puedo migrar desde otro hosting sin perder datos?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Sí, incluimos asistencia de migración. Nuestro equipo se encarga de todo el proceso sin downtime. Realizamos migraciones típicamente en 24-48 horas, dependiendo del tamaño de tu tienda."
 				}
 			},
 			{
@@ -217,7 +276,7 @@ const ecommerceFaqs = [
 				}
 			]}
 			gridCols={2}
-			backgroundGradient="bg-gradient-to-br from-white via-blue-50 to-gray-50"
+			backgroundGradient="bg-white"
 		/>
 
 		<!-- Platform Comparison Table -->
@@ -251,8 +310,9 @@ const ecommerceFaqs = [
 			]}
 		/>
 		<EcommerceComparison client:load />
-		<ServiceBenefits 
+		<ServiceBenefits
 			client:load
+			backgroundGradient="bg-white"
 			title="Características y beneficios"
 			description="Soluciones de hosting superiores con tecnología avanzada y servicio excepcional."
 			benefits={[
@@ -307,34 +367,6 @@ const ecommerceFaqs = [
 			client:load
 			serviceName="Hosting E-commerce"
 			features={["SSL Incluido", "CDN Global", "Respaldos Diarios", "Soporte Experto"]}
-		/>
-
-		<!-- People Also Ask Section -->
-		<PeopleAlsoAsk
-			client:load
-			title="Preguntas Frecuentes sobre Hosting E-commerce"
-			questions={[
-				{
-					question: "¿Qué velocidad debería tener mi tienda online?",
-					answer: "Google recomienda que las páginas carguen en menos de 3 segundos. Para e-commerce, menos de 2 segundos es ideal. Nuestro hosting optimizado logra tiempos de carga promedio de 1.2 segundos con CDN incluido."
-				},
-				{
-					question: "¿Cuál es la diferencia entre WooCommerce, PrestaShop y Magento?",
-					answer: "WooCommerce: Plugin WordPress, flexible, ideal para tiendas medianas. PrestaShop: Plataforma independiente, excelente UX. Magento: Para grandes operaciones, muy potente pero requiere más recursos."
-				},
-				{
-					question: "¿Es seguro procesar pagos en línea con tu hosting?",
-					answer: "Sí. Cumplimos con PCI DSS, incluimos certificados SSL gratuitos, firewall WAF y protección DDoS. Todos los datos de pago se procesan a través de pasarelas seguras certificadas."
-				},
-				{
-					question: "¿Qué pasa si tengo un pico de tráfico?",
-					answer: "Nuestro hosting es escalable automáticamente. Si tienes promociones o picos de ventas, los recursos se expanden sin necesidad de intervención manual, garantizando que tu tienda siga funcionando normalmente."
-				},
-				{
-					question: "¿Puedo migrar desde otro hosting sin perder datos?",
-					answer: "Sí, incluimos asistencia de migración. Nuestro equipo se encarga de todo el proceso sin downtime. Realizamos migraciones típicamente en 24-48 horas, dependiendo del tamaño de tu tienda."
-				}
-			]}
 		/>
 
 		<ServiceFAQ

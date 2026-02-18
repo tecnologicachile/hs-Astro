@@ -24,7 +24,7 @@ Softland ERP se ha consolidado como la solución de gestión empresarial más co
 
 ## Módulos Principales de Softland ERP
 
-### 📊 Gestión Contable y Financiera
+### Gestión Contable y Financiera
 
 #### [Manual Softland CW – Contabilidad y Presupuestos](/blog/manual-softland-cw-contabilidad-presupuestos-guia-completa)
 El núcleo financiero del sistema que permite llevar la contabilidad completa de tu empresa, gestionar presupuestos y generar reportes financieros para la toma de decisiones estratégicas.
@@ -46,7 +46,7 @@ Control integral de cuentas por pagar, gestión de proveedores y administración
 - Conciliación bancaria automática
 - Reportes de antigüedad de deudas
 
-### 📦 Gestión Comercial e Inventario
+### Gestión Comercial e Inventario
 
 #### [Manual Softland IW – Inventario y Facturación](/blog/manual-softland-iw-inventario-facturacion-guia-completa)
 Administración completa del inventario, control de stock en múltiples bodegas y facturación electrónica integrada con el SII para cumplimiento tributario.
@@ -78,7 +78,7 @@ Optimización del proceso de abastecimiento desde la requisición hasta la recep
 - Control de recepciones
 - Análisis de proveedores
 
-### 👥 Gestión de Recursos Humanos
+### Gestión de Recursos Humanos
 
 #### [Manual Softland SW – Recursos Humanos](/blog/manual-softland-sw-recursos-humanos-guia-completa)
 Administración integral del personal, desde el ingreso hasta el término de la relación laboral, incluyendo gestión de remuneraciones y cumplimiento normativo.
@@ -100,7 +100,7 @@ Cálculo automático de remuneraciones, liquidaciones de sueldo, leyes sociales 
 - Declaraciones DT y DJ
 - Boletas electrónicas de honorarios
 
-### 🏢 Gestión de Activos y Análisis
+### Gestión de Activos y Análisis
 
 #### [Manual Softland AW – Activo Fijo](/blog/manual-softland-activo-fijo-guia-completa)
 Control completo de los bienes de la empresa, depreciación automática según normativas chilenas e internacionales, y gestión patrimonial integral.
@@ -126,17 +126,17 @@ Herramientas de Business Intelligence con cubos OLAP, reportes ejecutivos y alar
 
 La verdadera fortaleza de Softland ERP radica en la integración completa entre todos sus módulos:
 
-### 🔄 Flujo de Información Automático
+### Flujo de Información Automático
 - Los datos se registran una sola vez y fluyen automáticamente entre módulos
 - Eliminación de duplicación de información
 - Consistencia de datos en tiempo real
 
-### 📈 Visibilidad Completa del Negocio
+### Visibilidad Completa del Negocio
 - Reportes consolidados con información de todos los módulos
 - Análisis cruzado de información financiera, comercial y operativa
 - Trazabilidad completa de las operaciones
 
-### ⚡ Eficiencia Operativa
+### Eficiencia Operativa
 - Reducción significativa de tiempos de proceso
 - Automatización de tareas rutinarias
 - Eliminación de errores por transcripción manual

@@ -8,7 +8,6 @@ interface BlogPost {
   pubDate: string;
 }
 
-// Posts relacionados por servicio
 const blogPostsByService: Record<string, BlogPost[]> = {
   'hosting-softland-erp': [
     {
@@ -102,14 +101,11 @@ export default function RelatedBlogPosts({
     <section className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-hs-blue/10 rounded-full px-4 py-2 text-sm font-medium text-hs-blue mb-4">
-            <BookOpen className="w-4 h-4" />
-            Blog
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          <p className="text-sm font-medium text-hs-blue uppercase tracking-widest mb-3">Blog</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
             {title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
             {description}
           </p>
         </div>
@@ -119,13 +115,13 @@ export default function RelatedBlogPosts({
             <a
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group bg-gray-50 border border-gray-100 rounded-xl p-6 hover:bg-white hover:shadow-lg hover:border-hs-blue/30 transition-all duration-300"
+              className="group border border-gray-200 rounded-xl p-6 hover:border-hs-blue/30 hover:shadow-sm transition-all duration-200"
             >
               <div className="flex items-center gap-2 mb-3">
-                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-hs-blue/10 text-hs-blue">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium bg-hs-blue/8 text-hs-blue">
                   {post.category}
                 </span>
-                <div className="flex items-center text-xs text-gray-500">
+                <div className="flex items-center text-xs text-gray-400">
                   <Calendar className="w-3 h-3 mr-1" />
                   {new Date(post.pubDate).toLocaleDateString('es-CL', {
                     day: 'numeric',
@@ -134,15 +130,15 @@ export default function RelatedBlogPosts({
                   })}
                 </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-hs-blue transition-colors mb-2 line-clamp-2">
+              <h3 className="text-base font-semibold text-gray-900 group-hover:text-hs-blue transition-colors duration-200 mb-2 line-clamp-2">
                 {post.title}
               </h3>
-              <p className="text-sm text-gray-600 line-clamp-2 mb-4">
+              <p className="text-sm text-gray-500 line-clamp-2 mb-4">
                 {post.description}
               </p>
               <div className="flex items-center text-hs-blue text-sm font-medium">
                 Leer artículo
-                <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-0.5 transition-transform duration-200" />
               </div>
             </a>
           ))}
@@ -151,7 +147,7 @@ export default function RelatedBlogPosts({
         <div className="text-center mt-10">
           <a
             href="/blog"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-all duration-200"
           >
             Ver todos los artículos
             <ArrowRight className="w-4 h-4" />

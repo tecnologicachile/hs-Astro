@@ -8,9 +8,11 @@ tags: ['Softland ERP Chile', 'Clientes XW', 'Cobranzas', 'Cuentas por Cobrar', '
 featured: true
 ---
 
-El control de las cuentas por cobrar es vital para la liquidez y estabilidad de cualquier empresa. El módulo Softland XW – Clientes y Cobranzas entrega las herramientas necesarias para administrar de forma integral la cartera de clientes, controlar créditos, gestionar cobranzas y dar seguimiento a los pagos.
+¿Sabes cuánto dinero tiene tu empresa "atrapado" en facturas vencidas? En Chile, los problemas de liquidez afectan a gran parte de las PYMES, y muchas veces no por falta de ventas, sino por mala gestión de cobranzas.
 
-En este artículo revisamos las principales funcionalidades del sistema y te dejamos acceso al manual oficial Softland XW en PDF.
+Cuando no hay seguimiento sistemático de pagos, los clientes extienden sus plazos, las facturas se acumulan y el flujo de caja se resiente. Cobrar se vuelve una tarea reactiva en lugar de un proceso automatizado.
+
+En esta guía descubrirás cómo el **módulo Softland XW** te permite controlar tu cartera de clientes, automatizar cobranzas y mantener la liquidez de tu empresa. Al final podrás descargar el manual oficial en PDF.
 
 ## ¿Qué es el módulo Softland XW?
 
@@ -55,13 +57,30 @@ Permite emitir letras de cambio y pagarés, junto con informes de control asocia
 
 ## Beneficios de Softland XW
 
-**Liquidez asegurada**: seguimiento oportuno de pagos y vencimientos.
+**Liquidez protegida**
+Seguimiento automático de vencimientos con alertas preventivas. Reduce tus días de cobranza promedio al identificar retrasos antes de que se acumulen.
 
-**Mejor control de clientes**: historial crediticio y comportamiento de pago documentado.
+**Control de clientes documentado**
+Historial crediticio completo de cada cliente. Toma decisiones de crédito informadas basándote en comportamiento real de pago.
 
-**Automatización de cobranzas**: emisión de cartas y notificaciones electrónicas.
+**Cobranzas automatizadas**
+Emisión automática de cartas de cobranza por correo electrónico. Define escalamiento según días de mora sin intervención manual.
 
-**Visibilidad total**: consultas e informes detallados sobre cuentas por cobrar.
+**Visibilidad financiera total**
+Consultas e informes detallados sobre cuentas por cobrar, antigüedad de saldos y proyección de flujos.
+
+> **¿Necesitas integrar tu cobranza con e-commerce?** Con nuestra [sincronización Softland-tienda online](/servicios/sincronizacion), los pagos de tu WooCommerce o PrestaShop se registran automáticamente en XW.
+
+## Preguntas Frecuentes
+
+**¿Puedo enviar recordatorios de cobranza automáticos?**
+Sí, el módulo permite configurar cartas de cobranza paramétricas que se envían por email según días de mora, sin intervención manual.
+
+**¿Cómo se integra con facturación?**
+XW se integra directamente con el módulo IW (Inventario y Facturación). Las facturas emitidas generan automáticamente cuentas por cobrar.
+
+**¿Puedo definir límites de crédito por cliente?**
+Sí, cada ficha de cliente permite configurar límite de crédito, condiciones de pago y bloqueo automático por morosidad.
 
 ## Conclusión
 
@@ -69,20 +88,13 @@ El módulo Softland XW – Clientes y Cobranzas es una solución clave para empr
 
 ---
 
-## 📥 Descargar Manual Completo
+## Descargar Manual Completo
 
 Para acceder a información detallada sobre configuración, procesos paso a paso y casos prácticos, descarga el manual oficial:
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a 
-    href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-XW.pdf" 
-    download="Manual-Softland-XW-Clientes-Cobranzas.pdf"
-    style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0048AB, #0058D6); color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); transition: all 0.3s ease;"
-  >
-    📥 Descargar Manual XW PDF
-    <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-    </svg>
+  <a href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-XW.pdf" download="Manual-Softland-XW-Clientes-Cobranzas.pdf" class="download-btn">
+    Descargar Manual XW PDF
   </a>
 </div>
 

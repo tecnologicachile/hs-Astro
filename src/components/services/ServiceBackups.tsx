@@ -25,36 +25,36 @@ interface ServiceBackupsProps {
   backgroundGradient?: string;
 }
 
-export default function ServiceBackups({ 
-  title, 
-  description, 
+export default function ServiceBackups({
+  title,
+  description,
   features,
-  backgroundGradient = "bg-gradient-to-bl from-gray-50 via-slate-50 to-blue-50"
+  backgroundGradient = "bg-white"
 }: ServiceBackupsProps) {
   return (
-    <div className={`${backgroundGradient} py-24 sm:py-32`}>
+    <div className={`${backgroundGradient} py-16 sm:py-20`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-base leading-7 text-gray-500">
             {description}
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature, index) => {
+        <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map((feature) => {
             const IconComponent = iconMap[feature.icon];
             return (
-              <div key={feature.title} className="relative group">
-                <div className="flex flex-col items-center text-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-hs-blue to-hs-blue-light shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                    <IconComponent className="h-8 w-8 text-white" />
+              <div key={feature.title} className="relative group text-center">
+                <div className="flex flex-col items-center">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-hs-blue text-white mb-5">
+                    <IconComponent className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-6 text-lg font-semibold leading-7 text-gray-900">
+                  <h3 className="text-base font-semibold leading-7 text-gray-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="mt-3 text-base leading-7 text-gray-600">
+                  <p className="text-sm leading-6 text-gray-500">
                     {feature.description}
                   </p>
                 </div>

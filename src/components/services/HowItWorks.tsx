@@ -1,4 +1,4 @@
-import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface Step {
   title: string;
@@ -10,15 +10,16 @@ interface HowItWorksProps {
   subtitle?: string;
   steps: Step[];
   serviceName: string;
+  background?: string;
 }
 
 export default function HowItWorks({
   title = "¿Cómo Funciona?",
   subtitle = "Proceso simple y eficiente para comenzar",
   steps,
-  serviceName
+  serviceName,
+  background = "bg-gray-50"
 }: HowItWorksProps) {
-  // Generate HowTo schema
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -39,64 +40,55 @@ export default function HowItWorks({
   };
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-white py-16 sm:py-20">
-      {/* HowTo Schema */}
+    <section className={`${background} py-16 sm:py-20`}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
             {title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
             {subtitle}
           </p>
         </div>
 
         <div className="relative">
           {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-hs-blue via-hs-blue-light to-hs-blue-lighter -translate-y-1/2 z-0" />
+          <div className="hidden lg:block absolute top-6 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-px bg-gray-200 z-0" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow h-full">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-hs-blue/30 hover:shadow-sm transition-all duration-200 h-full flex flex-col">
                   {/* Step number */}
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-hs-blue to-hs-blue-light rounded-full text-white font-bold text-lg mb-4 mx-auto lg:mx-0">
+                  <div className="flex items-center justify-center w-10 h-10 bg-hs-blue rounded-lg text-white font-semibold text-sm mb-5 mx-auto lg:mx-0">
                     {index + 1}
                   </div>
 
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 text-center lg:text-left">
+                  <h3 className="text-base font-semibold text-gray-900 mb-2 text-center lg:text-left">
                     {step.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm leading-relaxed text-center lg:text-left">
+                  <p className="text-sm text-gray-500 leading-relaxed text-center lg:text-left flex-1">
                     {step.description}
                   </p>
-
-                  {/* Checkmark for completed feeling */}
-                  <div className="flex justify-center lg:justify-start mt-4">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <a
             href="/contacto"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-hs-blue text-white rounded-xl font-semibold hover:bg-hs-blue-light transition-colors shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-hs-blue text-white rounded-lg text-sm font-semibold hover:bg-hs-blue-light transition-colors duration-200 shadow-sm hover:shadow-md"
           >
             Comenzar Ahora
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>

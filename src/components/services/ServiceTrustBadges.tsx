@@ -25,11 +25,11 @@ export default function ServiceTrustBadges() {
         <div className="grid grid-cols-3 gap-8">
           {badges.map((badge, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-hs-blue bg-opacity-10 mb-3">
-                <badge.icon className="h-6 w-6 text-hs-blue" />
+              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-hs-blue/8 mb-3">
+                <badge.icon className="h-5 w-5 text-hs-blue" />
               </div>
-              <div className="text-lg font-bold text-gray-900">{badge.text}</div>
-              <div className="text-sm text-gray-600">{badge.subtext}</div>
+              <div className="text-base font-semibold text-gray-900">{badge.text}</div>
+              <div className="text-sm text-gray-500">{badge.subtext}</div>
             </div>
           ))}
         </div>

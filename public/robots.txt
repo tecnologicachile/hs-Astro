@@ -1,19 +1,28 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://hostingsistemas.cl/sitemap-index.xml
-Sitemap: https://hostingsistemas.cl/sitemap-0.xml
-
-# Disallow admin and temporary files
-Disallow: /admin/
-Disallow: /tmp/
-Disallow: /_astro/
-Disallow: /functions/
-
-# Allow specific important pages
+# Important pages
 Allow: /servicios/
 Allow: /blog/
 Allow: /casos-de-exito
 Allow: /contacto
 Allow: /quienes-somos
+
+# Disallow admin and system files
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /_astro/
+Disallow: /functions/
+
+# Disallow query parameters that create duplicate content
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*page=
+Disallow: /*?*ref=
+
+# Sitemaps
+Sitemap: https://hostingsistemas.cl/sitemap-index.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

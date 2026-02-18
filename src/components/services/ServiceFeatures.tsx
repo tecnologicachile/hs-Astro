@@ -1,10 +1,10 @@
-import { 
-  TrendingUp, 
-  Shield, 
-  RefreshCw, 
-  Headphones, 
-  MapPin, 
-  Server, 
+import {
+  TrendingUp,
+  Shield,
+  RefreshCw,
+  Headphones,
+  MapPin,
+  Server,
   Zap,
   Users,
   Globe,
@@ -47,12 +47,12 @@ interface ServiceFeaturesProps {
   backgroundGradient?: string;
 }
 
-export default function ServiceFeatures({ 
-  title, 
-  description, 
-  features, 
+export default function ServiceFeatures({
+  title,
+  description,
+  features,
   gridCols = 2,
-  backgroundGradient = "bg-gradient-to-tr from-white via-slate-50 to-blue-50"
+  backgroundGradient = "bg-white"
 }: ServiceFeaturesProps) {
   const gridClass = {
     2: 'lg:grid-cols-2',
@@ -62,36 +62,36 @@ export default function ServiceFeatures({
   }[gridCols];
 
   return (
-    <div className={`${backgroundGradient} py-24 sm:py-32`}>
+    <div className={`${backgroundGradient} py-16 sm:py-20`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-base leading-7 text-gray-500">
             {description}
           </p>
         </div>
-        <div className={`mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 ${gridClass}`}>
+        <div className={`mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-6 ${gridClass}`}>
           {features.map((feature, index) => {
             const IconComponent = iconMap[feature.icon];
             return (
               <div
                 key={feature.title}
-                className={`group relative flex flex-col gap-6 rounded-2xl bg-white border border-gray-200 p-8 hover:border-hs-blue hover:shadow-xl hover:bg-gradient-to-br hover:from-white hover:to-slate-50 transition-all duration-300 ${
+                className={`group relative flex flex-col gap-5 rounded-xl border border-gray-200 bg-white p-6 hover:border-hs-blue/30 hover:shadow-sm transition-all duration-200 ${
                   gridCols === 5 && index === 4 ? 'lg:col-span-2 xl:col-span-1' : ''
                 }`}
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-hs-blue to-hs-blue-light text-white group-hover:shadow-lg transition-all duration-300">
-                  <IconComponent className="h-7 w-7" />
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-hs-blue/8 text-hs-blue group-hover:bg-hs-blue group-hover:text-white transition-colors duration-200">
+                  <IconComponent className="h-5 w-5" />
                 </div>
-              <div>
-                <h3 className="text-xl font-semibold leading-8 text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-base leading-7 text-gray-600">
-                  {feature.description}
-                </p>
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 text-gray-900 mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm leading-6 text-gray-500">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
             );

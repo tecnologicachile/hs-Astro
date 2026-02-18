@@ -74,20 +74,13 @@ El módulo Softland EW – Sueldos es una herramienta fundamental para empresas 
 
 ---
 
-## 📥 Descargar Manual Completo
+## Descargar Manual Completo
 
 Para acceder a información detallada sobre configuración, procesos paso a paso y casos prácticos, descarga el manual oficial:
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a 
-    href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-EW.pdf" 
-    download="Manual-Softland-EW-Sueldos.pdf"
-    style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0048AB, #0058D6); color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); transition: all 0.3s ease;"
-  >
-    📥 Descargar Manual EW PDF
-    <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-    </svg>
+  <a href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-EW.pdf" download="Manual-Softland-EW-Sueldos.pdf" class="download-btn">
+    Descargar Manual EW PDF
   </a>
 </div>
 

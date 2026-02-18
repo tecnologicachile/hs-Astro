@@ -6,8 +6,6 @@ import MainLayout from '../components/Layout.tsx';
 import PageHero from '../components/PageHero.tsx';
 import Breadcrumb from '../components/Breadcrumb.tsx';
 import CaseStudyCard from '../components/CaseStudyCard.tsx';
-import Button from '../components/Button.tsx';
-import { ExternalLink, Building2, ShoppingCart, Cloud, Server, Calculator } from 'lucide-react';
 
 const caseStudies = [
 	{
@@ -61,14 +59,14 @@ const caseStudies = [
 
 <Layout
 	title="Casos de Éxito Hosting Chile - Clientes Satisfechos"
-	description="Casos de éxito de hosting en Chile: Tritec, Surdent y RefriChile. Implementaciones optimizadas de e-commerce y Softland ERP."
+	description="Casos de éxito: Tritec, Surdent, RefriChile. Implementaciones optimizadas de e-commerce y Softland ERP en Chile. Resultados reales."
 	canonical="/casos-de-exito"
 >
 	<MainLayout client:load>
 		<!-- Breadcrumbs -->
 		<div class="bg-gray-50 py-3">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<Breadcrumb 
+				<Breadcrumb
 					client:load
 					items={[
 						{ name: "Casos de Éxito" }
@@ -77,28 +75,26 @@ const caseStudies = [
 			</div>
 		</div>
 
-		<PageHero 
+		<PageHero
 			client:load
-			title="Casos de Éxito" 
-			subtitle="Resultados Tangibles: Nuestro Impacto en Clientes"
+			title="Casos de Éxito"
+			subtitle="Resultados tangibles: nuestro impacto en clientes"
 		/>
 
 		<!-- Cases Grid -->
-		<div class="bg-gray-50/30 py-24 sm:py-32">
+		<div class="bg-gray-50 py-16 sm:py-20">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<!-- Section Header -->
-				<div class="text-center mb-16">
-					<p class="text-hs-blue font-semibold text-sm uppercase tracking-wide mb-4">Nuestros Clientes</p>
-					<h1 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-6">
+				<div class="text-center mb-12">
+					<p class="text-sm font-medium text-hs-blue uppercase tracking-widest mb-3">Nuestros Clientes</p>
+					<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
 						Empresas que Confían en Nosotros
-					</h1>
-					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+					</h2>
+					<p class="text-base text-gray-500 max-w-2xl mx-auto">
 						Desde startups hasta empresas consolidadas, ayudamos a organizaciones de todos los sectores a alcanzar sus objetivos digitales.
 					</p>
 				</div>
-				
-				<!-- Grid -->
-				<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12">
+
+				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 					{caseStudies.map((caseStudy) => (
 						<CaseStudyCard
 							client:load
@@ -106,25 +102,23 @@ const caseStudies = [
 							{...caseStudy}
 						/>
 					))}
-
-					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- CTA Section -->
-		<div class="bg-white py-24 sm:py-32">
+		<div class="bg-white py-16 sm:py-20">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-4xl text-center">
-					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
+				<div class="mx-auto max-w-3xl text-center">
+					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
 						¿Listo para ser nuestro próximo caso de éxito?
 					</h2>
-					<p class="text-xl leading-8 text-gray-600 mb-10">
+					<p class="text-base leading-7 text-gray-500 mb-8">
 						Únete a empresas líderes que han transformado sus operaciones con nuestras soluciones especializadas.
 					</p>
-					<a href="/contacto" class="inline-flex items-center rounded-xl bg-gradient-to-r from-hs-blue to-hs-blue-light px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:from-hs-blue-light hover:to-hs-blue-lighter transform hover:scale-105 transition-all duration-300">
+					<a href="/contacto" class="inline-flex items-center rounded-lg bg-hs-blue px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-hs-blue-light hover:shadow-md transition-all duration-200">
 						Solicitar Cotización
-						<svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 						</svg>
 					</a>

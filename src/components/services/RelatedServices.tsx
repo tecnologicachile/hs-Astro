@@ -5,7 +5,6 @@ interface Service {
   description: string;
   href: string;
   icon: 'Database' | 'ShoppingCart' | 'RefreshCw' | 'Headphones';
-  color: string;
 }
 
 const allServices: Service[] = [
@@ -14,28 +13,24 @@ const allServices: Service[] = [
     description: 'Servidores Windows dedicados con SQL Server optimizado y soporte técnico especializado.',
     href: '/servicios/hosting-softland-erp',
     icon: 'Database',
-    color: 'blue'
   },
   {
     title: 'Hosting E-commerce',
     description: 'Hosting optimizado para WooCommerce, PrestaShop, Magento y Jumpseller con SSL y CDN.',
     href: '/servicios/hosting-woocommerce',
     icon: 'ShoppingCart',
-    color: 'purple'
   },
   {
     title: 'Sincronización ERPSync',
     description: 'Integración automática cada 5 minutos entre Softland ERP y tu tienda online.',
     href: '/servicios/sincronizacion',
     icon: 'RefreshCw',
-    color: 'orange'
   },
   {
     title: 'Soporte Softland ERP',
     description: 'Soporte técnico especializado con 20+ años de experiencia en Softland ERP.',
     href: '/servicios/soporte-softland-erp',
     icon: 'Headphones',
-    color: 'green'
   }
 ];
 
@@ -44,33 +39,6 @@ const iconComponents = {
   ShoppingCart,
   RefreshCw,
   Headphones
-};
-
-const colorClasses = {
-  blue: {
-    bg: 'bg-hs-blue/10',
-    bgHover: 'group-hover:bg-hs-blue/20',
-    text: 'text-hs-blue',
-    border: 'hover:border-hs-blue'
-  },
-  purple: {
-    bg: 'bg-purple-100',
-    bgHover: 'group-hover:bg-purple-200',
-    text: 'text-purple-600',
-    border: 'hover:border-purple-400'
-  },
-  orange: {
-    bg: 'bg-orange-100',
-    bgHover: 'group-hover:bg-orange-200',
-    text: 'text-orange-600',
-    border: 'hover:border-orange-400'
-  },
-  green: {
-    bg: 'bg-green-100',
-    bgHover: 'group-hover:bg-green-200',
-    text: 'text-green-600',
-    border: 'hover:border-green-400'
-  }
 };
 
 interface RelatedServicesProps {
@@ -90,10 +58,10 @@ export default function RelatedServices({
     <section className="bg-gray-50 py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
             {title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
             {description}
           </p>
         </div>
@@ -101,28 +69,27 @@ export default function RelatedServices({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {relatedServices.map((service) => {
             const IconComponent = iconComponents[service.icon];
-            const colors = colorClasses[service.color as keyof typeof colorClasses];
 
             return (
               <a
                 key={service.href}
                 href={service.href}
-                className={`group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 ${colors.border}`}
+                className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-hs-blue/30 hover:shadow-sm transition-all duration-200 flex flex-col"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className={`w-12 h-12 ${colors.bg} rounded-xl flex items-center justify-center flex-shrink-0 ${colors.bgHover} transition-colors`}>
-                    <IconComponent className={`w-6 h-6 ${colors.text}`} />
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-hs-blue/8 text-hs-blue rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-hs-blue group-hover:text-white transition-colors duration-200">
+                    <IconComponent className="w-5 h-5" />
                   </div>
-                  <h3 className={`text-lg font-semibold text-gray-900 group-hover:${colors.text} transition-colors`}>
+                  <h3 className="text-base font-semibold text-gray-900">
                     {service.title}
                   </h3>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                <p className="text-sm text-gray-500 leading-6 mb-4 flex-1">
                   {service.description}
                 </p>
-                <div className={`flex items-center ${colors.text} transition-colors`}>
-                  <span className="text-sm font-medium">Ver más</span>
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                <div className="flex items-center text-hs-blue text-sm font-medium">
+                  Ver más
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-0.5 transition-transform duration-200" />
                 </div>
               </a>
             );

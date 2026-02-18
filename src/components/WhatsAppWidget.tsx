@@ -22,41 +22,32 @@ export default function WhatsAppWidget() {
     <>
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-20 right-4 sm:right-6 z-50 w-80 sm:w-96 max-w-[calc(100vw-2rem)] animate-slideUp">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+        <div className="fixed bottom-20 right-4 sm:right-6 z-50 w-80 max-w-[calc(100vw-2rem)]">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
             {/* Header */}
-            <div className="bg-[#075E54] text-white p-4">
+            <div className="bg-[#075E54] text-white px-4 py-3">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center">
-                  <WhatsAppIcon className="h-6 w-6" />
+                <div className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center">
+                  <WhatsAppIcon className="h-5 w-5" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold">Hosting Sistemas</h3>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-[#25D366] rounded-full"></div>
-                    <p className="text-sm text-white/80">Disponible</p>
-                  </div>
+                  <h3 className="text-sm font-medium">Hosting Sistemas</h3>
+                  <p className="text-xs text-white/60">Disponible</p>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                  className="p-1.5 hover:bg-white/10 rounded-lg transition-colors duration-200"
                   aria-label="Cerrar chat"
                 >
-                  <X className="h-5 w-5" />
+                  <X className="h-4 w-4" />
                 </button>
               </div>
             </div>
 
             {/* Chat Body */}
-            <div
-              className="p-4 h-36"
-              style={{
-                backgroundColor: '#ECE5DD',
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4cdc4' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-              }}
-            >
-              <div className="bg-white p-3 rounded-lg rounded-tl-none shadow-sm max-w-[85%]">
-                <p className="text-sm text-gray-800">
+            <div className="p-4 h-32 bg-gray-50">
+              <div className="bg-white p-3 rounded-lg shadow-sm max-w-[85%] border border-gray-100">
+                <p className="text-sm text-gray-700">
                   ¡Hola! ¿En qué podemos ayudarte?
                 </p>
                 <span className="text-[10px] text-gray-400 block text-right mt-1">Ahora</span>
@@ -64,12 +55,12 @@ export default function WhatsAppWidget() {
             </div>
 
             {/* Footer */}
-            <div className="p-3 bg-[#F0F0F0]">
+            <div className="p-3 border-t border-gray-100">
               <button
                 onClick={handleWhatsAppRedirect}
-                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full py-3 flex items-center justify-center gap-2 transition-colors font-medium"
+                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-lg py-2.5 flex items-center justify-center gap-2 transition-colors duration-200 text-sm font-medium"
               >
-                <WhatsAppIcon className="h-5 w-5" />
+                <WhatsAppIcon className="h-4 w-4" />
                 Iniciar conversación
               </button>
             </div>
@@ -77,27 +68,27 @@ export default function WhatsAppWidget() {
         </div>
       )}
 
-      {/* Floating Pill Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full pl-4 pr-5 py-3 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 ${
-          isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100 hover:scale-105'
-        }`}
-        aria-label="Abrir chat de WhatsApp"
-      >
-        <WhatsAppIcon className="h-6 w-6" />
-        <span className="font-medium text-sm">Chatea con nosotros</span>
-      </button>
+      {/* Floating Button */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-lg px-4 py-3 shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2"
+          aria-label="Abrir chat de WhatsApp"
+        >
+          <WhatsAppIcon className="h-5 w-5" />
+          <span className="text-sm font-medium hidden sm:inline">WhatsApp</span>
+        </button>
+      )}
 
       {/* Close Button */}
       {isOpen && (
         <button
           onClick={() => setIsOpen(false)}
-          className="fixed bottom-6 right-6 z-50 bg-gray-600 hover:bg-gray-700 text-white rounded-full pl-4 pr-5 py-3 shadow-lg flex items-center gap-3 transition-all"
+          className="fixed bottom-6 right-6 z-50 bg-gray-700 hover:bg-gray-600 text-white rounded-lg px-4 py-3 shadow-md flex items-center gap-2 transition-colors duration-200"
           aria-label="Cerrar chat"
         >
-          <X className="h-6 w-6" />
-          <span className="font-medium text-sm">Cerrar</span>
+          <X className="h-5 w-5" />
+          <span className="text-sm font-medium hidden sm:inline">Cerrar</span>
         </button>
       )}
     </>

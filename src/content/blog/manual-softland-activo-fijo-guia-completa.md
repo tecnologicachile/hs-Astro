@@ -8,9 +8,11 @@ tags: ['Softland ERP Chile', 'Activo Fijo AW', 'Gestión de Activos', 'IFRS', 'M
 featured: true
 ---
 
-La administración de activos fijos es un aspecto fundamental en cualquier empresa, ya que permite llevar un control ordenado y transparente del patrimonio. Con el módulo Softland AW – Activo Fijo, las organizaciones cuentan con una solución integral para registrar, gestionar y depreciar sus bienes de manera eficiente y en cumplimiento con normativas locales e internacionales.
+¿Sabías que muchas empresas chilenas pierden dinero en auditorías por no tener un control actualizado de sus activos fijos? Las depreciaciones mal calculadas, los bienes sin registrar y la falta de cumplimiento IFRS generan multas y complicaciones tributarias evitables.
 
-En este artículo encontrarás un resumen completo de las funcionalidades del sistema y al final podrás acceder al manual oficial en PDF para profundizar en cada proceso.
+La gestión manual de activos en hojas de cálculo produce errores, duplicidades y depreciaciones incorrectas. Cuando llega la auditoría, el equipo contable invierte semanas en cuadrar información que debería estar disponible con un clic.
+
+En esta guía descubrirás cómo el **módulo Softland AW** automatiza completamente la gestión de activos fijos, asegura cumplimiento IFRS y reduce tu cierre contable de semanas a horas. Al final podrás descargar el manual oficial en PDF.
 
 ## ¿Qué es el módulo Softland AW?
 
@@ -54,13 +56,30 @@ Integra herramientas de agrupación de componentes, revaluaciones, deterioros y 
 
 ## Beneficios para la empresa
 
-**Cumplimiento normativo**: asegura que los reportes estén alineados con estándares internacionales (IFRS) y normativas locales.
+**Cumplimiento normativo garantizado**
+Genera automáticamente reportes bajo normas IFRS y normativas SII chileno. Reduce el riesgo de observaciones en auditorías y asegura que tu contabilidad de activos esté siempre al día.
 
-**Eficiencia administrativa**: reduce tiempos en el registro, actualización y control de activos.
+**Eficiencia administrativa**
+Reduce de semanas a horas el tiempo de registro, actualización y control de activos. Los procesos masivos permiten gestionar cientos de bienes en minutos.
 
-**Control patrimonial**: facilita auditorías internas y externas con información clara y verificable.
+**Control patrimonial total**
+Facilita auditorías internas y externas con información clara, verificable y accesible. Sabe exactamente dónde está cada activo, quién es responsable y cuál es su valor actual.
 
-**Optimización financiera**: mejora la planificación de inversiones y depreciaciones.
+**Optimización financiera**
+Mejora la planificación de inversiones con proyecciones de depreciación precisas. Aprovecha beneficios tributarios por adquisición de activos fijos.
+
+> **¿Necesitas ayuda con la implementación?** Nuestro equipo de [soporte Softland ERP](/servicios/soporte-softland-erp) tiene más de 20 años de experiencia configurando el módulo AW para empresas chilenas.
+
+## Preguntas Frecuentes
+
+**¿El módulo AW cumple con las normas IFRS vigentes en Chile?**
+Sí, está completamente adaptado a los estándares IFRS y normativas del SII, incluyendo revalorizaciones, deterioros y cálculos de depreciación según ley chilena.
+
+**¿Puedo migrar mis activos desde Excel?**
+Sí, el módulo incluye herramientas de captura masiva de activos que facilitan la migración desde hojas de cálculo u otros sistemas.
+
+**¿Cómo se integra con el módulo de Contabilidad (CW)?**
+La contabilización de movimientos de activos es automática. Cada alta, baja, depreciación o revalorización genera asientos contables directamente en el libro mayor.
 
 ## Conclusión
 
@@ -68,20 +87,13 @@ El módulo Softland AW – Activo Fijo es una herramienta esencial para cualquie
 
 ---
 
-## 📥 Descargar Manual Completo
+## Descargar Manual Completo
 
 Para acceder a información detallada sobre configuración, procesos paso a paso y casos prácticos, descarga el manual oficial:
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a 
-    href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-AW.pdf" 
-    download="Manual-Softland-Activo-Fijo.pdf"
-    style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0048AB, #0058D6); color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); transition: all 0.3s ease;"
-  >
-    📥 Descargar Manual PDF (7.67 MB)
-    <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-    </svg>
+  <a href="https://ghdqgcnsaglvrwdtklkq.supabase.co/storage/v1/object/public/manuales-softland/Manual-AW.pdf" download="Manual-Softland-Activo-Fijo.pdf" class="download-btn">
+    Descargar Manual PDF (7.67 MB)
   </a>
 </div>
 
