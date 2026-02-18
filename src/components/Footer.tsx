@@ -126,8 +126,13 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-500 flex items-center gap-2">
             © {currentYear} Hosting Sistemas · Tecnológica Chile SpA
+            <span className="text-gray-600">·</span>
+            <span className="inline-flex items-center gap-1 text-gray-600">
+              <img src="/logos/microsoft.png" alt="Microsoft" className="h-3.5 w-auto opacity-50" />
+              Microsoft Partner
+            </span>
           </p>
           <p className="text-xs text-gray-600">
             Desarrollado por{' '}
